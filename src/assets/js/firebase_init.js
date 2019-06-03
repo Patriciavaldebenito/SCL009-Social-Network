@@ -1,8 +1,7 @@
 // function init 
 
-
     // Your web app's Firebase configuration
-    var firebaseConfig = {
+    let firebaseConfig = {
         apiKey: "AIzaSyBvoom8hD61pERzrj9U0A_JG-Wv_SV4NK0",
         authDomain: "scl009-social-network.firebaseapp.com",
         databaseURL: "https://scl009-social-network.firebaseio.com",
@@ -15,9 +14,5 @@
     firebase.initializeApp(firebaseConfig);
   
     firebase.firestore();
-
-
-
-
 
 

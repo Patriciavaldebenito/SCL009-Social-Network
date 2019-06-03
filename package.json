@@ -7,11 +7,19 @@
     "test": "test"
   },
   "scripts": {
+<<<<<<< HEAD
     "test":"jest --coverage",
     "eslint":"eslint --ext .js src/ test/",
     "htmlhint":"htmlhint src/*.html",
     "pretest":"npm run eslint && npm run htmlhint",
     "deploy":"gh-pages -d src/"
+=======
+    "test": "jest --coverage",
+    "eslint": "eslint --ext .js src/ test/",
+    "htmlhint": "htmlhint src/*.html",
+    "pretest": "npm run eslint && npm run htmlhint",
+    "deploy": "gh-pages -d src/"
+>>>>>>> 827ad011763d82f6ad4bcd01ea47007801d1d8db
   },
   "repository": {
     "type": "git",
@@ -40,6 +48,8 @@
     "eslint": "^5.16.0",
     "eslint-plugin-jest": "^22.6.4",
     "express": "^4.17.1",
+    "firebase": "^4.12.1",
+    "firebase-tools": "^6.10.0",
     "gh-pages": "^2.0.1",
     "htmlhint": "^0.11.0",
     "jest": "^24.8.0"
