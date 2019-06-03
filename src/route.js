@@ -1,5 +1,4 @@
 //import todas las vistas
-
 import { templateAbout } from './assets/views/templateAbout.js';
 import { templateProject } from './assets/views/templateProject.js';
 import { templateHome } from './assets/views/templateHome.js';
