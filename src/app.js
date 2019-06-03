@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+ 
+=======
 // Import logoutMessage function from
 import { createUser } from './assets/js/firebase_auth.js';
 
@@ -18,3 +21,4 @@ signupForm.addEventListener('submit', (e) => {
 
 })
 
+>>>>>>> 827ad011763d82f6ad4bcd01ea47007801d1d8db
