@@ -16,16 +16,18 @@ signupForm.addEventListener('submit', (e) => {
 
   
   let  resultValidationForm = validationForm(user,age,email,password);
-
+     //true
   
 
-    if (resultValidationForm === true){ 
-      console.log("vamos a crear la function")
+    if(resultValidationForm){ 
+        console.log("ok")
        createUser(user, age, email, password);
  
-   } 
+    } else {
+   
+      alert("la cuenta no ha sido creada");
+    }
 
-      alert("la cuenta no ha sido creada"); 
    
 
 })

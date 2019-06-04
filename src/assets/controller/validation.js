@@ -31,7 +31,7 @@ export const validationForm = (user,age,email,password) => {
 }
 
 
-export const validateEmail= (email) => {
+function validateEmail(email)  {
   
     // var re = /\S+@\S+/;
     //La prueba de validación de correo electrónico simple y futura será verificar la presencia del símbolo @
