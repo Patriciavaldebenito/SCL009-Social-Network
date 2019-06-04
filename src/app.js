@@ -25,7 +25,7 @@ signupForm.addEventListener('submit', (e) => {
  
    } 
 
-      alert("la cuenta no ha sido creada"); 
+      else {alert("la cuenta no ha sido creada");}
    
 
 })

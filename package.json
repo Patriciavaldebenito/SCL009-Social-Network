@@ -7,19 +7,11 @@
     "test": "test"
   },
   "scripts": {
-<<<<<<< HEAD
     "test":"jest --coverage",
     "eslint":"eslint --ext .js src/ test/",
     "htmlhint":"htmlhint src/*.html",
     "pretest":"npm run eslint && npm run htmlhint",
     "deploy":"gh-pages -d src/"
-=======
-    "test": "jest --coverage",
-    "eslint": "eslint --ext .js src/ test/",
-    "htmlhint": "htmlhint src/*.html",
-    "pretest": "npm run eslint && npm run htmlhint",
-    "deploy": "gh-pages -d src/"
->>>>>>> 827ad011763d82f6ad4bcd01ea47007801d1d8db
   },
   "repository": {
     "type": "git",
