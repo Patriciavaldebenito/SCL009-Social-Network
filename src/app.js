@@ -23,11 +23,9 @@ signupForm.addEventListener('submit', (e) => {
         console.log("ok")
        createUser(user, age, email, password);
  
-    } else {
-   
-      alert("la cuenta no ha sido creada");
-    }
+    } 
 
+      else {alert("la cuenta no ha sido creada");}
    
 
 })
