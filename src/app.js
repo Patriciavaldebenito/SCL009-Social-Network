@@ -1,5 +1,7 @@
 // Import logoutMessage function from
 import { createUser } from './assets/js/firebase_auth.js';
+import { validationForm } from './assets/controller/validation.js';
+
 
 const signupForm = document.querySelector('#signup-form');
 
@@ -12,8 +14,19 @@ signupForm.addEventListener('submit', (e) => {
   let email = signupForm['signup-email'].value;
   let password = signupForm['signup-password'].value;
 
-  // resultValidationForm(validateForm);
+  
+  let  resultValidationForm = validationForm(user,age,email,password);
 
-  createUser(user, age, email, password); 
+  
+
+    if (resultValidationForm === true){ 
+      console.log("vamos a crear la function")
+       createUser(user, age, email, password);
+ 
+   } 
+
+      alert("la cuenta no ha sido creada"); 
+   
 
 })
+
