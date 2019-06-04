@@ -1,10 +1,12 @@
 //import todas las vistas
-import { templateAbout } from './assets/views/templateAbout.js';
-import { templateProject } from './assets/views/templateProject.js';
-import { templateHome } from './assets/views/templateHome.js';
+import { templateHome } from './assets/views/tempateHome.js';
+// import { templateRegistre } from './assets/views/templateAboutRegistre';
+// import { templateLogin } from './assets/views/templateProjectLogin';
+
 
 const changeRoute = (hash) => {
-  if (hash === '#/about' || hash === '#/project' || hash === '#/home' || hash === '' || hash === '#/' || hash === '/#') {
+   console.log("si estoy leyendo changeRoute");
+  if (hash === '#/registre' || hash === '#/login' || hash === '#/home' || hash === '' || hash === '#/' || hash === '/#') {
     return showTemplate(hash)
   }
   return showTemplate(hash)
@@ -19,12 +21,12 @@ const showTemplate = (hash) => {
   containerRoot.innerHTML = '';
 
   switch (router) {
-    case 'about':
-      templateAbout();
-      break;
-    case 'project':
-      templateProject();
-      break;
+    // case 'registre':
+    //   templateRegistre();
+    //   break;
+    // case 'login':
+    //   templateLogin();
+    //   break;
     case 'home':
       templateHome();
       break;
@@ -37,6 +39,7 @@ const showTemplate = (hash) => {
 }
 
 export const initRouter = () => {
+  console.log("comprobando que lee los cambios de ruta");
   // cuando la ventana se carga saca el hash y se lo pasa a changeRoute
   window.addEventListener('load', changeRoute(window.location.hash));
 
