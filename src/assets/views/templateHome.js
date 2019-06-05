@@ -2,7 +2,7 @@ import {
   templateRegistre
 } from "./templateAboutRegistre.js";
 // ***** templates conectados linea 27 --- lognMuro(); error 
-// import { loginGoogle } from "./../js/firebase_auth.js";
+import { loginGoogle } from "./../js/firebase_auth.js";
 import {
   templateMuro
 } from "./templateMuro.js";
@@ -37,7 +37,7 @@ export const templateHome = () => {
   // 2. En home click en btn google
   document.getElementById("buttonGoogle").addEventListener("click", () => {
     console.log("presionaste boton google en Home!");
-    //  loginGoogle();
+    loginGoogle();
     // ***************** revisar error!!
     templateMuro();
     window.location.hash = "#/muro";

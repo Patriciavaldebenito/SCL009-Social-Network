@@ -52,22 +52,20 @@ export const confirmationEmail = () => {
 
 // Function loginGoogle
 export const loginGoogle = () => {
+
   console.log("click en LOGINGOOGLE hacemos correr su funcion? sii!! ")
   // 1. Crea una instancia del objeto del proveedor de Google:
-  var provider =  firebase.auth.GoogleAuthProvider();
+  var provider = new firebase.auth.GoogleAuthProvider();
   // 2.3.4 opcionales
   // 5. Autenticar con Firebase a través del objeto del proveedor de Google.
   // Para ofrecer acceso con una ventana emergente, invoca signInWithPopup:
 
   firebase.auth().signInWithPopup(provider).then(function(result) {
     // This gives you a Google Access Token. You can use it to access the Google API.
-    console.log(" y tambien estoy dentro de signInWithPopup");
-    var token = result.credential.accessToken;
+    //var token = result.credential.accessToken;
     // The signed-in user info.
     var user = result.user;
     // ...
-    console.log(token);
-    console.log(user);
   }).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
@@ -78,7 +76,6 @@ export const loginGoogle = () => {
     var credential = error.credential;
     // ...
   });
-
 
 };
 
