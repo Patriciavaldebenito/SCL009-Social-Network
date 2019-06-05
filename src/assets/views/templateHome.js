@@ -1,25 +1,39 @@
-import { templateRegistre } from './templateAboutRegistre.js';
+import { templateRegistre } from "./templateAboutRegistre.js";
+// ***** templates conectados linea 27 --- lognMuro(); error 
+// import { loginGoogle } from "./../js/firebase_auth.js";
+import { templateMuro } from "./templateMuro.js";
+import { templateLogin } from "./templateProjectLogin.js";
 
 export const templateHome = () => {
-  document.getElementById('root').innerHTML = `<div id="modal-home" class="modal">
+  document.getElementById(
+    "root"
+  ).innerHTML = `<div id="modal-home" class="modal">
                                                   <div class="modal-content">
                                                      <h3>Template Home</h3>
                                                      <button class="btn-google" type="button" id="buttonGoogle">Acceso con Google</button>
                                                      <button id="btnRegistre" class="btn-create">Sign up</button>
                                                      <button id="btnLogin" class="btn-create">Sign up</button>
                                                   </div>
-                                               </div>` 
-   
-   
-  document.getElementById('btnRegistre').addEventListener('click', () => {
-   templateRegistre(); 
-   window.location.hash = '#/registre';
- })
-      
-}
+                                               </div>`;
 
-// import { templateLogin } from './templateProjectLogin';
-// document.getElementById('btnLogin').addEventListener('click', () => {
-//   templateLogin(); // ir alli
-//   window.location.hash = '#/login';
-// })
+  // 1. En home click en btn  registrar
+  document.getElementById("btnRegistre").addEventListener("click", () => {
+    templateRegistre();
+    window.location.hash = "#/registre";
+  });
+
+  // 2. En home click en btn google
+  document.getElementById("buttonGoogle").addEventListener("click", () => {
+    console.log("presionaste boton google en Home!");
+   //  loginGoogle();
+    // ***************** revisar error!!
+    templateMuro();
+    window.location.hash = "#/muro";
+  });
+
+  //3. En home click en btn login
+  document.getElementById("btnLogin").addEventListener("click", () => {
+    templateLogin();
+    window.location.hash = "#/login";
+  });
+};
