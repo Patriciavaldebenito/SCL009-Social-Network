@@ -1,6 +1,6 @@
 //import todas las vistas
-import { templateHome } from './assets/views/tempateHome.js';
-// import { templateRegistre } from './assets/views/templateAboutRegistre';
+import { templateHome } from './assets/views/templateHome.js';
+import { templateRegistre } from './assets/views/templateAboutRegistre.js';
 // import { templateLogin } from './assets/views/templateProjectLogin';
 
 
@@ -21,25 +21,25 @@ const showTemplate = (hash) => {
   containerRoot.innerHTML = '';
 
   switch (router) {
-    // case 'registre':
-    //   templateRegistre();
-    //   break;
-    // case 'login':
-    //   templateLogin();
-    //   break;
     case 'home':
       templateHome();
       break;
     case '':
       templateHome();
       break;
+    case 'registre':
+      templateRegistre();
+      break;
+       // case 'login':
+       //   templateLogin();
+       //   break;
     default:
       containerRoot.innerHTML = `<h1>Error 404</h1>`
   }
 }
 
 export const initRouter = () => {
-  console.log("comprobando que lee los cambios de ruta");
+   
   // cuando la ventana se carga saca el hash y se lo pasa a changeRoute
   window.addEventListener('load', changeRoute(window.location.hash));
 
