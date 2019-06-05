@@ -53,16 +53,18 @@ export const confirmationEmail = () => {
 // Function loginGoogle
 export const loginGoogle = () => {
 
-
-  // Using a popup.
+  console.log("click en LOGINGOOGLE hacemos correr su funcion? sii!! ")
+  // 1. Crea una instancia del objeto del proveedor de Google:
   var provider = new firebase.auth.GoogleAuthProvider();
-  provider.addScope('profile');
-  provider.addScope('email');
+  // 2.3.4 opcionales
+  // 5. Autenticar con Firebase a través del objeto del proveedor de Google.
+  // Para ofrecer acceso con una ventana emergente, invoca signInWithPopup:
   firebase.auth().signInWithPopup(provider).then(function(result) {
-  // This gives you a Google Access Token.
-  var token = result.credential.accessToken;
-  // The signed-in user info.
-  var user = result.user;
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    var token = result.credential.accessToken;
+    // The signed-in user info.
+    var user = result.user;
+    // ...
   }).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
@@ -74,38 +76,26 @@ export const loginGoogle = () => {
     // ...
   });
 
-};
-
-//HU2
-//Acceso con GOOGLE
-/*
-export const authGoogle = () => {
-  var provider = new firebase.auth.GoogleAuthProvider();
-  firebase.auth().signInWithPopup(provider)
-    .then(function (result) {
-      // This gives you a Google Access Token. 
-      var token = result.credential.accessToken;
-      // The signed-in user info.
-      var user = result.user;
-      console.log(result);
-      // ...
-    }).catch(function (error) {
-      console.log(error);
-      // Handle Errors here.
-      var errorCode = error.code;
-      console.log(errorCode);
-      var errorMessage = error.message;
-      console.log(errorMessage);
-      // The email of the user's account used.
-      var email = error.email;
-      console.log(email);
-      // The firebase.auth.AuthCredential type that was used.
-      var credential = error.credential;
-      console.log(credential);
-      // ...
-    });
 }
-*/
+
+
+export const observer = () => {
+
+  firebase.auth().onAuthStateChanged(function(user) {
+
+    if (user) { 
+      console.log("si señor !! el usuario ha sido creado jo jo -- if del observador ");
+      // User is signed in.
+    } else {
+      // No user is signed in.
+      console.log("nones :( -- if del observador ");
+    }
+  });
+
+}
+
+
+
 
 //Conectar Basedatos RealTime
 

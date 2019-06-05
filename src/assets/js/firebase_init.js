@@ -13,7 +13,7 @@ export const initiationFirebase = () => {
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
-  
+
     firebase.firestore();
 
 }
