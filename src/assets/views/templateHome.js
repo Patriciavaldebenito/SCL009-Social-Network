@@ -18,10 +18,13 @@ export const templateHome = () => {
   ).innerHTML = `
                                                   <div id="modal-home" class="modal">
                                                   <div class="modal-content">
-                                                     <h3>Template Home</h3>
-                                                     <button class="btn-google" type="button" id="buttonGoogle">Acceso con Google</button>
-                                                     <button id="btnRegistre" class="btn-create">Sign up</button>
-                                                     <button id="btnLogin" class="btn-create">Sign up</button>
+                                                     <h3>Bienvenidos</h3>
+                                                      <form id="home-form">
+                                                        <br>
+                                                        <button class="btn-google" type="button" id="buttonGoogle">Acceso con Google</button>
+                                                        <button id="btnRegistre" class="btn-create">Registrar</button>
+                                                        <button id="btnLogin" class="btn-create">Entrar</button>
+                                                     </form>
                                                   </div>
                                                </div>`;
 
