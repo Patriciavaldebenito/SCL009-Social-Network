@@ -1,8 +1,6 @@
 import { validationForm } from "./../controller/validation.js";
 import { createUser } from "./../js/firebase_auth.js";
-import { confirmationEmail } from "./../js/firebase_auth.js";
-
-// // import { templateLogin } from './t';
+import { templateMuro } from "./templateMuro.js";
 
 export const templateRegistre = () => {
   let containerRegistre = document.getElementById("root");
@@ -36,30 +34,33 @@ export const templateRegistre = () => {
 
   containerRegistre.innerHTML = contenidoRegistre;
 
+  // 1. En registre click en btn probando ****cambiar name gaba??¡¡
   document.getElementById("btnProbando").addEventListener("click", () => {
-   
-
     let user = document.getElementById("signup-user").value;
     let age = document.getElementById("signup-age").value;
     let email = document.getElementById("signup-email").value;
     let password = document.getElementById("signup-password").value;
-
-    let res = validationForm(user,age,email,password);
+    let res = validationForm(user, age, email, password);
     console.log(res);
-   
 
-   if(res){
-
-     createUser(user, age, email, password);
-     
-     console.log("si entra");
-
-   }else{
-     console.log("no entra");
-   }
-
-
+    if (res) {
+      createUser(user, age, email, password);
+      templateMuro();
+      console.log("si entra");
+    } else {
+      console.log("no entra");
+    }
   });
+
+  // 2. En registre click en btn google
+  document.getElementById("buttonGoogle").addEventListener("click", () => {
+    console.log("presionaste boton google en Home!");
+    //  loginGoogle();
+    // ***************** revisar error!!
+    templateMuro();
+    window.location.hash = "#/muro";
+  });
+  
 };
 
 //   document.getElementById('btnLogin').addEventListener('click', () => {
