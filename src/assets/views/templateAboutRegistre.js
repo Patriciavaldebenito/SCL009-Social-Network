@@ -1,5 +1,6 @@
 import { validationForm } from "./../controller/validation.js";
 import { createUser } from "./../js/firebase_auth.js";
+import { confirmationEmail } from "./../js/firebase_auth.js";
 
 // // import { templateLogin } from './t';
 
@@ -50,6 +51,7 @@ export const templateRegistre = () => {
    if(res){
 
      createUser(user, age, email, password);
+     
      console.log("si entra");
 
    }else{
