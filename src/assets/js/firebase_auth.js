@@ -59,10 +59,9 @@ export const loginGoogle = () => {
   // 2.3.4 opcionales
   // 5. Autenticar con Firebase a través del objeto del proveedor de Google.
   // Para ofrecer acceso con una ventana emergente, invoca signInWithPopup:
-
   firebase.auth().signInWithPopup(provider).then(function(result) {
     // This gives you a Google Access Token. You can use it to access the Google API.
-    //var token = result.credential.accessToken;
+    var token = result.credential.accessToken;
     // The signed-in user info.
     var user = result.user;
     // ...
@@ -77,7 +76,7 @@ export const loginGoogle = () => {
     // ...
   });
 
-};
+}
 
 //HU2
 //Acceso con GOOGLE
