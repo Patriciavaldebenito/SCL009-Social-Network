@@ -1,4 +1,5 @@
 // function init 
+export const initiationFirebase = () => {
 
     // Your web app's Firebase configuration
     let firebaseConfig = {
@@ -15,4 +16,4 @@
   
     firebase.firestore();
 
-
+}
