@@ -1,5 +1,4 @@
-// Function createUser
-export const createUser = (user, age, email, password) => {
+  export const createUser = (user, age, email, password) => {
   console.log(user);
   console.log(age);
   console.log(email);
@@ -82,3 +81,55 @@ export const loginGoogle = () => {
 
 
 };
+
+//HU2
+//Acceso con GOOGLE
+/*
+export const authGoogle = () => {
+  var provider = new firebase.auth.GoogleAuthProvider();
+  firebase.auth().signInWithPopup(provider)
+    .then(function (result) {
+      // This gives you a Google Access Token. 
+      var token = result.credential.accessToken;
+      // The signed-in user info.
+      var user = result.user;
+      console.log(result);
+      // ...
+    }).catch(function (error) {
+      console.log(error);
+      // Handle Errors here.
+      var errorCode = error.code;
+      console.log(errorCode);
+      var errorMessage = error.message;
+      console.log(errorMessage);
+      // The email of the user's account used.
+      var email = error.email;
+      console.log(email);
+      // The firebase.auth.AuthCredential type that was used.
+      var credential = error.credential;
+      console.log(credential);
+      // ...
+    });
+}
+*/
+
+//Conectar Basedatos RealTime
+
+// export const initRealTime = () => {
+//   let app = document.getElementById('app');
+//   let dbref = firebase.database().ref('titulo');
+
+//   dbref.on('value')
+//     .then(function (snap) {
+//       app.innerText = snap.val()
+
+//     })
+// }
+//first example 
+/*
+let $title = $('#title');
+let database = firebase.database().ref().child('titulo');
+database.on("value", function(snapshot) {
+$title.text(snapshot.val());
+})
+*/
