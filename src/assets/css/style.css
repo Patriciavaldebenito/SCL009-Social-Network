@@ -1,20 +1,4 @@
-/* solo para probar codigo  */
-/*
-.containerForm{
 
-    background: blanchedalmond; 
-
-    align-items: center;
-    width: 80%;
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
-    float: none;
-    padding: 2%;
-    text-align: center;
-    
-}
-*/
 
 body {
   display: flex;
@@ -40,14 +24,15 @@ body img {
 
 }
 
-.h1,
-.h3 {
+h1,
+h3 {
   text-align: center;
   font-family: 'Segoe UI';
   color: rgba(23, 24, 18, 0.658);
+  font-size: 2em; 
 }
 
-.modal-container {
+modal-container {
   width: 150%;
   height: 150%;
   margin-top: 0%;
@@ -55,6 +40,22 @@ body img {
   margin-right: 100%;
   align-items: center;
   justify-content: center;
+}
+
+#home-form {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  float: none;
+  padding: 2%;
+  width: 30%;
+  height: 40%;
+  margin-top: 10%;
+  margin-left: 25%;
+  margin-right: 80%;
+
 }
 
 .input-field {
@@ -65,15 +66,16 @@ body img {
   margin-right: 100%;
   align-items: center;
   justify-content: center;
-  align-items: center;
-  justify-content: center;
+  
 }
 
 .btn-create {
   color: white;
-  margin-top: 1%;
+  margin-top: 5%;
+  ;
   align-items: center;
   border-radius: 5px;
+  text-align: center;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   background: rgb(202, 60, 60);
   /* this is a maroon */
@@ -84,9 +86,11 @@ body img {
 
 .btn-google {
   color: white;
-  margin-top: 1%;
+  margin-top: 5%;
   align-items: center;
+  
   border-radius: 20;
+  text-align: center;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   background-image: url('https://i.ibb.co/nL48YsC/google-logo.png');
   background-repeat: no-repeat;
@@ -96,4 +100,5 @@ body img {
   /*background: rgb(45, 162, 230);*/
   /* this is a blue */
   font-size: 85%;
+  
 }
