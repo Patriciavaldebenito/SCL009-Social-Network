@@ -30,10 +30,7 @@ export const templateHome = () => {
   document.getElementById("buttonGoogle").addEventListener("click", () => {
     console.log("presionaste boton google en Home!");
 
-  //  const statusUser = () => { observer(); }
-  //  console.log("este es el estado del usuario :" + statusUser)
 
-  //   if (statusUser){
 
       loginGoogle();
       templateMuro();
