@@ -7,7 +7,7 @@ export const templateRegistre = () => {
   let contenidoRegistre = ` 
   <div id="modal-signup" class="modal">
     <div class="modal-content">
-      <h3>Cuenta Nueva</h3>
+      <h3>Crea tu cuenta</h3>
       <form id="signup-form">
         <div class="input-field">
           <input type="user"  id="signup-user" required />
@@ -26,7 +26,7 @@ export const templateRegistre = () => {
           <label for="signup-password">password</label>
         </div>
         <br>
-        <button id="btnProbando"class="btn-create">Sign up</button>
+        <button id="btnProbando"class="btn-create">Crear</button>
       </form>
     </div>
   </div> 
