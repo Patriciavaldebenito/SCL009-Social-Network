@@ -5,7 +5,7 @@ import { templateMuro } from "./templateMuro.js";
 export const templateRegistre = () => {
   let containerRegistre = document.getElementById("root");
   let contenidoRegistre = ` 
-  <div id="modal-signup" class="modal">
+  <div class="modal" id="modal-signup" >
     <div class="modal-content">
       <h3>Crea tu cuenta</h3>
       <form id="signup-form">
