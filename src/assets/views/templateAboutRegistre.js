@@ -1,15 +1,13 @@
 import { validationForm } from "./../controller/validation.js";
 import { createUser } from "./../js/firebase_auth.js";
-import { confirmationEmail } from "./../js/firebase_auth";
-
-// // import { templateLogin } from './t';
+import { templateMuro } from "./templateMuro.js";
 
 export const templateRegistre = () => {
   let containerRegistre = document.getElementById("root");
   let contenidoRegistre = ` 
   <div id="modal-signup" class="modal">
     <div class="modal-content">
-      <h3>Cuenta Nueva</h3>
+      <h3>Crea tu cuenta</h3>
       <form id="signup-form">
         <div class="input-field">
           <input type="user"  id="signup-user" required />
@@ -28,7 +26,7 @@ export const templateRegistre = () => {
           <label for="signup-password">password</label>
         </div>
         <br>
-        <button id="btnProbando"class="btn-create">Sign up</button>
+        <button id="btnProbando"class="btn-create">Crear</button>
       </form>
     </div>
   </div> 
@@ -36,30 +34,33 @@ export const templateRegistre = () => {
 
   containerRegistre.innerHTML = contenidoRegistre;
 
+  // 1. En registre click en btn probando ****cambiar name gaba??¡¡
   document.getElementById("btnProbando").addEventListener("click", () => {
-   
-
     let user = document.getElementById("signup-user").value;
     let age = document.getElementById("signup-age").value;
     let email = document.getElementById("signup-email").value;
     let password = document.getElementById("signup-password").value;
-
-    let res = validationForm(user,age,email,password);
+    let res = validationForm(user, age, email, password);
     console.log(res);
-   
 
-   if(res){
-
-     createUser(user, age, email, password);
-     
-     console.log("si entra");
-
-   }else{
-     console.log("no entra");
-   }
-
-
+    if (res) {
+      createUser(user, age, email, password);
+      templateMuro();
+      console.log("si entra");
+    } else {
+      console.log("no entra");
+    }
   });
+
+  // 2. En registre click en btn google
+  document.getElementById("buttonGoogle").addEventListener("click", () => {
+    console.log("presionaste boton google en Home!");
+    //  loginGoogle();
+    // ***************** revisar error!!
+    templateMuro();
+    window.location.hash = "#/muro";
+  });
+  
 };
 
 //   document.getElementById('btnLogin').addEventListener('click', () => {

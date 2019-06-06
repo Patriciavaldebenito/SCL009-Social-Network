@@ -1,23 +1,10 @@
-// import {  } from './templateAboutRegistre';
-// import {  } from './templateProjectLogin';
+// import {  } from '';
+// import {  } from '';
 
-// export const templateHome = () => {
+export const templateMuro = () => {
 
-//   document.getElementById('root').innerHTML = `<p>Template Home</p>
-//                                               <button ">Ir a About</button>` // ir alli
-
-
-//   document.getElementById('').addEventListener('click', () => {
-
-//     template------(); // ir alli
-//     window.location.hash = '#/-----';
-//   })
-
-
-//   document.getElementById('----').addEventListener('click', () => {
-
-//     templateLogin(); // ir alli
-//     window.location.hash = '#/----';
-//   })
-  
-// }
+  document.getElementById('root').innerHTML = `<p>Los usuarios ya tendran una pantalla para publicar je je !! </p>`; 
+  // Eventos en el muro de la aplicacion 
+  // document.getElementById('').addEventListener('click', () => {
+  // })
+}
