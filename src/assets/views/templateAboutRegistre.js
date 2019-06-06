@@ -10,19 +10,19 @@ export const templateRegistre = () => {
       <h3>Crea tu cuenta</h3>
       <form id="signup-form">
         <div class="input-field">
-          <input type="user"  id="signup-user" required />
+          <input type="user"  id="signup-user"/>
           <label for="signup-user">usuario</label>
         </div>
         <div class="input-field">
-          <input type="number"  id="signup-age" required />
+          <input type="number"  id="signup-age"/>
           <label for="signup-age">edad</label>
         </div>
         <div class="input-field">
-          <input type="email"  id="signup-email" required />
+          <input type="email"  id="signup-email"/>
           <label for="signup-email">email</label>
         </div>
         <div class="input-field">
-          <input type="password"  id="signup-password" required />
+          <input type="password"  id="signup-password"/>
           <label for="signup-password">password</label>
         </div>
         <br>

@@ -96,7 +96,6 @@ export const observer = () => {
 
 
 
-
 //Conectar Basedatos RealTime
 
 // export const initRealTime = () => {
