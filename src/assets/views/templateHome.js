@@ -1,21 +1,13 @@
-import {
-  templateRegistre
-} from "./templateAboutRegistre.js";
-// ***** templates conectados linea 27 --- lognMuro(); error 
+import { templateRegistre } from "./templateAboutRegistre.js";
 import { loginGoogle } from "./../js/firebase_auth.js";
-import {
-  templateMuro
-} from "./templateMuro.js";
-import {
-  templateLogin
-} from "./templateProjectLogin.js";
+import { templateMuro } from "./templateMuro.js";
+import { templateLogin } from "./templateProjectLogin.js";
 
 // import { initRealTime } from './../js/firebase_auth.js';
 
 export const templateHome = () => {
-  document.getElementById(
-    "root"
-  ).innerHTML = `
+ 
+  document.getElementById("root").innerHTML = `
                                                   <div id="modal-home" class="modal">
                                                   <div class="modal-content">
                                                      <h3>Bienvenidos</h3>
@@ -40,10 +32,14 @@ export const templateHome = () => {
   // 2. En home click en btn google
   document.getElementById("buttonGoogle").addEventListener("click", () => {
     console.log("presionaste boton google en Home!");
-    loginGoogle();
-    // ***************** revisar error!!
-    templateMuro();
-    window.location.hash = "#/muro";
+
+
+
+      loginGoogle();
+      templateMuro();
+      window.location.hash = "#/muro";
+  //   } 
+  
   });
 
   //3. En home click en btn login
