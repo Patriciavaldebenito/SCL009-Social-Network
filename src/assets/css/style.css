@@ -36,15 +36,21 @@ body img {
   margin-right: 10%;
   position: relative;
   display: flex;
-  align-content: flex-end;
+  
 
 }
 
-.h1,
-.h3 {
+h1,
+h3 {
   text-align: center;
   font-family: 'Segoe UI';
   color: rgba(23, 24, 18, 0.658);
+}
+
+.title {
+  text-align: center;
+  font-family: 'Segoe UI';
+  color: rgba(230, 45, 39, 0.658);
 }
 
 .modal-container {
@@ -58,17 +64,28 @@ body img {
 }
 
 .input-field {
+  align-items: center;
+  justify-content: center;
   width: 50%;
   height: 300%;
   margin-top: 2%;
   margin-left: 10%;
   margin-right: 100%;
-  align-items: center;
-  justify-content: center;
-  align-items: center;
-  justify-content: center;
+ 
 }
+/*
+.home-form {
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 300%;
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 100%;
 
+
+}
+*/
 .btn-create {
   color: white;
   margin-top: 1%;

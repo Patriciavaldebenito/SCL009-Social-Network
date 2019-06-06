@@ -1,6 +1,6 @@
 import { validationForm } from "./../controller/validation.js";
 import { createUser } from "./../js/firebase_auth.js";
-import { confirmationEmail } from "./../js/firebase_auth.js";
+import { confirmationEmail } from "./../js/firebase_auth";
 
 // // import { templateLogin } from './t';
 
