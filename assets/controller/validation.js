@@ -90,7 +90,7 @@ export const validationExpRegEmail = email => {
   return re.test(email);
 };
 
-export const validationForm = (user, age, email, password) => {
+export const validationFormRegistre = (user, age, email, password) => {
   if ( validationUser(user) === false || validationAge(age) === false ||  validationEmail(email) === false ||  validationPassword(password) === false || !validationExpRegEmail(email) ) {
    
     console.log("Un campo no cumple el testeo");
@@ -104,4 +104,17 @@ export const validationForm = (user, age, email, password) => {
 
 };
 
-// export const resultValidationForm = validationForm(user, age, email, password);
+// export const resultValidationForm = validationForm(email, password);
+export const validationFormSignLogin = (email, password) => {
+  if ( validationEmail(email) === false ||  validationPassword(password) === false || !validationExpRegEmail(email) ) {
+   
+    console.log("Un campo no cumple el testeo");
+    return false;
+  }
+  else{
+    swal.fire('vamos al muro logeado registrado')
+    console.log("logeado redireccionando al muro");
+    return true;
+  }
+
+};

@@ -1,4 +1,7 @@
 import { templateMuro } from "./templateMuro.js";
+import { validationFormSignLogin } from "../controller/validation.js";
+import { signLogin } from "../js/firebase_auth.js";
+
 // import { loginGoogle } from "./../js/firebase_auth.js"; **** revisar ruta ****
 // import {} from "";
 
@@ -24,14 +27,31 @@ export const templateLogin = () => {
 
   // 1. En Login click en btnLogin
   document.getElementById("btnLoginDos").addEventListener("click", () => {
-    
-    // **********  aqui falta la funcion cuando el usuario ya esta registrado + validacion+test
-    templateMuro();
-    window.location.hash = "#/muro";
+    // valores desde imput text para function singLogin
+    let email = document.getElementById('signup-email').value;
+
+    let password = document.getElementById('signup-password').value;
+    console.log(email);
+    console.log(password);
+
+    let resSignLogin = validationFormSignLogin(email, password);
+    // conditions
+    if (resSignLogin) {
+      signLogin(email, password);
+      console.log("logeado / parametros validados");
+      window.location.hash = "#/muro";
+    } else {
+      console.log("NO     createUser / parametros validos");
+    }
+
+
+
+
+
   });
 
- // 2. En login click en btn google
- document.getElementById("buttonGoogle").addEventListener("click", () => {
+  // 2. En login click en btn google
+  document.getElementById("buttonGoogle").addEventListener("click", () => {
     console.log("presionaste boton google en Home!");
     //  loginGoogle();
     // ***************** revisar error!!

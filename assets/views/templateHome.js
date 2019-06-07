@@ -1,4 +1,3 @@
-import { templateRegistre } from "./templateAboutRegistre.js";
 import { loginGoogle } from "./../js/firebase_auth.js";
 import { templateMuro } from "./templateMuro.js";
 import { templateLogin } from "./templateProjectLogin.js";
@@ -6,7 +5,7 @@ import { templateLogin } from "./templateProjectLogin.js";
 // import { initRealTime } from './../js/firebase_auth.js';
 
 export const templateHome = () => {
- 
+
   document.getElementById("root").innerHTML = `
                                                   <div class="modal" id="modal-home" >
                                                   <div class="modal-content">
@@ -25,7 +24,7 @@ export const templateHome = () => {
 
   // 1. En home click en btn  registrar
   document.getElementById("btnRegistre").addEventListener("click", () => {
-    templateRegistre();
+
     window.location.hash = "#/registre";
   });
 
@@ -35,16 +34,21 @@ export const templateHome = () => {
 
 
 
-      loginGoogle();
-      templateMuro();
-      window.location.hash = "#/muro";
-  //   } 
-  
+    loginGoogle();
+    templateMuro();
+    window.location.hash = "#/muro";
+
+
   });
 
   //3. En home click en btn login
+
   document.getElementById("btnLogin").addEventListener("click", () => {
-    templateLogin();
     window.location.hash = "#/login";
   });
+
+
+
+
+
 };
