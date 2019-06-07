@@ -20,7 +20,7 @@ body img {
   margin-right: 10%;
   position: relative;
   display: flex;
-  align-content: flex-end;
+  
 
 }
 
@@ -59,16 +59,24 @@ modal-container {
 }
 
 .input-field {
+  align-items: center;
+  justify-content: center;
   width: 50%;
   height: 300%;
   margin-top: 2%;
   margin-left: 10%;
   margin-right: 100%;
+ 
+}
+/*
+.home-form {
   align-items: center;
   justify-content: center;
   
 }
 
+}
+*/
 .btn-create {
   color: white;
   margin-top: 5%;
