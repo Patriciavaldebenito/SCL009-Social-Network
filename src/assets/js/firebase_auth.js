@@ -7,7 +7,10 @@ export const createUser = (user, age, email, password) => {
   
   firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(function () {
-        window.location.hash = "#/login";
+
+      signOutRedSocial();
+      verificationEmail();
+        
     })
     .catch(function (error) {
       // Handle Errors here.
@@ -35,7 +38,6 @@ export const createUser = (user, age, email, password) => {
   //   console.error("Error  adding document: ", error);
   // });
 };
-
 
 // Function loginGoogle
 export const loginGoogle = () => {
@@ -82,8 +84,9 @@ export const signLogin = (email,password) => {
     if(!user.emailVerified){
       
       console.log(user.emailVerified);
+      alert("verifica tu correo porfavor");//ok
       signOutRedSocial();
-      alert("verifica tu correo porfavor");
+      
 
     } else {
  
@@ -94,21 +97,17 @@ export const signLogin = (email,password) => {
 
 
 
-   
-
-  }).catch(function (error) {
+  })
+  .catch(function (error) {
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
     // ...
   });
 }
-
-
 // 1.añadir un listener en tiempo real
 // si el usuario esta logeado aparece boton para salir 
 // qe aparesca el muro 
-
 //2. ir a nueva actividad que muestra la identidad del usuario y el ID del usuario en firebase asociado a esa identidad 
 // se vera si el correo ha sido verificado
 // inicialmente o ha de ser verificado
@@ -116,8 +115,6 @@ export const signLogin = (email,password) => {
 // una vez que el usuario hace click en el boton (enviado a su correo) este correo contendra un enlace 
 // y una vez que se haga click en el enlace se verificara la cuenta 
 export const verificationEmail = () => {
-  
- 
   // para enviar un mensaje de direccion a un usuario ...
   var user = firebase.auth().currentUser;
   user.sendEmailVerification().then(function () {
@@ -138,6 +135,7 @@ export const observer = () => {
 
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
+
       console.log("Existe usuario Activo");
      
      
@@ -145,17 +143,14 @@ export const observer = () => {
       var displayName = user.displayName;
       var email = user.email;
       var emailVerified = user.emailVerified;
+       console.log(emailVerified);
       var photoURL = user.photoURL;
       var isAnonymous = user.isAnonymous;
       var uid = user.uid;
       var providerData = user.providerData;
       // ...
     } else {
-
       console.log("  NO    existe usuario Activo   ");
- 
-
-
       // User is signed out.
       // ...
     }
@@ -168,6 +163,8 @@ export const observer = () => {
 export const signOutRedSocial = () => {
 
   firebase.auth().signOut().then(function () {
+
+    window.location.hash = "#/login";
     // Sign-out successful.
   }).catch(function (error) {
     // An error happened.

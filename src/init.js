@@ -4,10 +4,8 @@ import { initiationFirebase } from './assets/js/firebase_init.js';
 import { observer } from './assets/js/firebase_auth.js'
 
 const init = () => {
-  
-  observer();
-  initRouter();
   initiationFirebase();
- 
+  initRouter();
+  observer();
 };
 window.addEventListener('load',init);
