@@ -68,15 +68,7 @@ modal-container {
   margin-right: 100%;
  
 }
-/*
-.home-form {
-  align-items: center;
-  justify-content: center;
-  
-}
 
-}
-*/
 .btn-create {
   color: white;
   margin-top: 5%;
@@ -96,7 +88,7 @@ modal-container {
   color: white;
   margin-top: 5%;
   align-items: center;
-  
+
   border-radius: 20;
   text-align: center;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -110,3 +102,20 @@ modal-container {
   font-size: 85%;
   
 }
+/*pensado en el responsive
+@media screen and (max-width:300px){
+  #home-form {
+    display: none;
+  }
+  
+}
+*/
+/*
+#title {
+  text-align: center;
+  font-family: 'Segoe UI';
+  color: rgba(202, 15, 15, 0.76);
+  font-size: 2em; 
+
+}
+*/
