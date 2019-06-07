@@ -1,6 +1,8 @@
-import { validationForm } from "./../controller/validation.js";
+import { validationFormRegistre } from "../controller/validation.js";
 import { createUser } from "./../js/firebase_auth.js";
-import { templateMuro } from "./templateMuro.js";
+// import { templateMuro } from "./templateMuro.js";
+import { loginGoogle } from "./../js/firebase_auth.js";
+
 
 export const templateRegistre = () => {
   let containerRegistre = document.getElementById("root");
@@ -40,35 +42,25 @@ export const templateRegistre = () => {
     let age = document.getElementById("signup-age").value;
     let email = document.getElementById("signup-email").value;
     let password = document.getElementById("signup-password").value;
-    let res = validationForm(user, age, email, password);
-    console.log(res);
+    let resRegistre = validationFormRegistre(user, age, email, password);
+    console.log(resRegistre);
 
-    if (res) {
+    if (resRegistre) {
       createUser(user, age, email, password);
-      templateMuro();
-      console.log("si entra");
+      console.log("createUser  / parametros validados");
     } else {
-      console.log("no entra");
+      console.log("NO     createUser / parametros validos");
     }
   });
 
   // 2. En registre click en btn google
   document.getElementById("buttonGoogle").addEventListener("click", () => {
     console.log("presionaste boton google en Home!");
-    //  loginGoogle();
-    // ***************** revisar error!!
-    templateMuro();
-    window.location.hash = "#/muro";
+
+     loginGoogle();
+    
+  
   });
   
+  
 };
-
-//   document.getElementById('btnLogin').addEventListener('click', () => {
-
-//     templateLogin(); // ir alli
-//     window.location.hash = '#/login';
-//   })
-// }
-
-//   // llamar a la función que carga el template project
-//   // cambiar el hash a #/project
