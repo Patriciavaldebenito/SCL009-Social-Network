@@ -1,6 +1,8 @@
 import { validationForm } from "./../controller/validation.js";
 import { createUser } from "./../js/firebase_auth.js";
-import { templateMuro } from "./templateMuro.js";
+// import { templateMuro } from "./templateMuro.js";
+import { loginGoogle } from "./../js/firebase_auth.js";
+
 
 export const templateRegistre = () => {
   let containerRegistre = document.getElementById("root");
@@ -45,7 +47,6 @@ export const templateRegistre = () => {
 
     if (res) {
       createUser(user, age, email, password);
-      templateMuro();
       console.log("si entra");
     } else {
       console.log("no entra");
@@ -55,20 +56,10 @@ export const templateRegistre = () => {
   // 2. En registre click en btn google
   document.getElementById("buttonGoogle").addEventListener("click", () => {
     console.log("presionaste boton google en Home!");
-    //  loginGoogle();
-    // ***************** revisar error!!
-    templateMuro();
-    window.location.hash = "#/muro";
+
+     loginGoogle();
+    
+  
   });
   
 };
-
-//   document.getElementById('btnLogin').addEventListener('click', () => {
-
-//     templateLogin(); // ir alli
-//     window.location.hash = '#/login';
-//   })
-// }
-
-//   // llamar a la función que carga el template project
-//   // cambiar el hash a #/project

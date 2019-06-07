@@ -9,6 +9,7 @@
     .createUserWithEmailAndPassword(email, password)
     .then(function() {
       confirmationEmail();
+      window.location.hash ="#/login";
     })
     .catch(function(error) {
       // Handle Errors here.
@@ -65,7 +66,13 @@ export const loginGoogle = () => {
     // The signed-in user info.
     var user = result.user;
     // ...
-  }).catch(function(error) {
+  })
+  .then( 
+    
+    function changeMuro() {
+         window.location.hash = "#/login";
+    })
+  .catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
