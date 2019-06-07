@@ -8,14 +8,14 @@ import { templateLogin } from "./templateProjectLogin.js";
 export const templateHome = () => {
  
   document.getElementById("root").innerHTML = `
-                                                  <div id="modal-home" class="modal">
+                                                  <div class="modal" id="modal-home" >
                                                   <div class="modal-content">
                                                      <h3>Bienvenidos</h3>
                                                       <form id="home-form">
                                                         <br>
                                                         <button class="btn-google" type="button" id="buttonGoogle">Acceso con Google</button>
-                                                        <button id="btnRegistre" class="btn-create">Registrar</button>
-                                                        <button id="btnLogin" class="btn-create">Entrar</button>
+                                                        <button class="btn-create" id="btnRegistre" >Registrar</button>
+                                                        <button class="btn-create" id="btnLogin" >Entrar</button>
                                                      </form>
                                                   </div>
                                                </div>`;
