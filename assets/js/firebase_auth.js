@@ -7,19 +7,20 @@ export const createUser = (user, age, email, password) => {
   
   firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(function () {
-      window.location.hash = "#/login";
-      const verificationEmailGoToLogin = verificationEmail();
-      verificationEmailGoToLogin = false; 
+
+      // const verificationEmailGoToLogin = 
+      verificationEmail();
+      // verificationEmailGoToLogin = false; 
      
      
       console.log("estamos llendo al login desde registro lleno");
-        
+      window.location.hash = "#/login";
       
-        if(!verificationEmailGoToLogin){
-          observer();
-          console.log("el usuario entra, va al formulario de registro, procesa la funcion de creacion de usuario, verifica cada input, luego se almacena el firebase y se asume activo ...luego se manda a login");
+        // if(!verificationEmailGoToLogin){
+        //   observer();
+        //   console.log("el usuario entra, va al formulario de registro, procesa la funcion de creacion de usuario, verifica cada input, luego se almacena el firebase y se asume activo ...luego se manda a login");
   
-        }
+        // }
        
       
     
@@ -52,6 +53,8 @@ export const createUser = (user, age, email, password) => {
 };
 
 export const verificationEmail = () => {
+  
+ 
   // para enviar un mensaje de direccion a un usuario ...
   var user = firebase.auth().currentUser;
   user.sendEmailVerification().then(function () {
@@ -87,7 +90,7 @@ export const loginGoogle = () => {
     .then(
 
       function changeMuro() {
-        window.location.hash = "#/login";
+        window.location.hash = "#/muro";
       })
     .catch(function (error) {
       // Handle Errors here.
@@ -134,7 +137,7 @@ export const observer = () => {
     if (user) {
       console.log("Existe usuario Activo");
      
-
+     
       // User is signed in.
       var displayName = user.displayName;
       var email = user.email;
@@ -147,7 +150,7 @@ export const observer = () => {
     } else {
 
       console.log("  NO    existe usuario Activo   ");
-      
+ 
 
 
       // User is signed out.

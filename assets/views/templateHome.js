@@ -1,6 +1,6 @@
 import { loginGoogle } from "./../js/firebase_auth.js";
 import { templateMuro } from "./templateMuro.js";
-import { templateLogin } from "./templateProjectLogin.js";
+
 
 // import { initRealTime } from './../js/firebase_auth.js';
 
@@ -35,8 +35,8 @@ export const templateHome = () => {
 
 
     loginGoogle();
-    templateMuro();
-    window.location.hash = "#/muro";
+
+   
 
 
   });
