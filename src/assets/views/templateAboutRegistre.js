@@ -12,7 +12,7 @@ export const templateRegistre = () => {
       <h3>Crea tu cuenta</h3>
       <form id="signup-form">
         <div class="input-field">
-          <input type="user"  id="signup-user"/>
+          <input type="text"  id="signup-user"/>
           <label for="signup-user">usuario</label>
         </div>
         <div class="input-field">
@@ -28,7 +28,7 @@ export const templateRegistre = () => {
           <label for="signup-password">password</label>
         </div>
         <br>
-        <button id="btnProbando"class="btn-create">Crear</button>
+        <button id="btnProbando" class="btn-create">Crear</button>
       </form>
     </div>
   </div> 
