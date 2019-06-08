@@ -6,7 +6,7 @@ import { templateLogin } from './assets/views/templateProjectLogin.js';
 
 
 const changeRoute = (hash) => {
-   console.log("si estoy leyendo changeRoute");
+   console.log("window.location.hash leido   /  llamando a showTemplate");
   if (hash === '#/registre' || hash === '#/muro' || hash === '#/login' || hash === '#/home' || hash === '' || hash === '#/' || hash === '/#') {
     return showTemplate(hash)
   }
@@ -23,18 +23,23 @@ const showTemplate = (hash) => {
   switch (router) {
     case 'home':
       templateHome();
+       console.log(" hash paso a router --- se activa fx templateHome");
       break;
     case '':
       templateHome();
+      console.log(" hash paso a router --- se activa fx templateHome");
       break;
     case 'registre':
       templateRegistre();
+      console.log(" hash paso a router --- se activa fx templateRegistre");
       break;
     case 'muro':
       templateMuro();
+      console.log(" hash paso a router --- se activa fx templateMuro");
       break;
     case 'login':
       templateLogin();
+      console.log(" hash paso a router --- se activa fx templateLogin");
       break;
     default:
       containerRoot.innerHTML = `<h1>Error 404</h1>`

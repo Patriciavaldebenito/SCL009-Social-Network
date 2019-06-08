@@ -97,7 +97,7 @@ export const validationFormRegistre = (user, age, email, password) => {
     return false;
   }
   else{
-    swal.fire('¡Listo!, ya puedes confirmar tu correo electronico y disfrutar de PANORAMIX')
+    
     console.log("true test Ok");
     return true;
   }
@@ -112,8 +112,8 @@ export const validationFormSignLogin = (email, password) => {
     return false;
   }
   else{
-    swal.fire('vamos al muro logeado registrado')
-    console.log("logeado redireccionando al muro");
+    // swal.fire('vamos al muro logeado registrado')
+    console.log("validos los imput del formulario Login");
     return true;
   }
 
