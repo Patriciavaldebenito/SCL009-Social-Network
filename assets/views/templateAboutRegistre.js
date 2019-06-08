@@ -32,20 +32,24 @@ export const templateRegistre = () => {
       </form>
     </div>
   </div> 
-  <button class="btn-google" type="button" id="buttonGoogle">Acceso con Google</button>`;
+  <button class="btn-google" type="button" id="buttonGoogleRegistre">Acceso con Google</button>`;
 
   containerRegistre.innerHTML = contenidoRegistre;
 
   // 1. En registre click en btn probando ****cambiar name gaba??¡¡
   document.getElementById("btnProbando").addEventListener("click", () => {
+    console.log("click en boton registrar");
     let user = document.getElementById("signup-user").value;
     let age = document.getElementById("signup-age").value;
     let email = document.getElementById("signup-email").value;
     let password = document.getElementById("signup-password").value;
+
     let resRegistre = validationFormRegistre(user, age, email, password);
-    console.log(resRegistre);
+    
+    console.log("la funcion validationFormRegistre lee los 4x y retorna = " + resRegistre);
 
     if (resRegistre) {
+      console.log("al retornar true, se ejecutara createUser");
       createUser(user, age, email, password);
       console.log("createUser  / parametros validados");
     } else {
@@ -54,7 +58,7 @@ export const templateRegistre = () => {
   });
 
   // 2. En registre click en btn google
-  document.getElementById("buttonGoogle").addEventListener("click", () => {
+  document.getElementById("buttonGoogleRegistre").addEventListener("click", () => {
     console.log("presionaste boton google en Home!");
 
      loginGoogle();

@@ -1,5 +1,5 @@
 import { loginGoogle } from "./../js/firebase_auth.js";
-import { templateMuro } from "./templateMuro.js";
+// import { templateMuro } from "./templateMuro.js";
 
 
 // import { initRealTime } from './../js/firebase_auth.js';
@@ -12,7 +12,7 @@ export const templateHome = () => {
                                                      <h3>Bienvenidos</h3>
                                                       <form id="home-form">
                                                         <br>
-                                                        <button class="btn-google" type="button" id="buttonGoogle">Acceso con Google</button>
+                                                        <button class="btn-google" type="button" id="buttonGoogleHome">Acceso con Google</button>
                                                         <button class="btn-create" id="btnRegistre" >Registrar</button>
                                                         <button class="btn-create" id="btnLogin" >Entrar</button>
                                                      </form>
@@ -29,16 +29,9 @@ export const templateHome = () => {
   });
 
   // 2. En home click en btn google
-  document.getElementById("buttonGoogle").addEventListener("click", () => {
+  document.getElementById("buttonGoogleHome").addEventListener("click", () => {
     console.log("presionaste boton google en Home!");
-
-
-
     loginGoogle();
-
-   
-
-
   });
 
   //3. En home click en btn login
@@ -46,9 +39,5 @@ export const templateHome = () => {
   document.getElementById("btnLogin").addEventListener("click", () => {
     window.location.hash = "#/login";
   });
-
-
-
-
 
 };
