@@ -162,9 +162,7 @@ export const verificationEmail = () => {
 
     window.location.hash = "#/home";
     console.log("enviando correo");
-  
     
-    console.log("se cierra sesion por registro creado, Usuario retorna a login");
   
   })
     .catch(function (error) {
