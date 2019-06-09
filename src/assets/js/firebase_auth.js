@@ -9,9 +9,8 @@ export const createUser = (user, age, email, password) => {
     .then(function () {
       console.log("se creo usuario en firebase");
       verificationEmail();
-      
-      window.location.hash = "#/home";
-      console.log("se redirecciona al home");
+     
+
     })
     .catch(function (error) {
       // Handle Errors here.
@@ -79,11 +78,14 @@ export const signLogin = (email, password) => {
   console.log("antes de realizar signLogin ");
   // let user = firebase.auth().currentUser;
   // var emailVerifiedReturn = user.emailVerified;
-   
-  if (aparece === true) {
+
     firebase.auth().signInWithEmailAndPassword(email, password)
     .then(function () {
-      window.location.hash = "#/muro"; 
+
+      
+        window.location.hash = "#/muro"; 
+     
+    
      //si user.verified es true entonces se va al muro 
       }
       // se desarrolla la funcon de login 
@@ -97,9 +99,7 @@ export const signLogin = (email, password) => {
       var errorMessage = error.message;
       // ...
     });
-       
-  }
- 
+  
 }
 
 export const observer = () => {
@@ -112,9 +112,10 @@ export const observer = () => {
       console.log("*****************");
       console.log(user.emailVerified);
       console.log("*****************");
-      aparece(user);
+      // aparece(user);
       var email = user.email;
       var displayName = user.displayName;
+      console.log("displayName = " +displayName);
 
       var  emailVerified = user.emailVerified;
 
@@ -134,19 +135,15 @@ export const observer = () => {
   //email-password.html
 }
 
-export const  aparece = (user) => {
- var user = user; 
- if(user.emailVerified){
-   console.log("el valor de user es = " + user + "y user.emailverified es = " + user.emailVerified);
-   console.log("el mail fue verificado porque el observador ya se ejecuto, se desarrolla sign ")
- 
-    return true;
- }
- if(!user.emailVerified){
-   
-   return false;
- }
-}
+// export const  aparece = (user) => {
+//  var user = user; 
+//  if(user.emailVerified){
+//    console.log("el valor de user es = " + user + "y user.emailverified es = " + user.emailVerified);
+//    console.log("el mail fue verificado porque el observador ya se ejecuto, se desarrolla sign ");
+//    return true;
+//  }
+
+// }
 
 
 
@@ -160,10 +157,10 @@ export const verificationEmail = () => {
   user.sendEmailVerification()
   
   .then(function () {
-    console.log("enviando correo");
+
   
-    
-    console.log("se cierra sesion por registro creado, Usuario retorna a login");
+    window.location.hash= "#/login";
+   
   
   })
     .catch(function (error) {
