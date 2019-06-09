@@ -7,8 +7,8 @@ import { loginGoogle } from "./../js/firebase_auth.js";
 export const templateHome = () => {
 
   document.getElementById("root").innerHTML = `
-                                                  <div class="modal" id="modal-home" >
-                                                  <div class="modal-content">
+                                                  <div class=" modal" id="modal-home" >
+                                                    <div class="modal-content">
                                                      <h3>Bienvenidos</h3>
                                                       <form id="home-form">
                                                         <br>
@@ -16,10 +16,9 @@ export const templateHome = () => {
                                                         <button class="btn-create" id="btnRegistreHome" >Registrar</button>
                                                         <button class="btn-create" id="btnLoginHome" >Entrar</button>
                                                         <button class="btn-google" type="button" id="buttonGoogleHome">Google</button>
-                                                     </form>
-                                                     
-                                                  </div>
-                                               </div>`;
+                                                      </form>
+                                                    </div>
+                                                  </div>`;
 
   // initRealTime ();
   //<div id="app" class="title"></div>
