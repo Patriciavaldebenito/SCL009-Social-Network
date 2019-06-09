@@ -15,58 +15,40 @@
             <h3>Bienvenidos</h3>
             <form id="home-form">
                 <br>
-                <button class="btn-google" type="button" id="buttonGoogle">Acceso con Google</button>
+                <button class="btn-google" type="button" id="buttonGoogleHome">Acceso con Google</button>
                 <button class="btn-create" id="btnRegistre">Registrar</button>
                 <button class="btn-create" id="btnLogin">Entrar</button>
             </form>
         </div>
     </div>
     <!--Template AboutRegistre-->
-    <div class="modal" id="modal-signup">
+    <div class="modal" id="modal-signup" >
         <div class="modal-content">
-            <h3>Crea tu cuenta</h3>
-            <form id="signup-form">
-                <div class="input-field">
-                    <input type="text" id="signup-user" />
-                    <label for="signup-user">usuario</label>
-                </div>
-                <div class="input-field">
-                    <input type="number" id="signup-age" />
-                    <label for="signup-age">edad</label>
-                </div>
-                <div class="input-field">
-                    <input type="email" id="signup-email" />
-                    <label for="signup-email">email</label>
-                </div>
-                <div class="input-field">
-                    <input type="password" id="signup-password" />
-                    <label for="signup-password">password</label>
-                </div>
-                <br>
-                <button id="btnProbando" class="btn-create">Crear</button>
-            </form>
+          <h3>Crea tu cuenta</h3>
+          <form id="signup-form">
+            <div class="input-field">
+              <input type="text"  id="signup-user"/>
+              <label for="signup-user">usuario</label>
+            </div>
+            <div class="input-field">
+              <input type="number"  id="signup-age"/>
+              <label for="signup-age">edad</label>
+            </div>
+            <div class="input-field">
+              <input type="email" placeholder="Ingresa tu correo" id="signup-email"/>
+              <label for="signup-email"></label>
+            </div>
+            <div class="input-field">
+              <input type="password" placeholder="Ingresa tu contraseña" id="signup-password"/>
+              <label for="signup-password"></label>
+            </div>
+            <br>
+            <button class="btn-create" id="btnProbando" >Crear</button>
+            <button id="back" type="button"></button>
+          </form>
         </div>
-    </div>
-    <button class="btn-google" type="button" id="buttonGoogle">Acceso con Google</button>
-    <!--Template ProjectLogin-->
-    <p>Template login</p>
-                                               <div id="login" class="modal">
-                                                   <div class="input-field">
-                                                      <h3>usuario logeandose</h3>
-                                                      <form id="login-form">
-                                                         <div class="input-field">
-                                                           <input type="email"  id="signup-email" required />
-                                                           <label for="signup-email">email</label>
-                                                         </div>
-                                                         <div class="input-field">
-                                                           <input type="password"  id="signup-password" required />
-                                                           <label for="signup-password">password</label>
-                                                         </div>
-                                                      </form>
-                                                   </div>
-                                               </div>
-                                               <button id="btnLoginDos" class="btn-create">Sign up</button>
-                                               <button class="btn-google" type="button" id="buttonGoogle">Acceso con Google</button>
+      </div> 
+      <button class="btn-google" type="button" id="buttonGoogleRegistre">Acceso con Google</button>
 </body>
 
 </html>

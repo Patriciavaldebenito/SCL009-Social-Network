@@ -2,7 +2,7 @@ import { validationFormRegistre } from "../controller/validation.js";
 import { createUser } from "./../js/firebase_auth.js";
 // import { templateMuro } from "./templateMuro.js";
 import { loginGoogle } from "./../js/firebase_auth.js";
-
+import { templateHome } from "./templateHome.js";
 
 export const templateRegistre = () => {
   let containerRegistre = document.getElementById("root");
@@ -20,19 +20,22 @@ export const templateRegistre = () => {
           <label for="signup-age">edad</label>
         </div>
         <div class="input-field">
-          <input type="email"  id="signup-email"/>
-          <label for="signup-email">email</label>
+          <input type="email" placeholder="Ingresa tu correo" id="signup-email"/>
+          <label for="signup-email"></label>
         </div>
         <div class="input-field">
-          <input type="password"  id="signup-password"/>
-          <label for="signup-password">password</label>
+          <input type="password" placeholder="Ingresa tu contraseña" id="signup-password"/>
+          <label for="signup-password"></label>
         </div>
         <br>
-        <button id="btnProbando" class="btn-create">Crear</button>
+        <button class="btn-create" id="btnProbando" >Crear</button>
+        <button id="back" type="button"></button>
       </form>
     </div>
   </div> 
-  <button class="btn-google" type="button" id="buttonGoogle">Acceso con Google</button>`;
+  <button class="btn-google" type="button" id="buttonGoogle">Acceso con Google</button>
+  
+  `;
 
   containerRegistre.innerHTML = contenidoRegistre;
 
@@ -52,7 +55,10 @@ export const templateRegistre = () => {
       console.log("NO     createUser / parametros validos");
     }
   });
-
+  document.getElementById('back').addEventListener('click', () => {
+    templateHome();
+  });
+  
   // 2. En registre click en btn google
   document.getElementById("buttonGoogle").addEventListener("click", () => {
     console.log("presionaste boton google en Home!");
