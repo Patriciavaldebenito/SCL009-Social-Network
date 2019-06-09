@@ -1,26 +1,8 @@
-<<<<<<< HEAD
-import {
-  loginGoogle
-} from "./../js/firebase_auth.js";
-import {
-  validationFormSignLogin
-} from "../controller/validation.js";
-import {
-  signLogin
-} from "../js/firebase_auth.js";
-import {
-  aparece
-} from "../js/firebase_auth.js";
-import {
-  templateHome
-} from "./templateHome.js";
-=======
-import { loginGoogle, observer } from "./../js/firebase_auth.js";
+import { loginGoogle } from "./../js/firebase_auth.js";
 import { validationFormSignLogin } from "../controller/validation.js";
 import { signLogin } from "../js/firebase_auth.js";
-// import { aparece } from "../js/firebase_auth.js";
-
->>>>>>> cf4ab173646aee7dc43a04af7ef362f0dfd3b81c
+//import { aparece } from "../js/firebase_auth.js";
+import { templateHome } from "./templateHome.js";
 // import { loginGoogle } from "./../js/firebase_auth.js"; **** revisar ruta ****
 // import {} from "";
 
@@ -80,20 +62,11 @@ export const templateLogin = () => {
     // para logearse los datos ingresados por el usuario deben estar completos y pasar las validaciones 
     // y ademas el user.emailverified deben retornar true
     // asi se ejecuta la fx singLogin y se muestra el muro
-<<<<<<< HEAD
 
     if (resSignLogin) {
       signLogin(email, password);
       console.log("logeado / parametros validados");
 
-=======
-   
-       if(resSignLogin){
-
-        signLogin(email, password);
-        console.log("logeado / parametros validados");
-     
->>>>>>> cf4ab173646aee7dc43a04af7ef362f0dfd3b81c
     } else {
       console.log("NO    createUser / parametros validos");
     }

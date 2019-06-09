@@ -106,14 +106,10 @@ export const templateRegistre = () => {
   // 2. En registre click en btn google
   document.getElementById("buttonGoogle").addEventListener("click", () => {
     console.log("presionaste boton google en Home!");
-<<<<<<< HEAD
 
     loginGoogle();
 
 
-=======
-     loginGoogle();
->>>>>>> cf4ab173646aee7dc43a04af7ef362f0dfd3b81c
   });
 
 
