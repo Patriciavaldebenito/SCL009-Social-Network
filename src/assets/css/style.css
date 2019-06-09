@@ -27,12 +27,12 @@ body img {
 h1,
 h3 {
   text-align: center;
-  font-family: 'Segoe UI';
+  font-family: sans-serif;
   color: rgba(23, 24, 18, 0.658);
-  font-size: 2em; 
+  font-size: 1.5em; 
 }
 
-modal-container {
+.modal-container {
   width: 150%;
   height: 150%;
   margin-top: 0%;
@@ -61,10 +61,10 @@ modal-container {
 .input-field {
   align-items: center;
   justify-content: center;
-  width: 50%;
+  width: 90%;
   height: 300%;
-  margin-top: 2%;
-  margin-left: 10%;
+  margin-top: 5%;
+  margin-left: 15%;
   margin-right: 100%;
  
 }
@@ -72,16 +72,41 @@ modal-container {
 .btn-create {
   color: white;
   margin-top: 5%;
-  ;
   align-items: center;
   border-radius: 5px;
+  font-family: sans-serif;
   text-align: center;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   background: rgb(202, 60, 60);
   /* this is a maroon */
-  height: 30px;
-  width: 220px;
-  font-size: 85%;
+  height: 45px;
+  width: 265px;
+  font-size: 100%;
+  
+}
+
+.btn-google {
+  width:100%;
+  text-align: center;
+  cursor: pointer;
+  color: rgb(29, 47, 105);
+  margin-top: 5%;
+  padding: 10px 50px;
+  border: 30px;
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+  background: url('https://img.icons8.com/dusk/2x/google-logo.png') 15px 8px no-repeat;
+  background-size: 25px;
+  background-color: rgb(45, 162, 230);
+}
+
+.row-btn-google{
+  display: flex;
+  flex-direction:row;
+  width:100%;
+  align-self: center;
 }
 
 #back {
@@ -94,6 +119,9 @@ modal-container {
   border: none;
   margin-top: 10px;
 }
+
+/*
+<button class="btn-google" id="buttonGoogle">&nbsp&nbsp&nbspEntrar con Google</button>
 .btn-google {
   color: white;
   margin-top: 5%;
@@ -104,14 +132,15 @@ modal-container {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   background-image: url('https://i.ibb.co/nL48YsC/google-logo.png');
   background-repeat: no-repeat;
-  height: 30px;
+  height: 40px;
   width: 220px;
   background-position: center;
-  /*background: rgb(45, 162, 230);*/
-  /* this is a blue */
+  background: rgb(45, 162, 230);
+  this is a blue 
   font-size: 85%;
   
 }
+*/
 /*pensado en el responsive
 @media screen and (max-width:300px){
   #home-form {
