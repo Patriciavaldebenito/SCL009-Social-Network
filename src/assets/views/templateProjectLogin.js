@@ -1,7 +1,7 @@
 import { loginGoogle } from "./../js/firebase_auth.js";
 import { validationFormSignLogin } from "../controller/validation.js";
 import { signLogin } from "../js/firebase_auth.js";
-import { aparece } from "../js/firebase_auth.js";
+// import { aparece } from "../js/firebase_auth.js";
 
 // import { loginGoogle } from "./../js/firebase_auth.js"; **** revisar ruta ****
 // import {} from "";

@@ -9,8 +9,9 @@ export const createUser = (user, age, email, password) => {
     .then(function () {
       console.log("se creo usuario en firebase");
       verificationEmail();
-      console.log("se le envia al usuario un mail de verificacion");
+      
       window.location.hash = "#/home";
+      console.log("se redirecciona al home");
     })
     .catch(function (error) {
       // Handle Errors here.
@@ -161,7 +162,7 @@ export const verificationEmail = () => {
   .then(function () {
     console.log("enviando correo");
   
-    signOutRedSocial();
+    
     console.log("se cierra sesion por registro creado, Usuario retorna a login");
   
   })
