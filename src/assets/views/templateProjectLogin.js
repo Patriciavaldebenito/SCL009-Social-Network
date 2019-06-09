@@ -8,10 +8,10 @@ import { signLogin } from "../js/firebase_auth.js";
 
 export const templateLogin = () => {
   document.getElementById("root").innerHTML = `<p>Template login</p>
-                                               <div id="" class="modal">
-                                                   <div class="">
+                                               <div id="login" class="modal">
+                                                   <div class="input-field">
                                                       <h3>usuario logeandose</h3>
-                                                      <form id="">
+                                                      <form id="login-form">
                                                          <div class="input-field">
                                                            <input type="email"  id="login-email" required />
                                                            <label for="login-email">email</label>

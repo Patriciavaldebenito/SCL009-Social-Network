@@ -12,10 +12,12 @@ export const templateHome = () => {
                                                      <h3>Bienvenidos</h3>
                                                       <form id="home-form">
                                                         <br>
-                                                        <button class="btn-google" type="button" id="buttonGoogleHome">Acceso con Google</button>
+                                                        
                                                         <button class="btn-create" id="btnRegistre" >Registrar</button>
                                                         <button class="btn-create" id="btnLogin" >Entrar</button>
+                                                        <button class="btn-google" type="button" id="buttonGoogle">Google</button>
                                                      </form>
+                                                     
                                                   </div>
                                                </div>`;
 
