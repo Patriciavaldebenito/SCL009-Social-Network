@@ -9,8 +9,8 @@ export const createUser = (user, age, email, password) => {
     .then(function () {
       console.log("se creo usuario en firebase");
       verificationEmail();
-      console.log("se le envia al usuario un mail de verificacion");
-      window.location.hash = "#/home";
+      
+      console.log("se redirecciona al home");
     })
     .catch(function (error) {
       // Handle Errors here.
@@ -159,10 +159,11 @@ export const verificationEmail = () => {
   user.sendEmailVerification()
   
   .then(function () {
-    observer();
-    console.log("enviando correo y deireccionando a login");
-    alert("verifica tu correo");
-   
+
+    window.location.hash = "#/home";
+    console.log("enviando correo");
+  
+    
     console.log("se cierra sesion por registro creado, Usuario retorna a login");
   
   })
@@ -209,3 +210,4 @@ database.on("value", function(snapshot) {
 $title.text(snapshot.val());
 })
 */
+

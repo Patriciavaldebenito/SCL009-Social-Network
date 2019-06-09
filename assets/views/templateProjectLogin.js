@@ -1,31 +1,53 @@
 import { loginGoogle } from "./../js/firebase_auth.js";
 import { validationFormSignLogin } from "../controller/validation.js";
 import { signLogin } from "../js/firebase_auth.js";
-import { aparece } from "../js/firebase_auth.js";
+// import { aparece } from "../js/firebase_auth.js";
 
 // import { loginGoogle } from "./../js/firebase_auth.js"; **** revisar ruta ****
 // import {} from "";
 
 export const templateLogin = () => {
-  document.getElementById("root").innerHTML = `<p>Template login</p>
-                                               <div id="login" class="modal">
-                                                   <div class="input-field">
-                                                      <h3>usuario logeandose</h3>
-                                                      <form id="login-form">
-                                                         <div class="input-field">
-                                                           <input type="email"  id="login-email" required />
-                                                           <label for="login-email">email</label>
-                                                         </div>
-                                                         <div class="input-field">
-                                                           <input type="password"  id="login-password" required />
-                                                           <label for="login-password">password</label>
-                                                         </div>
-                                                      </form>
-                                                   </div>
-                                               </div>
-                                               <button id="btnLogin" class="btn-create">Sign up</button>
-                                               <button class="btn-google" type="button" id="buttonGoogleLogin">Acceso con Google</button>`;
+  document.getElementById("root").innerHTML = `
+                                                <div id="login" class="modal">
+                                                  <div class="input-field">
+                                                    <form id="login-form">
+                                                      <div class="row"
+                                                        <div class="col input-field">
+                                                          <h3>Inicia Sesión</h3>
+                                                        </div>
+                                                      </div>
 
+                                                      <div class="row"
+                                                        <div class="col input-field">
+                                                        <input type="email" placeholder="Correo" id="login-email" required />
+                                                          
+                                                        </div>
+                                                      </div>
+
+                                                      <div class="row"
+                                                        <div class="col input-field">
+                                                        <input type="password" placeholder="Contraseña" id="login-password" required />
+                                                        </div>
+                                                      </div>
+
+                                              
+                                                      <div class="row input-field">
+                                                        <div class="row icol">
+                                                          <button id="btnLogin" class="btn-create">Ingresa</button>
+                                                        </div>
+                                                      </div>
+
+                                                      <div class="row"
+                                                        <div class="col input-field">
+                                                          <button class="btn-google" type="button" id="buttonGoogleLogin">Acceso con Google</button>
+                                                        </div>
+                                                      </div>
+
+                                                    </form>
+                                                  </div>
+                                                </div>`;
+//<label for="login-email"></label>
+//<label for="login-password"></label>
   // 1. En Login click en btnLogin
   document.getElementById("btnLogin").addEventListener("click", () => {
   
