@@ -1,8 +1,18 @@
-import {loginGoogle } from "./../js/firebase_auth.js";
-import {validationFormSignLogin } from "../controller/validation.js";
-import {signLogin } from "../js/firebase_auth.js";
-import {  aparece } from "../js/firebase_auth.js";
-import {templateHome } from "./templateHome.js";
+import {
+  loginGoogle
+} from "./../js/firebase_auth.js";
+import {
+  validationFormSignLogin
+} from "../controller/validation.js";
+import {
+  signLogin
+} from "../js/firebase_auth.js";
+import {
+  aparece
+} from "../js/firebase_auth.js";
+import {
+  templateHome
+} from "./templateHome.js";
 // import { loginGoogle } from "./../js/firebase_auth.js"; **** revisar ruta ****
 // import {} from "";
 
@@ -11,31 +21,35 @@ export const templateLogin = () => {
                                                 <div class="modal" id="modal-login">
                                                   <div class="modal-content">
                                                     <h3>Inicia Sesión</h3>
+                                                    <br>
                                                     <form id="login-form">
-                                                        <div class="row input-field">
-                                                        <div class="col">
+                                                      <div class="row input-field">
+                                                        <div class = "col" >
                                                           <input type="email" placeholder="Correo" id="login-email" required />
                                                           <label for="login-email"></label>
                                                         </div>
                                                       </div>
                                                       <div class="row input-field">
-                                                        <div class="col">
+                                                        <div class = "col" >
                                                           <input type="password" placeholder="Contraseña" id="login-password" required />
                                                           <label for="login-password"></label>
                                                         </div>
                                                       </div>
-                                                      <div class="row input-field">
-                                                        <div class="col">
+                                                      <br>
+                                                      
+                                                      <div class="row"
+                                                        <div class="col input-field">
                                                           <button id="btnLogin" class="btn-create">Ingresa</button>
                                                         </div>
                                                       </div>
-                                                      <div class="row input-field">
-                                                        <div class="col">
+                                                      
+                                                      <div class="row"
+                                                        <div class="col input-field">
                                                           <button class="btn-google" type="button" id="buttonGoogleLogin">Acceso con Google</button>
                                                         </div>
-                                                      </div>
-                                                      <div class="row input-field">
-                                                        <div class="col">
+                                                      </div>  
+                                                      <div class="row"
+                                                        <div class="col input-field">
                                                           <button id="back" type="button"></button>
                                                         </div>
                                                       </div>
@@ -66,7 +80,7 @@ export const templateLogin = () => {
     } else {
       console.log("NO    createUser / parametros validos");
     }
-    
+
 
   });
   document.getElementById('back').addEventListener('click', () => {
