@@ -10,7 +10,7 @@ export const createUser = (user, age, email, password) => {
       console.log("se creo usuario en firebase");
       verificationEmail();
       console.log("se le envia al usuario un mail de verificacion");
-      
+      window.location.hash = "#/home";
     })
     .catch(function (error) {
       // Handle Errors here.
@@ -74,16 +74,17 @@ export const loginGoogle = () => {
 
 }
 
-
 export const signLogin = (email, password) => {
   console.log("antes de realizar signLogin ");
   // let user = firebase.auth().currentUser;
   // var emailVerifiedReturn = user.emailVerified;
-  firebase.auth().signInWithEmailAndPassword(email, password)
+   
+  if (aparece === true) {
+    firebase.auth().signInWithEmailAndPassword(email, password)
     .then(function () {
+      window.location.hash = "#/muro"; 
      //si user.verified es true entonces se va al muro 
-     permissionLoginWithVerifiedEmail(user);
-    }
+      }
       // se desarrolla la funcon de login 
       // se desarrolla function de validacion email
       // si user.verified es positivo 
@@ -95,24 +96,22 @@ export const signLogin = (email, password) => {
       var errorMessage = error.message;
       // ...
     });
+       
+  }
+ 
 }
-
-
-
-
-
-
 
 export const observer = () => {
 
   firebase.auth().onAuthStateChanged(function (user) {
-    var user = firebase.auth().currentUser;
+   
     if (user) {
       console.log(user);
+      console.log("existe usuario activo");
       console.log("*****************");
       console.log(user.emailVerified);
       console.log("*****************");
-
+      aparece(user);
       var email = user.email;
       var displayName = user.displayName;
 
@@ -124,6 +123,7 @@ export const observer = () => {
       var providerData = user.providerData;
 
       // User is signed in.
+
     } else {
       console.log("  NO    existe usuario Activo   ");
       // User is signed out.
@@ -133,15 +133,36 @@ export const observer = () => {
   //email-password.html
 }
 
+export const  aparece = (user) => {
+ var user = user; 
+ if(user.emailVerified){
+   console.log("el valor de user es = " + user + "y user.emailverified es = " + user.emailVerified);
+   console.log("el mail fue verificado porque el observador ya se ejecuto, se desarrolla sign ")
+ 
+    return true;
+ }
+ if(!user.emailVerified){
+   
+   return false;
+ }
+}
+
+
+
+
+
+
 export const verificationEmail = () => {
+  
   // para enviar un mensaje de direccion a un usuario ...
   var user = firebase.auth().currentUser;
   user.sendEmailVerification()
   
   .then(function () {
-    console.log("enviando correo");
+    observer();
+    console.log("enviando correo y deireccionando a login");
     alert("verifica tu correo");
-    signOutRedSocial();
+   
     console.log("se cierra sesion por registro creado, Usuario retorna a login");
   
   })
@@ -153,15 +174,13 @@ export const verificationEmail = () => {
 
 };
 
-
-
-
 export const signOutRedSocial = () => {
 
   firebase.auth().signOut().then(function () {
 
-    window.location.hash = "#/login";
+    // aqui no va al login aqui se cierra la sesion hacer un cuadro de salida 
     console.log("La sesion ha sido cerrada...");
+    window.location.hash = "#/signOut";
     // Sign-out successful.
   }).catch(function (error) {
     // An error happened.
