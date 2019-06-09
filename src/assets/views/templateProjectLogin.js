@@ -41,6 +41,8 @@ export const templateLogin = () => {
                                                       </div>
                                                     </form>
                                                   </div>
+                                                  <br>
+                                                  <button id="back" type="button"></button>
                                                 </div>
                                                
                                                `;
@@ -71,6 +73,10 @@ export const templateLogin = () => {
     }
 
 
+  });
+
+  document.getElementById('back').addEventListener('click', () => {
+    templateHome();
   });
 
   // 2. En login click en btn google
