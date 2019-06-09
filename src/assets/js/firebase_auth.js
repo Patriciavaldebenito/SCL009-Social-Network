@@ -159,10 +159,9 @@ export const verificationEmail = () => {
   user.sendEmailVerification()
   
   .then(function () {
-    observer();
-    console.log("enviando correo y deireccionando a login");
-    alert("verifica tu correo");
-   
+    console.log("enviando correo");
+  
+    signOutRedSocial();
     console.log("se cierra sesion por registro creado, Usuario retorna a login");
   
   })
@@ -209,3 +208,4 @@ database.on("value", function(snapshot) {
 $title.text(snapshot.val());
 })
 */
+

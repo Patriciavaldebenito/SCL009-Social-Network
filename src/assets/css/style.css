@@ -120,27 +120,7 @@ h3 {
   margin-top: 10px;
 }
 
-/*
-<button class="btn-google" id="buttonGoogle">&nbsp&nbsp&nbspEntrar con Google</button>
-.btn-google {
-  color: white;
-  margin-top: 5%;
-  align-items: center;
 
-  border-radius: 20;
-  text-align: center;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  background-image: url('https://i.ibb.co/nL48YsC/google-logo.png');
-  background-repeat: no-repeat;
-  height: 40px;
-  width: 220px;
-  background-position: center;
-  background: rgb(45, 162, 230);
-  this is a blue 
-  font-size: 85%;
-  
-}
-*/
 /*pensado en el responsive
 @media screen and (max-width:300px){
   #home-form {

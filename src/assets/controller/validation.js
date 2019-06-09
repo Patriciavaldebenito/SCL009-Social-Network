@@ -97,9 +97,14 @@ export const validationFormRegistre = (user, age, email, password) => {
     return false;
   }
   else{
-    
+    Swal.fire(
+      'Buen Trabajo!',
+      'Te registraste en Panoramix!, Verifica tu correo.',
+      'success'
+    )
     console.log("true test Ok");
     return true;
+    
   }
 
 };
@@ -113,8 +118,10 @@ export const validationFormSignLogin = (email, password) => {
   }
   else{
     // swal.fire('vamos al muro logeado registrado')
+    
     console.log("validos los imput del formulario Login");
     return true;
+    
   }
 
 };
