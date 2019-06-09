@@ -1,4 +1,4 @@
-import { loginGoogle } from "./../js/firebase_auth.js";
+import { loginGoogle, observer } from "./../js/firebase_auth.js";
 import { validationFormSignLogin } from "../controller/validation.js";
 import { signLogin } from "../js/firebase_auth.js";
 // import { aparece } from "../js/firebase_auth.js";
@@ -65,6 +65,7 @@ export const templateLogin = () => {
     // asi se ejecuta la fx singLogin y se muestra el muro
    
        if(resSignLogin){
+
         signLogin(email, password);
         console.log("logeado / parametros validados");
      
