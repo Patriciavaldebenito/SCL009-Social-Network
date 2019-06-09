@@ -140,7 +140,9 @@ export const verificationEmail = () => {
   
   .then(function () {
     console.log("enviando correo");
+    /*
     alert("verifica tu correo");
+    */
     signOutRedSocial();
     console.log("se cierra sesion por registro creado, Usuario retorna a login");
   

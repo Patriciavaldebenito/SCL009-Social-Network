@@ -99,7 +99,7 @@ export const validationFormRegistre = (user, age, email, password) => {
   else{
     Swal.fire(
       'Buen Trabajo!',
-      'Te registraste en Panoramix!',
+      'Te registraste en Panoramix!, Verifica tu correo.',
       'success'
     )
     console.log("true test Ok");
