@@ -13,23 +13,23 @@ export const templateHome = () => {
                                                     <div class="modal-content">
                                                       <form id="home-form">
                                                         <br>
-                                                        <div class="col"
-                                                          <div class="row input-field">
+                                                        <div class="row"
+                                                          <div class="col input-field">
                                                             <h3>Bienvenidos</h3>
                                                           </div>
                                                         </div>
-                                                        <div class="col"
-                                                          <div class="row input-field">
+                                                        <div class="row"
+                                                          <div class="col input-field">
                                                             <button class="btn-create" id="btnRegistreHome" >Registrar</button>
                                                           </div>
                                                         </div>
-                                                        <div class="col"
-                                                          <div class="row input-field">
+                                                        <div class="row"
+                                                          <div class="col input-field">
                                                             <button class="btn-create" id="btnLoginHome" >Entrar</button>
                                                           </div>
                                                         </div>
-                                                        <div class="col"
-                                                          <div class="row input-field">
+                                                        <div class="row"
+                                                          <div class="col input-field">
                                                             <button class="btn-google" type="button" id="buttonGoogleHome">Google</button>
                                                           </div>
                                                         </div>     

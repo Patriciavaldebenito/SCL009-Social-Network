@@ -11,41 +11,49 @@ export const templateLogin = () => {
                                                 <div id="login" class="modal">
                                                   <div class="input-field">
                                                     <form id="login-form">
-                                                      <div class="col"
-                                                        <div class="row input-field">
+                                                      <div class="row"
+                                                        <div class="col input-field">
                                                           <h3>Inicia Sesión</h3>
                                                         </div>
                                                       </div>
-                                                      <div class="col"
-                                                        <div class="row input-field">
+
+                                                      <div class="row"
+                                                        <div class="col input-field">
                                                         <input type="email" placeholder="Correo" id="login-email" required />
                                                           
                                                         </div>
                                                       </div>
-                                                      <div class="col"
-                                                        <div class="row input-field">
+
+                                                      <div class="row"
+                                                        <div class="col input-field">
                                                         <input type="password" placeholder="Contraseña" id="login-password" required />
-                                                          
                                                         </div>
                                                       </div>
-                                                      <div class="col"
-                                                        <div class="input-field">
-                                                        <div class="row input-field">
+
+                                              
+                                                      <div class="row input-field">
+                                                        <div class="row icol">
                                                           <button id="btnLogin" class="btn-create">Ingresa</button>
                                                         </div>
                                                       </div>
-                                                      <div class="col"
-                                                        <div class="row input-field">
+
+                                                      <div class="row"
+                                                        <div class="col input-field">
                                                           <button class="btn-google" type="button" id="buttonGoogleLogin">Acceso con Google</button>
                                                         </div>
                                                       </div>
+
                                                     </form>
                                                   </div>
+<<<<<<< HEAD
                                                   <br>
                                                   <button id="back" type="button"></button>
                                                 </div>
                                                
                                                `;
+=======
+                                                </div>`;
+>>>>>>> 22288b9c4e98014dc6588bfe5f8d91185202a48c
 //<label for="login-email"></label>
 //<label for="login-password"></label>
   // 1. En Login click en btnLogin

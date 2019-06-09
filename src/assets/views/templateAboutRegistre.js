@@ -11,35 +11,65 @@ export const templateRegistre = () => {
     <div class="modal-content">
       <h3>Crea tu cuenta</h3>
       <form id="signup-form">
-        <div class="input-field">
-          <input type="text" placeholder="Nombre" id="signup-user"/>
-          <label for="signup-user"></label>
+
+        <div class="row input-field">
+          <div class = "col" >
+            <input type="text" placeholder="Nombre" class ="inputUser" id="signup-user" />
+            <label for="signup-user"></label>
+          </div>
         </div>
-        <div class="input-field">
-          <input type="number" placeholder="Edad" id="signup-age"/>
-          <label for="signup-age"></label>
+
+        <div class="row input-field">
+          <div class = "col" >
+            <input type="number" placeholder="Edad" class ="inputAge" id="signup-age"/>
+            <label for="signup-age"></label>
+          </div>
         </div>
-        <div class="input-field">
-          <input type="email" placeholder="Correo" id="signup-email"/>
-          <label for="signup-email"></label>
+
+        <div class="row input-field">
+          <div class = "col" >
+            <input type="email" placeholder="Correo" class ="inputEmail" id="signup-email"/>
+            <label for="signup-email"></label>
+          </div>
         </div>
+
         <div class="input-field">
-          <input type="password" placeholder="Contraseña" id="signup-password"/>
-          <label for="signup-password"></label>
+          <div class = "col" >
+             <input type="password" placeholder="Contraseña" class ="inputPassword" id="signup-password"/>
+             <label for="signup-password"></label>
+          </div>
         </div>
+
         <br>
-        <button class="btn-create" id="btnProbando" >Crear</button>
-        
+        <div class = "row" >
+          <div class = "col" >
+           <button class="btn-create" id="btnRegistre" >Crear</button>
+          </div>
+        </div>
+
       </form>
+
     </div>
-    <button class="btn-google" type="button" id="buttonGoogle">Acceso con Google</button>
+
+    <div class = "row" >
+      <div class = "col" >
+        <button class="btn-google" type="button" id="buttonGoogle">Acceso con Google</button>
+      </div>
+    </div>
+
     <br>
-    <button id="back" type="button"></button>
-  </div>  `;
+
+    <div class = "row" >
+      <div class = "col" >
+        <button id="back" type="button"></button>
+      </div>
+    </div>
+
+  </div>`;
   containerRegistre.innerHTML = contenidoRegistre;
 
   // 1. En registre click en btn probando ****cambiar name gaba??¡¡
-  document.getElementById("btnProbando").addEventListener("click", () => {
+  document.getElementById("btnRegistre").addEventListener("click", () => {
     console.log("click en boton registrar");
     let user = document.getElementById("signup-user").value;
     let age = document.getElementById("signup-age").value;
@@ -58,6 +88,7 @@ export const templateRegistre = () => {
       console.log("NO     createUser / parametros validos");
     }
   });
+
   document.getElementById('back').addEventListener('click', () => {
     templateHome();
   });
