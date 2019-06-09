@@ -3,14 +3,14 @@ export const createUser = (user, age, email, password) => {
   console.log(age);
   console.log(email);
   console.log(password);
- 
-  
+
+
   firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(function () {
-
-      signOutRedSocial();
+      console.log("se creo usuario en firebase");
       verificationEmail();
-        
+      console.log("se le envia al usuario un mail de verificacion");
+      
     })
     .catch(function (error) {
       // Handle Errors here.
@@ -58,7 +58,7 @@ export const loginGoogle = () => {
     .then(
 
       function changeMuro() {
-        
+
         window.location.hash = "#/muro";
       })
     .catch(function (error) {
@@ -74,97 +74,94 @@ export const loginGoogle = () => {
 
 }
 
-export const signLogin = (email,password) => {
 
+export const signLogin = (email, password) => {
+  console.log("antes de realizar signLogin ");
+  // let user = firebase.auth().currentUser;
+  // var emailVerifiedReturn = user.emailVerified;
   firebase.auth().signInWithEmailAndPassword(email, password)
-  .then(function(){
-    
-    let user = firebase.auth().currentUser;
-
-    if(!user.emailVerified){
-      
-      console.log(user.emailVerified);
-      alert("verifica tu correo porfavor");//ok
-      signOutRedSocial();
-      
-
-    } else {
- 
-      console.log("estamos llendo al login desde registro lleno");
-      window.location.hash = "#/muro";
-      console.log("como ya es usuario puede entrar al muro jejej")
+    .then(function () {
+     //si user.verified es true entonces se va al muro 
+     permissionLoginWithVerifiedEmail(user);
     }
-
-
-
-  })
-  .catch(function (error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // ...
-  });
-}
-// 1.añadir un listener en tiempo real
-// si el usuario esta logeado aparece boton para salir 
-// qe aparesca el muro 
-//2. ir a nueva actividad que muestra la identidad del usuario y el ID del usuario en firebase asociado a esa identidad 
-// se vera si el correo ha sido verificado
-// inicialmente o ha de ser verificado
-// hay un boton que permite verificarlo
-// una vez que el usuario hace click en el boton (enviado a su correo) este correo contendra un enlace 
-// y una vez que se haga click en el enlace se verificara la cuenta 
-export const verificationEmail = () => {
-  // para enviar un mensaje de direccion a un usuario ...
-  var user = firebase.auth().currentUser;
-  user.sendEmailVerification().then(function () {
-
-    console.log("enviando correo");
-      return true;
-  })
+      // se desarrolla la funcon de login 
+      // se desarrolla function de validacion email
+      // si user.verified es positivo 
+      // entonces 
+    )
     .catch(function (error) {
-      
-      console.log("no se envia correo de verificacion");
-      // Ha ocurrido un error.
-      return false;
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // ...
     });
+}
 
-};
+
+
+
+
+
 
 export const observer = () => {
 
   firebase.auth().onAuthStateChanged(function (user) {
+    var user = firebase.auth().currentUser;
     if (user) {
+      console.log(user);
+      console.log("*****************");
+      console.log(user.emailVerified);
+      console.log("*****************");
 
-      console.log("Existe usuario Activo");
-     
-     
-      // User is signed in.
-      var displayName = user.displayName;
       var email = user.email;
-      var emailVerified = user.emailVerified;
-       console.log(emailVerified);
+      var displayName = user.displayName;
+
+      var  emailVerified = user.emailVerified;
+
       var photoURL = user.photoURL;
       var isAnonymous = user.isAnonymous;
       var uid = user.uid;
       var providerData = user.providerData;
-      // ...
+
+      // User is signed in.
     } else {
       console.log("  NO    existe usuario Activo   ");
       // User is signed out.
       // ...
     }
   });
-
   //email-password.html
-
 }
+
+export const verificationEmail = () => {
+  // para enviar un mensaje de direccion a un usuario ...
+  var user = firebase.auth().currentUser;
+  user.sendEmailVerification()
+  
+  .then(function () {
+    console.log("enviando correo");
+    alert("verifica tu correo");
+    signOutRedSocial();
+    console.log("se cierra sesion por registro creado, Usuario retorna a login");
+  
+  })
+    .catch(function (error) {
+      console.log("no se envia correo de verificacion");
+      // Ha ocurrido un error.
+      
+    });
+
+};
+
+
+
 
 export const signOutRedSocial = () => {
 
   firebase.auth().signOut().then(function () {
 
     window.location.hash = "#/login";
+    console.log("La sesion ha sido cerrada...");
     // Sign-out successful.
   }).catch(function (error) {
     // An error happened.
