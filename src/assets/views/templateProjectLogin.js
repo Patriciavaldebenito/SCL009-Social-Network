@@ -1,7 +1,7 @@
 import { loginGoogle } from "./../js/firebase_auth.js";
 import { validationFormSignLogin } from "../controller/validation.js";
 import { signLogin } from "../js/firebase_auth.js";
-
+import { aparece } from "../js/firebase_auth.js";
 
 // import { loginGoogle } from "./../js/firebase_auth.js"; **** revisar ruta ****
 // import {} from "";
@@ -23,11 +23,12 @@ export const templateLogin = () => {
                                                       </form>
                                                    </div>
                                                </div>
-                                               <button id="btnLoginDos" class="btn-create">Sign up</button>
+                                               <button id="btnLogin" class="btn-create">Sign up</button>
                                                <button class="btn-google" type="button" id="buttonGoogleLogin">Acceso con Google</button>`;
 
   // 1. En Login click en btnLogin
-  document.getElementById("btnLoginDos").addEventListener("click", () => {
+  document.getElementById("btnLogin").addEventListener("click", () => {
+  
     // valores desde imput text para function singLogin
     let email = document.getElementById('login-email').value;
 
@@ -37,10 +38,13 @@ export const templateLogin = () => {
 
     let resSignLogin = validationFormSignLogin(email, password);
     // conditions
-    if (resSignLogin ) {
-
-      signLogin(email, password);
-      console.log("logeado / parametros validados");
+    // para logearse los datos ingresados por el usuario deben estar completos y pasar las validaciones 
+    // y ademas el user.emailverified deben retornar true
+    // asi se ejecuta la fx singLogin y se muestra el muro
+   
+       if(resSignLogin){
+        signLogin(email, password);
+        console.log("logeado / parametros validados");
      
     } else {
       console.log("NO    createUser / parametros validos");

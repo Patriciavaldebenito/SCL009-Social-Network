@@ -53,7 +53,7 @@ export const templateRegistre = () => {
     if (resRegistre) {
       console.log("al retornar true, se ejecutara createUser");
       createUser(user, age, email, password);
-      console.log("createUser  / parametros validados");
+      console.log("createUser  ejecutando ");
     } else {
       console.log("NO     createUser / parametros validos");
     }
