@@ -77,7 +77,8 @@ export const templateRegistre = () => {
   containerRegistre.innerHTML = contenidoRegistre;
 
   // 1. En registre click en btn probando ****cambiar name gaba??¡¡
-  document.getElementById("btnRegistre").addEventListener("click", () => {
+  document.getElementById("btnRegistre").addEventListener("click", (e) => {
+    e.preventDefault();
     console.log("click en boton registrar");
     let user = document.getElementById("signup-user").value;
     let age = document.getElementById("signup-age").value;
@@ -91,6 +92,7 @@ export const templateRegistre = () => {
     if (resRegistre) {
       console.log("al retornar true, se ejecutara createUser");
       createUser(user, age, email, password);
+     
       console.log("createUser  ejecutando ");
     } else {
       console.log("NO     createUser / parametros validos");
@@ -104,10 +106,14 @@ export const templateRegistre = () => {
   // 2. En registre click en btn google
   document.getElementById("buttonGoogle").addEventListener("click", () => {
     console.log("presionaste boton google en Home!");
+<<<<<<< HEAD
 
     loginGoogle();
 
 
+=======
+     loginGoogle();
+>>>>>>> cf4ab173646aee7dc43a04af7ef362f0dfd3b81c
   });
 
 
