@@ -7,6 +7,7 @@ import { templateHome } from "./templateHome.js";
 // import {} from "";
 
 export const templateLogin = () => {
+  
   document.getElementById("root").innerHTML = `
                                                 <div class="modal" id="modal-login">
                                                   <div class="modal-content">
