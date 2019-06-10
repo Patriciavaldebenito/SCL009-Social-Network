@@ -20,7 +20,7 @@ export const createUser = (user, age, email, password) => {
       window.location.hash = "#/login";
 
     })
-  
+   
 
     .catch(function (error) {
       // Handle Errors here.
@@ -148,9 +148,17 @@ export const observer = () => {
 export const aparece = (user) => {
   var user = user;
   if (user.emailVerified) {
+   
     console.log("el valor de user es = " + user + "y user.emailverified es = " + user.emailVerified);
     console.log("el mail fue verificado porque el observador ya se ejecuto, se desarrolla sign ");
 
+  }
+  if(!user.emailVerified){
+    Swal.fire(
+      'Buen Trabajo!',
+      'Te registraste en Panoramix!, Te enviamos correo.',
+      'success'
+    )
   }
 
 }
