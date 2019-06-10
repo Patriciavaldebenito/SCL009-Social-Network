@@ -94,6 +94,13 @@ export const signLogin = (email, password) => {
 
 
       window.location.hash = "#/muro";
+      if (aparece === true ){
+        Swal.fire(
+          'Buen Trabajo!',
+          'Te registraste en Panoramix!, Te enviamos correo.',
+          'success'
+        )
+      }
 
 
       //si user.verified es true entonces se va al muro 
@@ -146,19 +153,18 @@ export const observer = () => {
 }
 
 export const aparece = (user) => {
+
   var user = user;
   if (user.emailVerified) {
    
     console.log("el valor de user es = " + user + "y user.emailverified es = " + user.emailVerified);
     console.log("el mail fue verificado porque el observador ya se ejecuto, se desarrolla sign ");
-
+    return true;
   }
+
   if(!user.emailVerified){
-    Swal.fire(
-      'Buen Trabajo!',
-      'Te registraste en Panoramix!, Te enviamos correo.',
-      'success'
-    )
+    console.log("el correo no ha sido verificado");
+    return false; 
   }
 
 }
