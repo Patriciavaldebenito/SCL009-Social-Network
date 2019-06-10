@@ -1,3 +1,5 @@
+import { templateMuro } from "../views/templateMuro.js";
+
 export const createUser = (user, age, email, password) => {
   console.log(user);
   console.log(age);
@@ -115,7 +117,6 @@ export const observer = () => {
       console.log(user.emailVerified);
       console.log("*****************");
 
-      // aparece(user);
 
       var email = user.email;
       var displayName = user.displayName;
@@ -145,7 +146,7 @@ export const observer = () => {
 function aparece(user) {
   var user = user;
   if (user.emailVerified) {
-     window.location.hash = "#/muro";
+     templateMuro();
    return true 
   }
 
