@@ -10,6 +10,7 @@ export const createUser = (user, age, email, password) => {
     .then(function () {
       console.log("se creo usuario en firebase");
       verificationEmail();
+      alert("REGISTRADO");
 
     })
     .then(function () {
@@ -24,7 +25,7 @@ export const createUser = (user, age, email, password) => {
 
     .catch(function (error) {
       // Handle Errors here.
-      var errorCode = error.code;
+      var errorCode = error.code; 
       var errorMessage = error.message;
       // ...
     });
