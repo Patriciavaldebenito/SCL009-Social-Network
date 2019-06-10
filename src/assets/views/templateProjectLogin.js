@@ -48,8 +48,8 @@ export const templateLogin = () => {
                                                 </div>`;
 
   // 1. En Login click en btnLogin
-  document.getElementById("btnLogin").addEventListener("click", () => {
-
+  document.getElementById("btnLogin").addEventListener("click", (e) => {
+    e.preventDefault();
     // valores desde imput text para function singLogin
     let email = document.getElementById('login-email').value;
 
