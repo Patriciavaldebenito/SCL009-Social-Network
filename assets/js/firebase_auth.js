@@ -6,26 +6,23 @@ export const createUser = (user, age, email, password) => {
 
 
   firebase.auth().createUserWithEmailAndPassword(email, password)
-   
+
     .then(function () {
       console.log("se creo usuario en firebase");
       verificationEmail();
-    
+
 
     })
-    .then(function () {
-     
-      location.href = "https://patriciavaldebenito.github.io/SCL009-Social-Network";
-    })
+
     .then(function () {
       window.location.hash = "#/login";
-      
+
     })
-   
+
 
     .catch(function (error) {
       // Handle Errors here.
-      var errorCode = error.code; 
+      var errorCode = error.code;
       var errorMessage = error.message;
       // ...
     });
@@ -95,7 +92,7 @@ export const signLogin = (email, password) => {
 
 
       window.location.hash = "#/muro";
-     
+
 
       //si user.verified es true entonces se va al muro 
     }
@@ -150,15 +147,15 @@ export const aparece = (user) => {
 
   var user = user;
   if (user.emailVerified) {
-   
+
     console.log("el valor de user es = " + user + "y user.emailverified es = " + user.emailVerified);
     console.log("el mail fue verificado porque el observador ya se ejecuto, se desarrolla sign ");
     return true;
   }
 
-  if(!user.emailVerified){
+  if (!user.emailVerified) {
     console.log("el correo no ha sido verificado");
-    return false; 
+    return false;
   }
 
 }
@@ -175,7 +172,10 @@ export const verificationEmail = () => {
       console.log("se envia mje de verificacion ");
     })
 
+    .then(function () {
 
+      location.href = "https://patriciavaldebenito.github.io/SCL009-Social-Network";
+    })
     .catch(function (error) {
       console.log("no se envia correo de verificacion");
       // Ha ocurrido un error.
