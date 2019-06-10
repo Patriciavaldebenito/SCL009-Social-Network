@@ -1,4 +1,3 @@
-import { init } from '../../init.js';
 export const createUser = (user, age, email, password) => {
   console.log(user);
   console.log(age);
@@ -7,16 +6,21 @@ export const createUser = (user, age, email, password) => {
 
 
   firebase.auth().createUserWithEmailAndPassword(email, password)
+   
     .then(function () {
       console.log("se creo usuario en firebase");
       verificationEmail();
-     
 
     })
-   .then(function(){
-    location.href = "https://patriciavaldebenito.github.io/SCL009-Social-Network"; 
-    
-   })
+    .then(function () {
+      window.location.hash = "#/login";
+
+    })
+    .then(function () {
+     
+      location.href = "https://patriciavaldebenito.github.io/SCL009-Social-Network";
+    })
+
     .catch(function (error) {
       // Handle Errors here.
       var errorCode = error.code;
@@ -84,15 +88,15 @@ export const signLogin = (email, password) => {
   // let user = firebase.auth().currentUser;
   // var emailVerifiedReturn = user.emailVerified;
 
-    firebase.auth().signInWithEmailAndPassword(email, password)
+  firebase.auth().signInWithEmailAndPassword(email, password)
     .then(function () {
 
-      
-        window.location.hash = "#/muro"; 
-     
-    
-     //si user.verified es true entonces se va al muro 
-      }
+
+      window.location.hash = "#/muro";
+
+
+      //si user.verified es true entonces se va al muro 
+    }
       // se desarrolla la funcon de login 
       // se desarrolla function de validacion email
       // si user.verified es positivo 
@@ -104,13 +108,13 @@ export const signLogin = (email, password) => {
       var errorMessage = error.message;
       // ...
     });
-  
+
 }
 
 export const observer = () => {
-  
+
   firebase.auth().onAuthStateChanged(function (user) {
-   
+
     if (user) {
       console.log(user);
       console.log("existe usuario activo");
@@ -120,9 +124,9 @@ export const observer = () => {
       aparece(user);
       var email = user.email;
       var displayName = user.displayName;
-      console.log("displayName = " +displayName);
+      console.log("displayName = " + displayName);
 
-      var  emailVerified = user.emailVerified;
+      var emailVerified = user.emailVerified;
 
       var photoURL = user.photoURL;
       var isAnonymous = user.isAnonymous;
@@ -140,33 +144,33 @@ export const observer = () => {
   //email-password.html
 }
 
-export const  aparece = (user) => {
- var user = user; 
- if(user.emailVerified){
-   console.log("el valor de user es = " + user + "y user.emailverified es = " + user.emailVerified);
-   console.log("el mail fue verificado porque el observador ya se ejecuto, se desarrolla sign ");
-  
- }
+export const aparece = (user) => {
+  var user = user;
+  if (user.emailVerified) {
+    console.log("el valor de user es = " + user + "y user.emailverified es = " + user.emailVerified);
+    console.log("el mail fue verificado porque el observador ya se ejecuto, se desarrolla sign ");
+
+  }
 
 }
 
 
-
-
-
-
 export const verificationEmail = () => {
-  
+
   // para enviar un mensaje de direccion a un usuario ...
   var user = firebase.auth().currentUser;
-  user.sendEmailVerification().then()
-  
-  
- 
+
+  user.sendEmailVerification()
+
+    .then(function () {
+      console.log("se envia mje de verificacion ");
+    })
+
+
     .catch(function (error) {
       console.log("no se envia correo de verificacion");
       // Ha ocurrido un error.
-      
+
     });
 
 };
