@@ -19,11 +19,7 @@ export const createUser = (user, age, email, password) => {
     })
     .then(function () {
       window.location.hash = "#/login";
-      Swal.fire(
-        'Buen Trabajo!',
-        'Te registraste en Panoramix!, Te enviamos correo.',
-        'success'
-      )
+      
     })
    
 
@@ -99,14 +95,7 @@ export const signLogin = (email, password) => {
 
 
       window.location.hash = "#/muro";
-      if (aparece === true ){
-        Swal.fire(
-          'Buen Trabajo!',
-          'Te registraste en Panoramix!, Te enviamos correo.',
-          'success'
-        )
-      }
-
+     
 
       //si user.verified es true entonces se va al muro 
     }
