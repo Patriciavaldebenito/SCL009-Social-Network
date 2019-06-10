@@ -10,11 +10,7 @@ export const createUser = (user, age, email, password) => {
     .then(function () {
       console.log("se creo usuario en firebase");
       verificationEmail();
-      Swal.fire(
-        'Buen Trabajo!',
-        'Te registraste en Panoramix!, Te enviamos correo.',
-        'success'
-      )
+    
 
     })
     .then(function () {
@@ -23,7 +19,11 @@ export const createUser = (user, age, email, password) => {
     })
     .then(function () {
       window.location.hash = "#/login";
-
+      Swal.fire(
+        'Buen Trabajo!',
+        'Te registraste en Panoramix!, Te enviamos correo.',
+        'success'
+      )
     })
    
 
