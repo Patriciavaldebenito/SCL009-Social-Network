@@ -5,13 +5,13 @@
 export const validationUser = user => {
   if (user === "") {
     Swal.fire('Ingrese un nombre de usuario');
-    
+
     console.log("sin unsuario");
     return false;
   }
   if (typeof user === "undefined") {
     Swal.fire('Ingrese un nombre de usuario correcto');
-    
+
     console.log("usuario indefinido");
     return false;
   }
@@ -20,17 +20,17 @@ export const validationUser = user => {
 };
 
 export const validationAge = age => {
-  if ( age === "" ) {
+  if (age === "") {
     swal.fire('ingresa tu edad');
-    
+
     console.log("aun no tienes la edad");
-    return false; 
+    return false;
   }
-  if ( age < 16 ) {
+  if (age < 16) {
     swal.fire('aun no tienes la edad');
-    
+
     console.log("aun no tienes la edad");
-    return false; 
+    return false;
   }
   if (typeof age === "undefined") {
     swal.fire('Ingresa una edad correcta');
@@ -45,7 +45,7 @@ export const validationAge = age => {
 export const validationEmail = email => {
   if (email === "") {
     swal.fire('Ingresa tu correo');
-    
+
     console.log("sin correo ");
     return false;
   }
@@ -62,19 +62,19 @@ export const validationEmail = email => {
 export const validationPassword = password => {
   if (password === "") {
     swal.fire('Ingresa una contraseña con mayor o igual a 6 caracteres');
-    
+
     console.log("sin password ");
     return false;
   }
   if (typeof password === "undefined") {
     swal.fire('Ingresa una contraseña con mayor o igual a 6 caracteres');
-    
+
     console.log("password indefinido");
     return false;
   }
   if (password.length < 6) {
     swal.fire('Ingresa una contraseña mayor o igual a 6 caracteres');
-    
+
     console.log("no cumple el largo de contraseña");
     return false;
   }
@@ -91,33 +91,37 @@ export const validationExpRegEmail = email => {
 };
 
 export const validationFormRegistre = (user, age, email, password) => {
-  if ( validationUser(user) === false || validationAge(age) === false ||  validationEmail(email) === false ||  validationPassword(password) === false || !validationExpRegEmail(email) ) {
-   
+  if (validationUser(user) === false || validationAge(age) === false || validationEmail(email) === false || validationPassword(password) === false || !validationExpRegEmail(email)) {
+
     console.log("Un campo no cumple el testeo");
     return false;
   }
-  else{
-
+  else {
+    Swal.fire(
+      'Buen Trabajo!',
+      'Te registraste en Panoramix!, Te enviamos correo.',
+      'success'
+    )
     console.log("true test Ok");
     return true;
-    
+
   }
 
 };
 
 // export const resultValidationForm = validationForm(email, password);
 export const validationFormSignLogin = (email, password) => {
-  if ( validationEmail(email) === false ||  validationPassword(password) === false || !validationExpRegEmail(email) ) {
-   
+  if (validationEmail(email) === false || validationPassword(password) === false || !validationExpRegEmail(email)) {
+
     console.log("Un campo no cumple el testeo");
     return false;
   }
-  else{
+  else {
     // swal.fire('vamos al muro logeado registrado')
-    
+
     console.log("validos los imput del formulario Login");
     return true;
-    
+
   }
 
 };
