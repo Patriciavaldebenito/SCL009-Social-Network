@@ -4,6 +4,7 @@ import { templateRegistre } from './assets/views/templateAboutRegistre.js';
 import { templateMuro } from "./assets/views/templateMuro.js";
 import { templateLogin } from './assets/views/templateProjectLogin.js';
 import { templateSignOut } from "./assets/views/templateSignOut.js";
+import { observer } from './assets/js/firebase_auth.js';
 
 
 const changeRoute = (hash) => {
@@ -31,11 +32,18 @@ const showTemplate = (hash) => {
       console.log(" hash paso a router --- se activa fx templateHome");
       break;
     case 'registre':
+   
       templateRegistre();
       console.log(" hash paso a router --- se activa fx templateRegistre");
       break;
-    case 'muro':
-      templateMuro();
+    case 'muro':  
+      
+      if(observer === true){
+        templateMuro();
+      }
+
+
+      
       console.log(" hash paso a router --- se activa fx templateMuro");
       break;
     case 'login':
@@ -59,6 +67,7 @@ export const initRouter = () => {
   // si encuentra un cambio en el hash lo vuelve a sacar y pasar como parámetro a changeRoute
   if ('onhashchange' in window) {
     window.onhashchange = () => {
+      observer();
       changeRoute(window.location.hash);
     }
   }
