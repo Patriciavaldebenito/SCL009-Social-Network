@@ -27,18 +27,18 @@ export const templateLogin = () => {
                                                       </div>
                                                       <br>
                                                       
-                                                      <div class="row"
+                                                      <div class="row">
                                                         <div class="col input-field">
                                                           <button id="btnLogin" class="btn-create">Ingresa</button>
                                                         </div>
                                                       </div>
                                                       
-                                                      <div class="row"
+                                                      <div class="row">
                                                         <div class="col input-field">
                                                           <button class="btn-google" type="button" id="buttonGoogleLogin">Acceso con Google</button>
                                                         </div>
                                                       </div>  
-                                                      <div class="row"
+                                                      <div class="row">
                                                         <div class="col input-field">
                                                           <button id="back" type="button"></button>
                                                         </div>
