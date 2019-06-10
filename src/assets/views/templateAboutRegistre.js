@@ -1,8 +1,16 @@
-import { validationFormRegistre } from "../controller/validation.js";
-import { createUser } from "./../js/firebase_auth.js";
+import {
+  validationFormRegistre
+} from "../controller/validation.js";
+import {
+  createUser
+} from "./../js/firebase_auth.js";
 // import { templateMuro } from "./templateMuro.js";
-import { loginGoogle } from "./../js/firebase_auth.js";
-import { templateHome } from "./templateHome.js";
+import {
+  loginGoogle
+} from "./../js/firebase_auth.js";
+import {
+  templateHome
+} from "./templateHome.js";
 
 export const templateRegistre = () => {
   let containerRegistre = document.getElementById("root");
@@ -33,7 +41,7 @@ export const templateRegistre = () => {
           </div>
         </div>
 
-        <div class="input-field">
+        <div class="row input-field">
           <div class = "col" >
              <input type="password" placeholder="Contraseña" class ="inputPassword" id="signup-password"/>
              <label for="signup-password"></label>
@@ -78,7 +86,7 @@ export const templateRegistre = () => {
     let password = document.getElementById("signup-password").value;
 
     let resRegistre = validationFormRegistre(user, age, email, password);
-    
+
     console.log("la funcion validationFormRegistre lee los 4x y retorna = " + resRegistre);
 
     if (resRegistre) {
@@ -94,12 +102,15 @@ export const templateRegistre = () => {
   document.getElementById('back').addEventListener('click', () => {
     templateHome();
   });
-  
+
   // 2. En registre click en btn google
   document.getElementById("buttonGoogle").addEventListener("click", () => {
     console.log("presionaste boton google en Home!");
-     loginGoogle();
+
+    loginGoogle();
+
+
   });
-  
-  
+
+
 };

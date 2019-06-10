@@ -5,13 +5,13 @@
 export const validationUser = user => {
   if (user === "") {
     Swal.fire('Ingrese un nombre de usuario');
-    // alert("Ingrese un nombre de usuario");
+    
     console.log("sin unsuario");
     return false;
   }
   if (typeof user === "undefined") {
     Swal.fire('Ingrese un nombre de usuario correcto');
-    // alert("Ingrese un nombre de usuario correcto");
+    
     console.log("usuario indefinido");
     return false;
   }
@@ -22,13 +22,13 @@ export const validationUser = user => {
 export const validationAge = age => {
   if ( age === "" ) {
     swal.fire('ingresa tu edad');
-    // alert("ingresa tu edad");
+    
     console.log("aun no tienes la edad");
     return false; 
   }
   if ( age < 16 ) {
     swal.fire('aun no tienes la edad');
-    // alert("aun no tienes la edad");
+    
     console.log("aun no tienes la edad");
     return false; 
   }
@@ -45,7 +45,7 @@ export const validationAge = age => {
 export const validationEmail = email => {
   if (email === "") {
     swal.fire('Ingresa tu correo');
-    // alert("Ingresa tu correo");
+    
     console.log("sin correo ");
     return false;
   }
@@ -62,19 +62,19 @@ export const validationEmail = email => {
 export const validationPassword = password => {
   if (password === "") {
     swal.fire('Ingresa una contraseña con mayor o igual a 6 caracteres');
-    // alert("Ingresa una contraseña con mayor o igual a 6 caracteres")
+    
     console.log("sin password ");
     return false;
   }
   if (typeof password === "undefined") {
     swal.fire('Ingresa una contraseña con mayor o igual a 6 caracteres');
-    // alert("Ingresa una contraseña con mayor o igual a 6 caracteres")
+    
     console.log("password indefinido");
     return false;
   }
   if (password.length < 6) {
-    swal.fire('Ingresa una contraseña con mayor o igual a 6 caracteres');
-    // alert("una contraseña con mayor o igual a 6 caracteres");
+    swal.fire('Ingresa una contraseña mayor o igual a 6 caracteres');
+    
     console.log("no cumple el largo de contraseña");
     return false;
   }
@@ -99,7 +99,7 @@ export const validationFormRegistre = (user, age, email, password) => {
   else{
     Swal.fire(
       'Buen Trabajo!',
-      'Te registraste en Panoramix!, Verifica tu correo.',
+      'Te registraste en Panoramix!, Te enviamos correo.',
       'success'
     )
     console.log("true test Ok");
