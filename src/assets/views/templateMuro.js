@@ -1,6 +1,4 @@
 
-// import {  } from '';
-
 export const templateMuro = () => {
    
   document.getElementById('root').innerHTML = `

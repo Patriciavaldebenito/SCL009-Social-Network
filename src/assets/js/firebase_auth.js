@@ -5,8 +5,7 @@ export const createUser = (user, age, email, password) => {
   console.log(password);
 
   firebase
-    .auth()
-    .createUserWithEmailAndPassword(email, password)
+    .auth().createUserWithEmailAndPassword(email, password)
 
     .then(function () {
       console.log("se creo usuario en firebase");
@@ -85,8 +84,10 @@ export const signLogin = (email, password) => {
     
     .then(
       function () {
+        
         observer();
-        // window.location.hash = "#/muro";
+
+     
         //si user.verified es true entonces se va al muro
       }
 
@@ -106,29 +107,33 @@ export const signLogin = (email, password) => {
 export const observer = () => {
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
+
+     
       console.log(user);
       console.log("existe usuario activo");
       console.log("*****************");
       console.log(user.emailVerified);
       console.log("*****************");
 
-      aparece(user);
+      // aparece(user);
 
       var email = user.email;
       var displayName = user.displayName;
       console.log("displayName = " + displayName);
 
-      var emailVerified = user.emailVerified;
+      aparece(user);
+      
+     return true;
 
       var photoURL = user.photoURL;
       var isAnonymous = user.isAnonymous;
       var uid = user.uid;
       var providerData = user.providerData;
-      return true;
+      // return true;
       // User is signed in.
     } else {
       console.log("  NO    existe usuario Activo   ");
-      // window.location.hash = "#/home";
+     
       // User is signed out.
       // ...
       return false; 
@@ -141,14 +146,14 @@ function aparece(user) {
   var user = user;
   if (user.emailVerified) {
      window.location.hash = "#/muro";
-
+   return true 
   }
 
   if (!user.emailVerified) {
     console.log("el correo no ha sido verificado");
     swal.fire("puedes verificar tu correo en la bandeja de entrada");
     // window.location.hash = "#/login";
-    
+    return false;
   }
 }
 
