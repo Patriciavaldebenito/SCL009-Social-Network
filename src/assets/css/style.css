@@ -1,23 +1,33 @@
-body {
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.root {
+
   display: flex;
   min-height: 100vh;
-  width: 100%;
-  padding: 0%;
-  margin: 0%;
+  width: 80%;
+  padding: 5%;
+  margin: 5%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  
 }
+
+
+
 
 body img {
   width: 230px;
   height: 120px;
-  margin-top: 0%;
+  /* margin-top: 0%;
   margin-left: 5%;
   margin-right: 10%;
   position: relative;
-  display: flex;
-}
+  display: flex; */
+} 
 
 h1,
 h3 {
@@ -27,7 +37,7 @@ h3 {
   font-size: 1.5em; 
 }
 
-.modal-container {
+/* .modal-container {
   width: 150%;
   height: 150%;
   margin-top: 0%;
@@ -35,9 +45,9 @@ h3 {
   margin-right: 100%;
   align-items: center;
   justify-content: center;
-}
+} */
 
-#home-form {
+/* #home-form {
   width: 100%;
   height: 100%;
   align-items: center;
@@ -62,7 +72,7 @@ h3 {
   margin-left: 15%;
   margin-right: 100%;
  
-}
+} */
 
 .btn-create {
   color: white;
@@ -104,7 +114,7 @@ h3 {
   align-self: center;
 }
 
-#back {
+/* #back {
   width: 60px;
   height: 43px;
   background:transparent;
@@ -113,7 +123,7 @@ h3 {
   background-repeat:no-repeat;
   border: none;
   margin-top: 10px;
-}
+} */
 
 
 /*pensado en el responsive
@@ -132,3 +142,53 @@ h3 {
   font-size: 2em; 
 
 }
+
+/* start CSS templateMuro */
+.wrapper {
+  display: flex;  
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.header {
+  background: tomato;
+}
+
+.footer {
+  background: lightgreen;
+}
+
+.main {
+  text-align: left;
+  background: deepskyblue;
+}
+
+.aside-1 {
+  background: gold;
+}
+
+/* .aside-2 {
+  background: hotpink;
+} */
+
+@media all and (min-width: 400px) {
+  .aside { flex: 1 0 0; }
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .aside-1 { order: 1; } 
+  .main    { order: 2; }
+  /* .aside-2 { order: 3; } */
+  .footer  { order: 4; }
+}
+
+
+
+/* end css el muro */
