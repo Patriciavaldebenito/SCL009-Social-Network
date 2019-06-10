@@ -1,3 +1,4 @@
+import { init } from '../../init.js';
 export const createUser = (user, age, email, password) => {
   console.log(user);
   console.log(age);
@@ -12,6 +13,10 @@ export const createUser = (user, age, email, password) => {
      
 
     })
+   .then(function(){
+    location.href = "https://patriciavaldebenito.github.io/SCL009-Social-Network"; 
+    
+   })
     .catch(function (error) {
       // Handle Errors here.
       var errorCode = error.code;
@@ -103,7 +108,7 @@ export const signLogin = (email, password) => {
 }
 
 export const observer = () => {
-
+  
   firebase.auth().onAuthStateChanged(function (user) {
    
     if (user) {
@@ -112,7 +117,7 @@ export const observer = () => {
       console.log("*****************");
       console.log(user.emailVerified);
       console.log("*****************");
-      // aparece(user);
+      aparece(user);
       var email = user.email;
       var displayName = user.displayName;
       console.log("displayName = " +displayName);
@@ -135,15 +140,15 @@ export const observer = () => {
   //email-password.html
 }
 
-// export const  aparece = (user) => {
-//  var user = user; 
-//  if(user.emailVerified){
-//    console.log("el valor de user es = " + user + "y user.emailverified es = " + user.emailVerified);
-//    console.log("el mail fue verificado porque el observador ya se ejecuto, se desarrolla sign ");
-//    return true;
-//  }
+export const  aparece = (user) => {
+ var user = user; 
+ if(user.emailVerified){
+   console.log("el valor de user es = " + user + "y user.emailverified es = " + user.emailVerified);
+   console.log("el mail fue verificado porque el observador ya se ejecuto, se desarrolla sign ");
+  
+ }
 
-// }
+}
 
 
 
@@ -154,15 +159,10 @@ export const verificationEmail = () => {
   
   // para enviar un mensaje de direccion a un usuario ...
   var user = firebase.auth().currentUser;
-  user.sendEmailVerification()
+  user.sendEmailVerification().then()
   
-  .then(function () {
-
   
-    window.location.hash= "#/login";
-   
-  
-  })
+ 
     .catch(function (error) {
       console.log("no se envia correo de verificacion");
       // Ha ocurrido un error.
