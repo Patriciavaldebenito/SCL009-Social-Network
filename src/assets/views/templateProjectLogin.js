@@ -15,13 +15,13 @@ export const templateLogin = () => {
                                                     <form id="login-form">
                                                       <div class="row input-field">
                                                         <div class = "col" >
-                                                          <input type="email" placeholder="Correo" id="login-email" required />
+                                                          <input type="email" placeholder="Correo" id="login-email"/>
                                                           <label for="login-email"></label>
                                                         </div>
                                                       </div>
                                                       <div class="row input-field">
                                                         <div class = "col" >
-                                                          <input type="password" placeholder="Contraseña" id="login-password" required />
+                                                          <input type="password" placeholder="Contraseña" id="login-password"/>
                                                           <label for="login-password"></label>
                                                         </div>
                                                       </div>
