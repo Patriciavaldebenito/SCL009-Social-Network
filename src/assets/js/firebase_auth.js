@@ -28,6 +28,31 @@ export const createUser = (user, age, email, password) => {
       // ...
     });
 
+ //inicializar con Cloud firestore   
+let db = firebase.firestore();
+
+//agregando a la colletion
+
+function guardar (){
+  let user = document.getElementById('user').value;
+  let age = document.getElementById('age').value;
+  let email = document.getElementById('email').value;
+  let password = document.getElementById('password').value;
+
+  db.collection("users").add({
+    user: user,
+    age: age,
+    email: email,
+    password: password
+})
+.then(function(docRef) {
+    console.log("Document written with ID: ", docRef.id);
+})
+.catch(function(error) {
+    console.error("Error adding document: ", error);
+});
+
+}
   // let db = firebase.firestore();
   // firebase.auth().createUserWithEmailAndPassword(email, password)
   // .then(function(){
