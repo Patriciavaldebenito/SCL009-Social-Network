@@ -13,13 +13,14 @@ export const createUser = (user, age, email, password) => {
 
     })
     .then(function () {
-      window.location.hash = "#/login";
-
-    })
-    .then(function () {
      
       location.href = "https://patriciavaldebenito.github.io/SCL009-Social-Network";
     })
+    .then(function () {
+      window.location.hash = "#/login";
+
+    })
+  
 
     .catch(function (error) {
       // Handle Errors here.
