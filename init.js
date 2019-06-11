@@ -9,4 +9,5 @@ export const init = () => {
   initRouter();
   observer();
 };
+
 window.addEventListener('load',init);

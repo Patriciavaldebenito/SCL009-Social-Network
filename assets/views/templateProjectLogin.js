@@ -7,6 +7,7 @@ import { templateHome } from "./templateHome.js";
 // import {} from "";
 
 export const templateLogin = () => {
+  
   document.getElementById("root").innerHTML = `
                                                 <div class="modal" id="modal-login">
                                                   <div class="modal-content">
@@ -15,30 +16,30 @@ export const templateLogin = () => {
                                                     <form id="login-form">
                                                       <div class="row input-field">
                                                         <div class = "col" >
-                                                          <input type="email" placeholder="Correo" id="login-email" required />
+                                                          <input type="email" placeholder="Correo" id="login-email"/>
                                                           <label for="login-email"></label>
                                                         </div>
                                                       </div>
                                                       <div class="row input-field">
                                                         <div class = "col" >
-                                                          <input type="password" placeholder="Contraseña" id="login-password" required />
+                                                          <input type="password" placeholder="Contraseña" id="login-password"/>
                                                           <label for="login-password"></label>
                                                         </div>
                                                       </div>
                                                       <br>
                                                       
-                                                      <div class="row"
+                                                      <div class="row">
                                                         <div class="col input-field">
                                                           <button id="btnLogin" class="btn-create">Ingresa</button>
                                                         </div>
                                                       </div>
                                                       
-                                                      <div class="row"
+                                                      <div class="row">
                                                         <div class="col input-field">
                                                           <button class="btn-google" type="button" id="buttonGoogleLogin">Acceso con Google</button>
                                                         </div>
                                                       </div>  
-                                                      <div class="row"
+                                                      <div class="row">
                                                         <div class="col input-field">
                                                           <button id="back" type="button"></button>
                                                         </div>

@@ -1,74 +1,31 @@
-export const createUser = (user, age, email, password) => {
-  console.log(user);
-  console.log(age);
-  console.log(email);
-  console.log(password);
+import { validationFormSignLogin } from '../controller/validation.js'
+import { SaveRegistryData } from './firebase_data.js'
+import { templateMuro } from './../views/templateMuro.js'
 
 
-  firebase.auth().createUserWithEmailAndPassword(email, password)
-
-    .then(function () {
-      console.log("se creo usuario en firebase");
-      verificationEmail();
-
-
-    })
-
-    .then(function () {
-      window.location.hash = "#/login";
-
-    })
-
-
-    .catch(function (error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      // ...
-    });
-
-  // let db = firebase.firestore();
-  // firebase.auth().createUserWithEmailAndPassword(email, password)
-  // .then(function(){
-  //   /*Base de datos, para almacenar de manera paralela en cloud firestore
-  //   dichos datos del usuario*/
-  //        db.collection('users').add({
-  //         email:email,
-  //         password:password
-  //        })
-  // })
-
-  // .then(function(docRef){
-  //   console.log("Document written with ID: ", docRef.id);
-  // })
-
-  // .catch(function(error){
-  //   console.error("Error  adding document: ", error);
-  // });
-};
-
+//HU1 registro con cuenta Google
 // Function loginGoogle
 export const loginGoogle = () => {
-
-  console.log("click en LOGINGOOGLE hacemos correr su funcion? sii!! ")
+  console.log("click en LOGINGOOGLE hacemos correr su funcion? sii!! ");
   // 1. Crea una instancia del objeto del proveedor de Google:
   var provider = new firebase.auth.GoogleAuthProvider();
   // 2.3.4 opcionales
   // 5. Autenticar con Firebase a través del objeto del proveedor de Google.
   // Para ofrecer acceso con una ventana emergente, invoca signInWithPopup:
-  firebase.auth().signInWithPopup(provider).then(function (result) {
-    // This gives you a Google Access Token. You can use it to access the Google API.
-    var token = result.credential.accessToken;
-    // The signed-in user info.
-    var user = result.user;
-    // ...
-  })
-    .then(
-
-      function changeMuro() {
-
-        window.location.hash = "#/muro";
-      })
+  firebase.auth().signInWithPopup(provider)
+    .then(function (result) {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      var token = result.credential.accessToken;
+      // The signed-in user info.
+      var user = result.user;
+      // ...
+      
+      
+    })
+    .then(function changeMuro() {
+      window.location.hash = "#/muro";
+      SaveRegistryData();
+    })
     .catch(function (error) {
       // Handle Errors here.
       var errorCode = error.code;
@@ -79,25 +36,25 @@ export const loginGoogle = () => {
       var credential = error.credential;
       // ...
     });
+};
 
-}
+//HU2 registro con Correo 
+export const createUser = (user, age, email, password) => {
+  console.log(user);
+  console.log(age);
+  console.log(email);
+  console.log(password);
 
-export const signLogin = (email, password,) => {
-  console.log("antes de realizar signLogin ");
-  // let user = firebase.auth().currentUser;
-  // var emailVerifiedReturn = user.emailVerified;
-
-  firebase.auth().signInWithEmailAndPassword(email, password)
+  firebase.auth().createUserWithEmailAndPassword(email, password)
+    
     .then(function () {
-      window.location.hash = "#/muro";
-      //si user.verified es true entonces se va al muro 
-    }
-  
-      // se desarrolla la funcon de login 
-      // se desarrolla function de validacion email
-      // si user.verified es positivo 
-      // entonces 
-    )
+      console.log("se creo usuario en firebase");
+      SaveRegistryData();
+      verificationEmail();
+      window.location.hash = "#/login";
+    })
+
+
     .catch(function (error) {
       // Handle Errors here.
       var errorCode = error.code;
@@ -105,100 +62,129 @@ export const signLogin = (email, password,) => {
       // ...
     });
 
-}
 
+  
+};
+
+
+
+
+//HU3 Inicio de Sesion 
+export const signLogin = (email, password) => {
+  console.log("antes de realizar signLogin ");
+  // let user = firebase.auth().currentUser;
+  // var emailVerifiedReturn = user.emailVerified;
+
+  firebase.auth().signInWithEmailAndPassword(email, password)
+
+
+    .then(
+      function () {
+        validationFormSignLogin();
+        observer();
+
+     
+        //si user.verified es true entonces se va al muro
+      }
+
+      // se desarrolla la funcon de login
+      // se desarrolla function de validacion email
+      // si user.verified es positivo
+      // entonces
+    )
+    .catch(function (error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // ...
+    });
+};
+
+// Observer
 export const observer = () => {
-
   firebase.auth().onAuthStateChanged(function (user) {
-
     if (user) {
+
+     
       console.log(user);
       console.log("existe usuario activo");
       console.log("*****************");
       console.log(user.emailVerified);
       console.log("*****************");
-    
-      aparece(user);
+
 
       var email = user.email;
       var displayName = user.displayName;
       console.log("displayName = " + displayName);
 
-      var emailVerified = user.emailVerified;
+      aparece(user);
+      
+     return true;
 
       var photoURL = user.photoURL;
       var isAnonymous = user.isAnonymous;
       var uid = user.uid;
       var providerData = user.providerData;
-
+      // return true;
       // User is signed in.
-
     } else {
       console.log("  NO    existe usuario Activo   ");
+     
       // User is signed out.
       // ...
+      return false;
     }
   });
   //email-password.html
-}
+};
 
 
-function  aparece (user)  {
-
+//Funcion Aparece
+function aparece(user) {
   var user = user;
   if (user.emailVerified) {
-
-    console.log("el valor de user es = " + user + "y user.emailverified es = " + user.emailVerified);
-    console.log("el mail fue verificado porque el observador ya se ejecuto, se desarrolla sign ");
-    return true;
+     templateMuro();
+   return true 
   }
 
   if (!user.emailVerified) {
     console.log("el correo no ha sido verificado");
     swal.fire("puedes verificar tu correo en la bandeja de entrada");
-    return false;
+     window.location.hash = "#/login";
   }
-
 }
 
+//Función VerificacionCorreo
 export const verificationEmail = () => {
-
   // para enviar un mensaje de direccion a un usuario ...
   var user = firebase.auth().currentUser;
 
-  user.sendEmailVerification()
+  user
+    .sendEmailVerification()
 
     .then(function () {
       console.log("se envia mje de verificacion ");
     })
 
-    .then(function () {
-
-      location.href = "https://patriciavaldebenito.github.io/SCL009-Social-Network";
-      aparece(user);
-    })
     .catch(function (error) {
       console.log("no se envia correo de verificacion");
       // Ha ocurrido un error.
-
     });
-
 };
 
+//Función Cerrar Sesión
 export const signOutRedSocial = () => {
-
-  firebase.auth().signOut().then(function () {
-
-    // aqui no va al login aqui se cierra la sesion hacer un cuadro de salida 
-    console.log("La sesion ha sido cerrada...");
-    window.location.hash = "#/signOut";
-    // Sign-out successful.
-  }).catch(function (error) {
-    // An error happened.
-  });
-
-
-}
+  firebase.auth().signOut()
+    .then(function () {
+      // aqui no va al login aqui se cierra la sesion hacer un cuadro de salida
+      console.log("La sesion ha sido cerrada...");
+      window.location.hash = "#/signOut";
+      // Sign-out successful.
+    })
+    .catch(function (error) {
+      // An error happened.
+    });
+};
 
 //Conectar Basedatos RealTime
 
@@ -212,7 +198,7 @@ export const signOutRedSocial = () => {
 
 //     })
 // }
-//first example 
+//first example
 /*
 let $title = $('#title');
 let database = firebase.database().ref().child('titulo');
@@ -220,4 +206,3 @@ database.on("value", function(snapshot) {
 $title.text(snapshot.val());
 })
 */
-

@@ -8,34 +8,38 @@ import {
 
 export const templateHome = () => {
 
-  document.getElementById("root").innerHTML = `
-                                                  <div class="modal" id="modal-home" >
+  document.getElementById("root").innerHTML = `     <header class="containerHeader">
+                                                      <div >
+                                                         <img class =imgHeader src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid" alt="Responsive image">
+                                                      </div> 
+                                                    </header>
+                                                    <div class="row containerPhraseWelcome">
+                                                      <div class="col">
+                                                         <h3 >Bienvenidos</h3>
+                                                      </div>
+                                                    </div>
+                                          
+                                                  <section class="modal" id="modal-home" >
                                                     <div class="modal-content">
                                                       <form id="home-form">
-                                                        <br>
-                                                        <div class="row"
-                                                          <div class="col input-field">
-                                                            <h3>Bienvenidos</h3>
-                                                          </div>
-                                                        </div>
-                                                        <div class="row"
+                                                        <div class="row">
                                                           <div class="col input-field">
                                                             <button class="btn-create" id="btnRegistreHome" >Registrar</button>
                                                           </div>
                                                         </div>
-                                                        <div class="row"
+                                                        <div class="row">
                                                           <div class="col input-field">
                                                             <button class="btn-create" id="btnLoginHome" >Entrar</button>
                                                           </div>
                                                         </div>
-                                                        <div class="row"
+                                                        <div class="row">
                                                           <div class="col input-field">
                                                             <button class="btn-google" type="button" id="buttonGoogleHome">Google</button>
                                                           </div>
                                                         </div>     
                                                       </form>
                                                     </div>
-                                                  </div>`;
+                                                  </section>`;
 
   // initRealTime ();
   //<div id="app" class="title"></div>
