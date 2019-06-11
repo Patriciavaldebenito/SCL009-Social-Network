@@ -8,40 +8,46 @@ export const templateMuro = () => {
       <aside class="aside aside-1">
         <div class="modal" id="modal-signup" >
           <div class="modal-content">
-            <h4>Publica tu Evento</h4>
+            <h3>Publica tu Evento Aquí. </h3>
+            <br>
             <form id="signup-form">
              
               <div class="row input-field2">
                 <div class = "col" >
-                  <input type="text" placeholder="Tipo: Danza,Teatro,Música." class ="inputevent" id="nameevent" />
+                  <p>Tipo de Actividad o Evento:</p>
+                  <input type="text" placeholder="Danza,Teatro,Música, etc." class ="inputevent" id="nameevent" />
                   <label for="nameEvent"></label>
                 </div>
               </div>
               <br>
               <div class="row input-field2">
                 <div class = "col" >
-                  <input type="text" placeholder="Coordenadas y dirección" class ="inputadrees" id="adrees"/>
+                  <p> Coodenadas </p>
+                  <input type="text" placeholder="Dirección" class ="inputadrees" id="adrees"/>
                   <label for="adrees"></label>
                 </div>
               </div>
               <br>
               <div class="row input-field2">
                  <div class = "col" >
-                  <input type="text" placeholder="Metro de Referencia" class ="inputsubway" id="subway"/>
+                  <p>Metro de Referencia</p>
+                  <input type="text" placeholder="Baquedano, Salvador, etc." class ="inputsubway" id="subway"/>
                   <label for="subway"></label>
                 </div>
               </div>
               <br>
               <div class="row input-field2">
                 <div class = "col" >
-                  <input type="number" placeholder="Fecha del evento" class ="inputdate" id="date"/>
+                  <p> Fecha del Evento</p>
+                  <input type="number" placeholder="01/06/2019" class ="inputdate" id="date"/>
                   <label for="date"></label>
                 </div>
               </div>
               <br>
               <div class="row input-field2">
                 <div class = "col" >
-                  <input type="text" placeholder="Descripcion." class ="inputmessage" id="message" />
+                  <p> Comentarios </p>
+                  <input type="text" placeholder="Descripcion del evento" class ="inputmessage" id="message" />
                   <label for="message"></label>
                 </div>
               </div>
