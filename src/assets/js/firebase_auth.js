@@ -2,6 +2,7 @@ import { validationFormSignLogin } from '../controller/validation.js'
 import { SaveRegistryData } from './firebase_data.js'
 import { templateMuro } from './../views/templateMuro.js'
 
+
 //HU1 registro con cuenta Google
 // Function loginGoogle
 export const loginGoogle = () => {
@@ -61,6 +62,11 @@ export const createUser = (user, age, email, password) => {
       // ...
     });
 
+<<<<<<< HEAD
+=======
+
+  
+>>>>>>> 6639b641fca78fc9f9f5cdafa0b10a92604bee9f
 };
 
 
@@ -147,7 +153,11 @@ function aparece(user) {
   if (!user.emailVerified) {
     console.log("el correo no ha sido verificado");
     swal.fire("puedes verificar tu correo en la bandeja de entrada");
+<<<<<<< HEAD
     window.location.hash = "#/login";
+=======
+     window.location.hash = "#/login";
+>>>>>>> 6639b641fca78fc9f9f5cdafa0b10a92604bee9f
   }
 }
 
@@ -171,9 +181,7 @@ export const verificationEmail = () => {
 
 //Función Cerrar Sesión
 export const signOutRedSocial = () => {
-  firebase
-    .auth()
-    .signOut()
+  firebase.auth().signOut()
     .then(function () {
       // aqui no va al login aqui se cierra la sesion hacer un cuadro de salida
       console.log("La sesion ha sido cerrada...");

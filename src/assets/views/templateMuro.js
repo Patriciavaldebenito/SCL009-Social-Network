@@ -1,8 +1,9 @@
+import { signOutRedSocial } from './../js/firebase_auth.js';
 
 export const templateMuro = () => {
    
   document.getElementById('root').innerHTML = `
-                                               <button class="btn-signOut" id="buttonSignOut  type="button">Cerrar Sesion </button>
+                                               <button class="btn-signOut" id="buttonSignOut"  type="button">Cerrar Sesion </button>
                                                
     <div class="wrapper">
     <header class="header">Header</header>
@@ -18,4 +19,10 @@ export const templateMuro = () => {
   // Eventos en el muro de la aplicacion 
   // document.getElementById('').addEventListener('click', () => {
   // })
+
+
+  document.getElementById('buttonSignOut').addEventListener('click', () => {
+      signOutRedSocial();
+  });
+
 }

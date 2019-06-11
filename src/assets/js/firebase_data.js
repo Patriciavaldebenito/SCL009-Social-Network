@@ -1,4 +1,3 @@
-
 //Inicializar con Cloud firestore   
 //agregando a la colletion
 export let SaveRegistryData = ()=> {
