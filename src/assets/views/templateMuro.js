@@ -97,7 +97,7 @@ export const templateMuro = () => {
     let date = document.getElementById("date").value;
     let message = document.getElementById("message").value;
 
-    let resPublication = validationFormPublication(nameevent, adrees, subway, date,message);
+    // let resPublication = validationFormPublication(nameevent, adrees, subway, date,message);
     
   })
 
