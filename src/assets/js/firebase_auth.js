@@ -120,14 +120,16 @@ export const observer = () => {
       var displayName = user.displayName;
       console.log("displayName = " + displayName);
       console.log("email = " + email);
+
       aparece(user);
-      if(!user.displayName && user.email){
-        getName(user.email);
-      }      
-      let photoURL = "assets/img/iconuser.jpg";
-      if(user.photoURL){
-        photoURL= user.photoURL;
-      }       
+
+      // if(!user.displayName && user.email){
+      //   getName(user.email);
+      // }      
+      // let photoURL = "assets/img/iconuser.jpg";
+      // if(user.photoURL){
+      //   photoURL= user.photoURL;
+      // }       
      return true;
 
       //var photoURL = user.photoURL;
@@ -136,13 +138,21 @@ export const observer = () => {
       //var providerData = user.providerData;
       // return true;
       // User is signed in.
-    } else {
+    }
+    
+    if(!user) {
       console.log("  NO    existe usuario Activo   ");
-     
+      
       // User is signed out.
       // ...
+   
+  
+
       return false;
     }
+
+    
+
   });
   //email-password.html
 };
@@ -150,17 +160,19 @@ export const observer = () => {
 
 //Funcion Aparece
 function aparece(user) {
+  console.log(user.email);
   var user = user;
   if (user.emailVerified) {
      templateMuro();
    return true 
   }
-
   if (!user.emailVerified) {
-    console.log("el correo no ha sido verificado");
-    swal.fire("puedes verificar tu correo en la bandeja de entrada");
-    window.location.hash = "#/login";
-  }
+   
+      console.log("el correo no ha sido verificado");
+      swal.fire("Verificar tu correo. Cuando este ok, Inicia Sesion!");
+      window.location.hash = "#/login";
+    }
+
 }
 
 //Función VerificacionCorreo

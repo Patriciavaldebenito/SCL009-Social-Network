@@ -1,7 +1,7 @@
 // Validation of registration fields
 
 
-
+// Validation of HU2 Registry Email
 export const validationUser = user => {
   if (user === "") {
     Swal.fire('Ingrese un nombre de usuario');
@@ -109,6 +109,8 @@ export const validationFormRegistre = (user, age, email, password) => {
 
 };
 
+
+//Validation HU3 Login Email
 // export const resultValidationForm = validationForm(email, password);
 export const validationFormSignLogin = (email, password) => {
   if (validationEmail(email) === false || validationPassword(password) === false || !validationExpRegEmail(email)) {
@@ -120,6 +122,75 @@ export const validationFormSignLogin = (email, password) => {
     // swal.fire('vamos al muro logeado registrado')
 
     console.log("validos los imput del formulario Login");
+    return true;
+
+  }
+
+};
+
+//Validation HU4 PublicationPost
+
+export const validationDate = date => {
+  if (date === "") {
+    Swal.fire('Ingrese fecha');
+
+    console.log("sin fecha");
+    return false;
+  }
+  if (typeof date === "undefined") {
+    Swal.fire('Ingrese fecha correcta');
+
+    console.log("fecha indefinida");
+    return false;
+  }
+  console.log("fecha OK");
+  return true;
+};
+
+export const validationAdrees = adrees => {
+  if (adrees === "") {
+    Swal.fire('Ingrese dirección');
+
+    console.log("sin dirección");
+    return false;
+  }
+  if (typeof adrees === "undefined") {
+    Swal.fire('Ingrese dirección correcta');
+
+    console.log("dirección indefinida");
+    return false;
+  }
+  console.log("dirección OK");
+  return true;
+};
+
+export const validationSubway = subway => {
+  if (subway === "") {
+    Swal.fire('Ingrese metro referencia');
+
+    console.log("sin metro referencia");
+    return false;
+  }
+  if (typeof subway === "undefined") {
+    Swal.fire('Ingrese metro correctamente');
+
+    console.log("metro indefinido");
+    return false;
+  }
+  console.log("metro OK");
+  return true;
+};
+
+export const validationFormPublication = (date, adrees, subway) => {
+  if (validationDate(date) === false || validationAdrees(adrees) === false || !validationSubway(subway)) {
+
+    console.log("Un campo no cumple");
+    return false;
+  }
+  else {
+    // swal.fire('vamos al muro logeado registrado')
+
+    console.log("validos los imput de la publicación");
     return true;
 
   }

@@ -1,4 +1,5 @@
 import { signOutRedSocial } from './../js/firebase_auth.js';
+import { postCreate } from '../js/firebase_data.js';
 
 export const templateMuro = () => {
    
@@ -15,8 +16,8 @@ export const templateMuro = () => {
               <div class="row input-field2">
                 <div class = "col" >
                   <p>Tipo de Actividad o Evento:</p>
-                  <input type="text" placeholder="Danza,Teatro,Música, etc." class ="inputevent" id="nameevent" />
-                  <label for="nameEvent"></label>
+                  <input type="text" placeholder="Danza,Teatro,Música, etc." class ="inputevent" id="event" />
+                  <label for="event"></label>
                 </div>
               </div>
               <br>
@@ -51,16 +52,16 @@ export const templateMuro = () => {
                   <label for="message"></label>
                 </div>
               </div>
+              <div class = "row" >
+                <div class = "col" >
+                   <button class="btn-create2" id="btnPublicar" >Publicar</button>
+                </div>
+              </div>
             </form>
           </div>
         </div>
       </aside>
       <aside class="aside aside-2">
-        <div class = "row" >
-          <div class = "col" >
-            <button class="btn-create2" id="btnPublicar" >Publicar</button>
-          </div>
-        </div>
         <div class = "row" >
           <div class = "col" >
             <button class="btn-create2" id="btnEditar" >Editar</button>
@@ -73,8 +74,13 @@ export const templateMuro = () => {
         </div>
       </aside>
       <section class="main">
-        <article ><p>Ver Aqui lo Publicado...</p><br></article>
+        <article ><p>Ver Aqui lo Publicado...</p><br>
+        
+        
+        </article>
       </section>
+      
+      
     <footer class="footer">
       <br>
       <div class = "row" >
@@ -91,14 +97,21 @@ export const templateMuro = () => {
   document.getElementById("btnPublicar").addEventListener("click", (e) => {
     e.preventDefault();
     console.log("click en boton publicar");
-    let nameevent = document.getElementById("nameevent").value;
+    let event = document.getElementById("event").value;
     let adrees = document.getElementById("adrees").value;
     let subway = document.getElementById("subway").value;
     let date = document.getElementById("date").value;
     let message = document.getElementById("message").value;
-
-    // let resPublication = validationFormPublication(nameevent, adrees, subway, date,message);
     
+    let resPublication = validationFormPublication( event,date, adrees, subway, MSMediaKeyMessageEvent);
+    if (resPublication) {
+      console.log(" se ejecutara postCreate");
+      postCreate(userPost);
+     
+      console.log("postCreate ejecutando ");
+    } else {
+      console.log("NO corre postCreates / parametros no validos");
+    }
   })
 
   document.getElementById('back').addEventListener('click', () => {

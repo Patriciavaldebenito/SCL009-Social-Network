@@ -50,6 +50,7 @@ export const templateHome = () => {
   document.getElementById("buttonGoogleHome").addEventListener("click", () => {
     console.log("presionaste boton google en Home!");
     loginGoogle();
+    getName();
   });
 
   //3. En home click en btn login

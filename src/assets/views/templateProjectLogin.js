@@ -3,6 +3,7 @@ import { validationFormSignLogin } from "../controller/validation.js";
 import { signLogin } from "../js/firebase_auth.js";
 //import { aparece } from "../js/firebase_auth.js";
 import { templateHome } from "./templateHome.js";
+import { getName } from "../js/firebase_data.js";
 // import { loginGoogle } from "./../js/firebase_auth.js"; **** revisar ruta ****
 // import {} from "";
 
@@ -83,6 +84,7 @@ export const templateLogin = () => {
   document.getElementById("buttonGoogleLogin").addEventListener("click", () => {
     console.log("presionaste boton google en Home!");
     loginGoogle();
+    
 
 
   });

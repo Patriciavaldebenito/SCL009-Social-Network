@@ -1,5 +1,5 @@
 //Inicializar con Cloud firestore   
-//agregando a la colletion
+//agregando a la colletion User
 export let saveRegistryData = ()=> {
     let db = firebase.firestore();
     let user = document.getElementById('signup-user').value;
@@ -20,16 +20,31 @@ export let saveRegistryData = ()=> {
         console.error("Error adding document: ", error);
     });
 
+    
+}
+//leer documentos
+export const getName = (email) =>{
+    let dbProfiles = firebase.firestore();
+    db.collection("users").get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            console.log(`${doc.id} => ${doc.data().email}`);
+        });
+    });
+
 }
 
 
+
+
+// HU4 para crear post
 export const postCreate = (userPost) =>{
     let dbPost = firebase.firestore();
     if(validatePost(userPost)){
-        /*let date=Date.now();*/
-        /*let nameProfile = validateName(); 
+        /*let date=Date.now(); example
+        */
+        /*let nameProfile = validateName(); example
        */
-        let nameevent = document.getElementById('nameevent').value;
+        let event = document.getElementById('event').value;
         let adrees = document.getElementById('adrees').value;
         let subway = document.getElementById('subway').value;
         let date = document.getElementById('date').value;
@@ -58,14 +73,16 @@ export const postCreate = (userPost) =>{
     
 }
 
-export const getName = (email) =>{
-    //consulta para obtener los datos del usuario
-    let dbProfiles = firebase.firestore();
-    let userProfile = dbProfiles.collection("users").where("email","==",email);
-    userProfile.get().then((querySnapshot) => {
-        querySnapshot.forEach((doc)=>{
-            firebase.auth().currentUser.profileName = doc.data().firstname + " " +doc.data().lastname;
-        })
+// Leer documentos Example
+// export const getName = (email) =>{
+//     //consulta para obtener los datos del usuario
+//     let dbProfiles = firebase.firestore();
+//     let userProfile = dbProfiles.collection("users").where("email","==",email);
+//     userProfile.get().then((querySnapshot) => {
+//         querySnapshot.forEach((doc)=>{
+//             firebase.auth().currentUser.profileName = doc.data().firstname + " " +doc.data().lastname;
+//         })
         
-    });
-}
+//     });
+// }
+
