@@ -1,5 +1,5 @@
 import { validationFormSignLogin } from '../controller/validation.js'
-import { SaveRegistryData } from './firebase_data.js'
+import { saveRegistryData } from './firebase_data.js'
 import { templateMuro } from './../views/templateMuro.js'
 
 
@@ -9,6 +9,7 @@ export const loginGoogle = () => {
   console.log("click en LOGINGOOGLE hacemos correr su funcion? sii!! ");
   // 1. Crea una instancia del objeto del proveedor de Google:
   var provider = new firebase.auth.GoogleAuthProvider();
+  
   // 2.3.4 opcionales
   // 5. Autenticar con Firebase a través del objeto del proveedor de Google.
   // Para ofrecer acceso con una ventana emergente, invoca signInWithPopup:
@@ -18,13 +19,17 @@ export const loginGoogle = () => {
       var token = result.credential.accessToken;
       // The signed-in user info.
       var user = result.user;
+      
       // ...
+      
       
       
     })
     .then(function changeMuro() {
+      
       window.location.hash = "#/muro";
-      SaveRegistryData();
+      
+      
     })
     .catch(function (error) {
       // Handle Errors here.
@@ -49,7 +54,7 @@ export const createUser = (user, age, email, password) => {
     
     .then(function () {
       console.log("se creo usuario en firebase");
-      SaveRegistryData();
+      saveRegistryData();
       verificationEmail();
       window.location.hash = "#/login";
     })
@@ -62,11 +67,6 @@ export const createUser = (user, age, email, password) => {
       // ...
     });
 
-<<<<<<< HEAD
-=======
-
-  
->>>>>>> 6639b641fca78fc9f9f5cdafa0b10a92604bee9f
 };
 
 
@@ -119,15 +119,21 @@ export const observer = () => {
       var email = user.email;
       var displayName = user.displayName;
       console.log("displayName = " + displayName);
-
+      console.log("email = " + email);
       aparece(user);
-      
+      if(!user.displayName && user.email){
+        getName(user.email);
+      }      
+      let photoURL = "assets/img/iconuser.jpg";
+      if(user.photoURL){
+        photoURL= user.photoURL;
+      }       
      return true;
 
-      var photoURL = user.photoURL;
-      var isAnonymous = user.isAnonymous;
-      var uid = user.uid;
-      var providerData = user.providerData;
+      //var photoURL = user.photoURL;
+      //var isAnonymous = user.isAnonymous;
+      //var uid = user.uid;
+      //var providerData = user.providerData;
       // return true;
       // User is signed in.
     } else {
@@ -153,11 +159,7 @@ function aparece(user) {
   if (!user.emailVerified) {
     console.log("el correo no ha sido verificado");
     swal.fire("puedes verificar tu correo en la bandeja de entrada");
-<<<<<<< HEAD
     window.location.hash = "#/login";
-=======
-     window.location.hash = "#/login";
->>>>>>> 6639b641fca78fc9f9f5cdafa0b10a92604bee9f
   }
 }
 

@@ -114,6 +114,22 @@ h3 {
   align-self: center;
 }
 
+.btn-create2 {
+  color: white;
+  margin-top: 5%;
+  align-items: stretch;
+  border-radius: 5px;
+  font-family: sans-serif;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: tomato;
+  /* this is a maroon */
+  height: 35px;
+  width: 100px;
+  font-size: 100%;
+  
+}
+
 #back {
   width: 60px;
   height: 43px;
@@ -157,11 +173,11 @@ h3 {
 }
 
 .header {
-  background: tomato;
+  background: deepskyblue;
 }
 
 .footer {
-  background: lightgreen;
+  background: lightblue;
 }
 
 .main {
@@ -170,7 +186,7 @@ h3 {
 }
 
 .aside-1 {
-  background: gold;
+  background: lightblue;
 }
 
 /* .aside-2 {
