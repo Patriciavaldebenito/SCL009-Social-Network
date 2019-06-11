@@ -22,11 +22,11 @@ body {
 body img {
   width: 230px;
   height: 120px;
-  /* margin-top: 0%;
+  margin-top: 0%;
   margin-left: 5%;
   margin-right: 10%;
   position: relative;
-  display: flex; */
+  display: flex; 
 } 
 
 h1,
@@ -37,7 +37,7 @@ h3 {
   font-size: 1.5em; 
 }
 
-/* .modal-container {
+ .modal-container {
   width: 150%;
   height: 150%;
   margin-top: 0%;
@@ -45,9 +45,9 @@ h3 {
   margin-right: 100%;
   align-items: center;
   justify-content: center;
-} */
+} 
 
-/* #home-form {
+ #home-form {
   width: 100%;
   height: 100%;
   align-items: center;
@@ -60,9 +60,7 @@ h3 {
   margin-top: 10%;
   margin-left: 25%;
   margin-right: 80%;
-
 }
-
 .input-field {
   align-items: center;
   justify-content: center;
@@ -72,7 +70,7 @@ h3 {
   margin-left: 15%;
   margin-right: 100%;
  
-} */
+} 
 
 .btn-create {
   color: white;
@@ -114,6 +112,7 @@ h3 {
   align-self: center;
 }
 
+<<<<<<< HEAD
 .btn-create2 {
   color: white;
   margin-top: 5%;
@@ -131,6 +130,9 @@ h3 {
 }
 
 #back {
+=======
+ #back {
+>>>>>>> a5817a193ac147aed89328fccd0f68b33e7366fa
   width: 60px;
   height: 43px;
   background:transparent;
@@ -149,14 +151,13 @@ h3 {
   }
   
 }
-*/
-/*
+
+
 #title {
   text-align: center;
   font-family: 'Segoe UI';
   color: rgba(202, 15, 15, 0.76);
   font-size: 2em; 
-
 }
 
 /* start CSS templateMuro */
