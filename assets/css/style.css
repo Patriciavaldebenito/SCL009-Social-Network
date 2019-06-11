@@ -1,3 +1,4 @@
+/* user - selector universar */
 * {
   padding: 0;
   margin: 0;
@@ -34,6 +35,23 @@
   text-align: center;
  }
 
+/* section -->   con class = modal
+   div     -->   con class = modal-content
+   div     -->   con class = row
+
+   dar class extra en       div.row
+
+             A  H  O  R  A 
+
+   div    -->   con class  div.row input-home
+
+   */
+
+.input-home {
+ text-align: center;
+}
+
+
 /* h1,
 h3 {
   text-align: center;
@@ -41,6 +59,7 @@ h3 {
   color: rgba(23, 24, 18, 0.658);
   font-size: 1.5em; 
 } */
+
 
 /* .modal-container {
   width: 150%;
@@ -96,7 +115,7 @@ h3 {
 }
 
 .btn-google {
-  width:100%;
+  width:80%;
   text-align: center;
   cursor: pointer;
   color: rgb(29, 47, 105);
@@ -111,13 +130,13 @@ h3 {
   background-size: 25px;
   background-color: rgb(45, 162, 230);
 }
-/*
+
 .row-btn-google{
   display: flex;
   flex-direction:row;
   width:100%;
   align-self: center;
-} */
+}
 
 /* #back {
   width: 60px;

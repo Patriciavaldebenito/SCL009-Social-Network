@@ -8,7 +8,11 @@ import {
 
 export const templateHome = () => {
 
-  document.getElementById("root").innerHTML = `    
+  document.getElementById("root").innerHTML = `     <header class="containerHeader">
+                                                       <div >
+                                                         <img class =imgHeader src="./img/headerapp.png" class="img-fluid" alt="Responsive image">
+                                                       </div> 
+                                                    </header>
                                                     <div class="row containerPhraseWelcome">
                                                       <div class="col">
                                                          <h3 >Bienvenidos</h3>
@@ -18,17 +22,17 @@ export const templateHome = () => {
                                                   <section class="modal" id="modal-home" >
                                                     <div class="modal-content">
                                                       <form id="home-form">
-                                                        <div class="row">
+                                                        <div class="row input-home">
                                                           <div class="col input-field">
                                                             <button class="btn-create" id="btnRegistreHome" >Registrar</button>
                                                           </div>
                                                         </div>
-                                                        <div class="row">
+                                                        <div class="row input-home">
                                                           <div class="col input-field">
                                                             <button class="btn-create" id="btnLoginHome" >Entrar</button>
                                                           </div>
                                                         </div>
-                                                        <div class="row">
+                                                        <div class="row input-home">
                                                           <div class="col input-field">
                                                             <button class="btn-google" type="button" id="buttonGoogleHome">Google</button>
                                                           </div>
