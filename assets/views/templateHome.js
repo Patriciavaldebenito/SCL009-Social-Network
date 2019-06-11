@@ -8,11 +8,7 @@ import {
 
 export const templateHome = () => {
 
-  document.getElementById("root").innerHTML = `     <header class="containerHeader">
-                                                      <div >
-                                                         <img class =imgHeader src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid" alt="Responsive image">
-                                                      </div> 
-                                                    </header>
+  document.getElementById("root").innerHTML = `    
                                                     <div class="row containerPhraseWelcome">
                                                       <div class="col">
                                                          <h3 >Bienvenidos</h3>
