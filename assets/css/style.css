@@ -17,8 +17,8 @@ body {
   align-items: center;
   justify-content: center;
   height: auto;
-  margin-top: 10%;
-  margin-bottom: 10%;
+  margin-top:0;
+  margin-bottom: 8%;
   padding: 2%;
   flex-direction:column;
   
@@ -45,7 +45,7 @@ body {
 }
 
 .containerparrafohome {
-  margin-top: 25%;
+  margin-top: 15%;
   background: #fff;
   text-align: center;
   
@@ -81,7 +81,7 @@ body {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   background: rgb(202, 60, 60);
   /* this is a maroon */
-  height: 60px;
+  height: 50px;
   width: 80%;
   font-size: 100%;
   
@@ -90,7 +90,7 @@ body {
 
 .btn-google {
   width:80%;
-  height: 60px;
+  height: 50px;
   text-align: center;
   cursor: pointer;
   color: rgb(29, 47, 105);
@@ -115,14 +115,16 @@ body {
 /* ---------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------- */
 
+
+
+/* style      REGISTRE */
 h3 {
   text-align: center;
   color:#000;
-
  }
 
  form {
-   margin-top: 10%;
+   margin-top: 5%;
   display: flex;
   width: 80%;
   background:#f2f2f2;
@@ -141,3 +143,24 @@ h3 {
   border:0;border-bottom:1px solid black
   /* text-align: center; */
 }
+
+/* ---------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------- */
+
+
+
+/* style      LOGIN */
+
+/*  style     Button reverse */
+
+#back {
+  width: 60px;
+  height: 43px;
+  background:transparent;
+  background-image:url('https://img.icons8.com/cotton/2x/circled-left--v1.png');
+  background-size:40px;
+  background-repeat:no-repeat;
+  border: none;
+  margin-top: 10px;
+} 
