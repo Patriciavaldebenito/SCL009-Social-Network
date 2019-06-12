@@ -145,6 +145,7 @@ body {
   margin-top: 5%;
   display: flex;
   width: 80%;
+  max-width: 400px; 
   background:#D4E6F1;
   align-items: center;
   justify-content: center;
@@ -153,6 +154,7 @@ body {
 }
 
 .formlogin {
+  max-width: 400px; 
   text-align: center;
   margin-top: 5%;
   display: flex;
