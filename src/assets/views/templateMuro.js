@@ -1,18 +1,21 @@
 import { signOutRedSocial } from './../js/firebase_auth.js';
-import { postCreate } from '../js/firebase_data.js';
+import { savePostData } from '../js/firebase_data.js';
+import { getDataPost } from '../js/firebase_data.js';
+import { getDataRegistry } from '../js/firebase_data.js';
 
 export const templateMuro = () => {
-   
-<<<<<<< HEAD
-  document.getElementById('root').innerHTML = `<button class="btn-create2" id="buttonSignOut"  type="button">Cerrar Sesion </button>                                               
+  getDataRegistry();
+  document.getElementById('root').innerHTML = `<button class="btn-create2" id="buttonSignOut"  type="button">Salir </button>                                               
     <div class="wrapper">
-      <header class="header"><h4>Bienvenido al Muro!....+(get.name).</h4></header>
+      <header class="header">
+      <h3>Publica tu Evento Aquí. </h3><h4 id="title"></h4></h4><br>
+      </header>
       <aside class="aside aside-1">
-        <div class="modal" id="modal-signup" >
+        <div class="modal" id="modal-toPost" >
           <div class="modal-content">
-            <h3>Publica tu Evento Aquí. </h3>
+            
             <br>
-            <form id="signup-form">
+            <form id="toPost-form">
              
               <div class="row input-field2">
                 <div class = "col" >
@@ -25,8 +28,8 @@ export const templateMuro = () => {
               <div class="row input-field2">
                 <div class = "col" >
                   <p> Coodenadas </p>
-                  <input type="text" placeholder="Dirección" class ="inputadrees" id="adrees"/>
-                  <label for="adrees"></label>
+                  <input type="text" placeholder="Dirección" class ="inputadrees" id="address"/>
+                  <label for="address"></label>
                 </div>
               </div>
               <br>
@@ -41,7 +44,7 @@ export const templateMuro = () => {
               <div class="row input-field2">
                 <div class = "col" >
                   <p> Fecha del Evento</p>
-                  <input type="number" placeholder="01/06/2019" class ="inputdate" id="date"/>
+                  <input type="text" placeholder="01-06" class ="inputdate" id="date"/>
                   <label for="date"></label>
                 </div>
               </div>
@@ -55,92 +58,79 @@ export const templateMuro = () => {
               </div>
               <div class = "row" >
                 <div class = "col" >
-                   <button class="btn-create2" id="btnPublicar" >Publicar</button>
+                   <button class="btn-create2" id="btnToPost" >Publicar</button>
                 </div>
               </div>
+              <div class = "row" >
+      <div class = "col" >
+        <button class="btn-create2" id="btnDelete" >Borrar</button>
+      </div>
+    </div>
             </form>
           </div>
         </div>
       </aside>
-      <aside class="aside aside-2">
-        <div class = "row" >
-          <div class = "col" >
-            <button class="btn-create2" id="btnEditar" >Editar</button>
-          </div>
-        </div>
-        <div class = "row" >
-          <div class = "col" >
-            <button class="btn-create2" id="btnBorrar" >Borrar</button>
-          </div>
-        </div>
-      </aside>
       <section class="main">
-        <article ><p>Ver Aqui lo Publicado...</p><br>
-        
+        <article ><br><h3>Observa El Muro con lo Publicado...</h3>
+        <div class = "row" >
+          <div class = "col" >
+            <button class="btn-create2" id="btnEdit" >Editar</button>
+          </div>
+        </div>
+        <table class="resp">
+        <thead>
+          <tr>
+            <h3>
+            <th scope="col">USUARIO</th>
+            <th scope="col">EVENTO</th>
+            <th scope="col">COORDENADAS</th>
+            <th scope="col">METRO</th>
+            <th scope="col">FECHA</th>
+            <th scope="col">COMENTARIOS</th>
+            <th scope="col">ME GUSTA</th>
+            </h3>
+          </tr>
+        </thead>
+        <tbody id="tabla">
+         
+        </tbody>
+      </table>
         
         </article>
       </section>
+      
+      
       
       
     <footer class="footer">
-      <br>
-      <div class = "row" >
-        <div class = "col" >
-          <button id="back" type="button"></button>
-        </div>
-      </div>
+    <div class = "row" >
+    <div class = "col" >
+      <button id="back" type="button"></button>
+    </div>
+  </div>
     </footer>
-=======
-  document.getElementById('root').innerHTML = `<header class="logoMuro">
-                                               <button class="btn-signOut" id="buttonSignOut"  type="button">Cerrar Sesion </button>
-                                               </header>
-    <div class="wrapper">
-      <section>
-      <div>
-      <p>Actividad o evento:</p>
-      <input type="text" placeholder="¿Cual es tu actividad ?"><br>
-
-      <p> Direccion:</p>
-      <input type="text" placeholder="¿Donde es?"><br>
-
-      <p>Metro de referencia:</p>
-      <input type="text" placeholder="ejemplo : metro Baquedano linea verde"><br>
-
-      <p>Fecha y direccion:</p>
-      <input type="text" placeholder="ejemplo"><br>
-
-      <p>comentarios:</p>
-      <input type="text" placeholder="¿Porque asistir? - ¡motivanos! "><br>
-      </div>
-      </section>
-      <section class="main">
-        <article >
-            <p>Pellentesquelibero sit amet quam egestas semper. Aenean ultricies mi vitae est. Maend leo.</p>  
-        </article>
-      </section>
-      <aside class="aside aside-1">Aside 1</aside>
-      <!-- <aside class="aside aside-2">Aside 2</aside> -->
-      <footer class="footer">Footer</footer>
->>>>>>> a5817a193ac147aed89328fccd0f68b33e7366fa
-  </div>`; 
+  </div>`;
+  getDataPost();
+//<aside class="aside aside-2"></aside>
   // Eventos en el muro de la aplicacion 
-  // document.getElementById('').addEventListener('click', () => {
-  // })
 
-  document.getElementById("btnPublicar").addEventListener("click", (e) => {
+
+  document.getElementById("btnToPost").addEventListener("click", (e) => {
     e.preventDefault();
+    savePostData();
+    getDataPost();
     console.log("click en boton publicar");
     let event = document.getElementById("event").value;
     let adrees = document.getElementById("adrees").value;
     let subway = document.getElementById("subway").value;
     let date = document.getElementById("date").value;
     let message = document.getElementById("message").value;
-    
-    let resPublication = validationFormPublication( event,date, adrees, subway, MSMediaKeyMessageEvent);
+
+    let resPublication = validationFormPublication(event, date, adrees, subway, message);
     if (resPublication) {
       console.log(" se ejecutara postCreate");
       postCreate(userPost);
-     
+
       console.log("postCreate ejecutando ");
     } else {
       console.log("NO corre postCreates / parametros no validos");
@@ -151,7 +141,7 @@ export const templateMuro = () => {
     templateProjectLogin();
   });
   document.getElementById('buttonSignOut').addEventListener('click', () => {
-      signOutRedSocial();
+    signOutRedSocial();
   });
 
 }

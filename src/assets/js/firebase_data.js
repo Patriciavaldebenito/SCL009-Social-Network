@@ -1,5 +1,7 @@
-//Inicializar con Cloud firestore   
-//agregando a la colletion User
+//Inicializar con Cloud firestore 
+
+//HU4 Comenzando a Guardar Data
+//agregando a la collection Users
 export let saveRegistryData = ()=> {
     let db = firebase.firestore();
     let user = document.getElementById('signup-user').value;
@@ -19,41 +21,22 @@ export let saveRegistryData = ()=> {
     .catch(function(error) {
         console.error("Error adding document: ", error);
     });
-
     
 }
-//leer documentos
-export const getName = (email) =>{
-    let dbProfiles = firebase.firestore();
-    db.collection("users").get().then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-            console.log(`${doc.id} => ${doc.data().email}`);
-        });
-    });
 
-}
-
-
-
-
-// HU4 para crear post
-export const postCreate = (userPost) =>{
+// HU4 Guardando Data
+//agregando a la collection Posts
+export let savePostData = () =>{
     let dbPost = firebase.firestore();
-    if(validatePost(userPost)){
-        /*let date=Date.now(); example
-        */
-        /*let nameProfile = validateName(); example
-       */
-        let event = document.getElementById('event').value;
-        let adrees = document.getElementById('adrees').value;
-        let subway = document.getElementById('subway').value;
-        let date = document.getElementById('date').value;
-        let message = document.getElementById('message').value;
+    let event = document.getElementById('event').value;
+    let address = document.getElementById('address').value;
+    let subway = document.getElementById('subway').value;
+    let date = document.getElementById('date').value;
+    let message = document.getElementById('message').value;
 
         dbPost.collection("post").add({
-            user: firebase.auth().currentUser.email,
-            nameevent: nameevent,
-            adrees: adrees,
+            event: event,
+            address: address,
             subway: subway,
             date: date,
             message: message       
@@ -61,28 +44,66 @@ export const postCreate = (userPost) =>{
         .then(function(docRef) {
             console.log("Document written with ID: ", docRef.id);
             document.getElementById("textpost").value=''; 
+            document.getElementById('event').value=''; 
+            document.getElementById('address').value=''; 
+            document.getElementById('subway').value=''; 
+            document.getElementById('date').value=''; 
+            document.getElementById('message').value=''; 
             window.location.hash="#/muro";
             /*postRead();  */
         })
         .catch(function(error) {
             console.error("Error adding document: ", error);
         });
-    }else{
-        return "error input vacío";
-    }
-    
+
+
 }
 
+// Read Data documents
+export let getDataPost = () =>{
+    let db = firebase.firestore();
+    let tabla = document.getElementById('tabla');
+    db.collection("post").onSnapshot((querySnapshot) => {
+        tabla.innerHTML = '';
+        querySnapshot.forEach((doc) => {
+            console.log(`${doc.id} => ${doc.data().user}`);
+            tabla.innerHTML += `
+            <tr>
+            <th scope="row">${doc.data().user}</th>
+            <td>${doc.data().event}</td>
+            <td>${doc.data().address}</td>
+            <td>${doc.data().subway}</td>
+            <td>${doc.data().date}</td>
+            <td>${doc.data().message}</td>
+            </tr>
+          `
+        });
+    });
+}
+
+export let getDataRegistry = () =>{
+    let db = firebase.firestore();
+    let title = document.getElementById('title');
+    db.collection("post").onSnapshot((querySnapshot) => {
+        title.innerHTML = '';
+        querySnapshot.forEach((doc) => {
+            console.log(`${doc.id} => ${doc.data().user}`);
+            title.innerHTML += `
+            <p><a>${doc.data().user}</a></p>
+          `
+        });
+    });
+}
 // Leer documentos Example
-// export const getName = (email) =>{
-//     //consulta para obtener los datos del usuario
-//     let dbProfiles = firebase.firestore();
+// export let getDataName = () =>{
+//     let db = firebase.firestore();
+//consulta para obtener los datos del usuario
 //     let userProfile = dbProfiles.collection("users").where("email","==",email);
-//     userProfile.get().then((querySnapshot) => {
+//    
+ //.get().then((querySnapshot) => {
 //         querySnapshot.forEach((doc)=>{
 //             firebase.auth().currentUser.profileName = doc.data().firstname + " " +doc.data().lastname;
 //         })
         
 //     });
-// }
-
+// )}
