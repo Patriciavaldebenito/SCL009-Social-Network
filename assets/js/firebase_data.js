@@ -36,6 +36,7 @@ export let savePostData = () =>{
     let message = document.getElementById('message').value;
 
         dbPost.collection("post").add({
+          
             event: event,
             address: address,
             subway: subway,
@@ -71,7 +72,8 @@ export let getDataPost = () =>{
         
         querySnapshot.forEach((doc) => {
 
-            console.log(`${doc.id} => ${doc.data().user}`);
+            console.log(`${doc.id} => ${doc.data().user}`); // dato nombre usuario con id 
+            console.log( doc.data());// json con los valores ingresados para publicar el evento
 
             tabla.innerHTML += `
             <tr>

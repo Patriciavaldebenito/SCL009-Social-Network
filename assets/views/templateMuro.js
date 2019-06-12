@@ -4,7 +4,7 @@ import { getDataPost } from '../js/firebase_data.js';
 // import { getDataRegistry } from '../js/firebase_data.js';
 
 export const templateMuro = () => {
-  getDataRegistry();
+  // getDataRegistry();
   document.getElementById('root').innerHTML = `<button class="btn-create2" id="buttonSignOut"  type="button">Salir </button>                                               
     <div class="wrapper">
       <header class="header">

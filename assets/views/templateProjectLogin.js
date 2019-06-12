@@ -27,7 +27,7 @@ export const templateLogin = () => {
            
    <button class="btn-googleLogin" type="button" id="buttonGoogleLogin">Google</button>
             
-   <button class ="back" id="back" type="button"></button>  
+   <button class ="backLogin" id="back" type="button"></button>  
 </form>
   
 </div>`;
