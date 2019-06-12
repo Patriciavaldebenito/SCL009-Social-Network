@@ -13,7 +13,7 @@ export const templateLogin = () => {
    <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid" > 
 </div> 
 
-<h3>Inicia Sesión</h3>
+<h3 class ="parrLogin">Inicia Sesión</h3>
      
 <form class ="formlogin"id="login-form">       
    <input type="email" placeholder="Correo" class ="barr" id="login-email"/>
@@ -22,9 +22,9 @@ export const templateLogin = () => {
    <input type="password" placeholder="Contraseña" class ="barr" id="login-password"/>
    <label for="login-password"></label>
   
-   <button id="btnLogin" class="btn-create">Ingresa</button>
+   <button id="btnLogin" class="btn-createLogin">Ingresa</button>
            
-   <button class="btn-google" type="button" id="buttonGoogleLogin">Acceso con Google</button>
+   <button class="btn-googleLogin" type="button" id="buttonGoogleLogin">Acceso con Google</button>
             
    <button id="back" type="button"></button>         
 </form>

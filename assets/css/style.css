@@ -25,7 +25,7 @@ body {
 }
 
 .flexbox-item {
-  max-width: 90%;
+  max-width: 85%;
   background:#fff;
   justify-content: center;
 
@@ -45,7 +45,8 @@ body {
 }
 
 .containerparrafohome {
-  margin-top: 15%;
+  margin-bottom: 20%;
+  margin-top: 35%;
   background: #fff;
   text-align: center;
   
@@ -53,25 +54,26 @@ body {
 
 .containerbotoncreatehome {
  
-  margin-top: 20%;
+  margin-top: 4%;
   background: #fff;
   text-align: center;
 } 
 .containerbotonentrarhome {
  
-  margin-top: 8%;
+  margin-top: 4%;
   background: #fff;
   text-align: center;
 } 
 .containerbotongooglehome {
   
-  margin-top: 8%;
+  margin-top: 6%;
   background: #fff;
   margin-bottom: 10%;
   text-align: center;
 } 
 
 .btn-create {
+  margin-bottom: 5%;
   color: white;
   margin-top: 5%;
   align-items: center;
@@ -118,7 +120,7 @@ body {
 
 
 /* style      REGISTRE */
-h3 {
+.parrRegistre {
   text-align: center;
   color:#000;
  }
@@ -144,6 +146,40 @@ h3 {
   /* text-align: center; */
 }
 
+.btn-createR {
+  color: white;
+  margin-top: 5%;
+  align-items: center;
+  border-radius: 5px;
+  font-family: sans-serif;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: rgb(202, 60, 60);
+  /* this is a maroon */
+  height: 50px;
+  width: 100%;
+  font-size: 100%;
+  
+}
+
+
+.btn-googleR {
+  width:80%;
+  height: 50px;
+  text-align: center;
+  cursor: pointer;
+  color: rgb(29, 47, 105);
+  margin-top: 5%;
+  padding: 10px 50px;
+  border: 30px;
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+  background: url('https://img.icons8.com/dusk/2x/google-logo.png') 15px 8px no-repeat;
+  background-size: 25px;
+  background-color: rgb(45, 162, 230);
+}
 /* ---------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------- */
@@ -153,6 +189,14 @@ h3 {
 /* style      LOGIN */
 
 /*  style     Button reverse */
+ .parrLogin {
+  text-align: center;
+  color:#000;
+  margin-top: 10%;
+ }
+
+
+
 
 #back {
   width: 60px;
@@ -164,3 +208,43 @@ h3 {
   border: none;
   margin-top: 10px;
 } 
+
+.formlogin{
+  margin-top: 10%;
+}
+
+.btn-createLogin {
+  margin-bottom: 5%;
+  color: white;
+  margin-top: 25%;
+  align-items: center;
+  border-radius: 5px;
+  font-family: sans-serif;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: rgb(202, 60, 60);
+  /* this is a maroon */
+  height: 50px;
+  width: 80%;
+  font-size: 100%;
+  
+}
+
+
+.btn-googleLogin {
+  width:80%;
+  height: 50px;
+  text-align: center;
+  cursor: pointer;
+  color: rgb(29, 47, 105);
+  margin-top: 5%;
+  padding: 10px 50px;
+  border: 30px;
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+  background: url('https://img.icons8.com/dusk/2x/google-logo.png') 15px 8px no-repeat;
+  background-size: 25px;
+  background-color: rgb(45, 162, 230);
+}

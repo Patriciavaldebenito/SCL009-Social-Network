@@ -21,7 +21,7 @@ export const templateRegistre = () => {
   <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid" >
  
 </div>
-  <h3>Crea tu cuenta</h3>
+  <h3 class="parrRegistre">Crea tu cuenta</h3>
 
   <form id="signup-form">
 
@@ -38,11 +38,11 @@ export const templateRegistre = () => {
            <input type="password" placeholder="Contraseña" class ="barr inputPassword" id="signup-password"/>
            <label for="signup-password"></label>
   
-         <button class="btn-create" id="btnRegistre" >Crear</button>
+         <button class="btn-createR" id="btnRegistre" >Crear</button>
     
   </form>
 
-  <button class="btn-google" type="button" id="buttonGoogle">Acceso con Google</button>
+  <button class="btn-googleR" type="button" id="buttonGoogle">Acceso con Google</button>
 
   <button id="back" type="button"></button>
 `;
