@@ -1,102 +1,72 @@
-/* user - selector universar */
-* {
+*{
   padding: 0;
   margin: 0;
 }
 
-/* body */
 
-.containerHeader {
-  width:  80%;
-  height: 30%;
-  max-width: 250px;
-  max-height: 300px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  padding: 10%;
-  margin-top:5%;
+body {
+  margin: 0;
+  color:#000;
+  font-size: 20px;
 }
 
- .imgHeader {
-  width:  80%;
-  height: 30%;
-  max-width: 250px;
-  max-height: 300px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
- }
-
- .containerPhraseWelcome {
-   padding: 5%;
-   margin-top: 20%;
-   margin-bottom: 10%;
-  text-align: center;
- }
-
-/* section -->   con class = modal
-   div     -->   con class = modal-content
-   div     -->   con class = row
-
-   dar class extra en       div.row
-
-             A  H  O  R  A 
-
-   div    -->   con class  div.row input-home
-
-   */
-
-.input-home {
- text-align: center;
-}
-
-
-/* h1,
-h3 {
-  text-align: center;
-  font-family: sans-serif;
-  color: rgba(23, 24, 18, 0.658);
-  font-size: 1.5em; 
-} */
-
-
-/* .modal-container {
-  width: 150%;
-  height: 150%;
-  margin-top: 0%;
-  margin-left: 100%;
-  margin-right: 100%;
+.root {
+  background: #fff;
+  display: flex;
   align-items: center;
   justify-content: center;
-} */
-
-/* #home-form {
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  float: none;
+  height: auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
   padding: 2%;
-  width: 30%;
-  height: 40%;
-  margin-top: 10%;
-  margin-left: 25%;
-  margin-right: 80%;
+  
+}
+
+.flexbox-item {
+  max-width: 90%;
+  background:#fff;
+  justify-content: center;
 
 }
 
-.input-field {
-  align-items: center;
-  justify-content: center;
-  width: 90%;
-  height: 300%;
-  margin-top: 10%;
-  margin-left: 15%;
-  margin-right: 100%;
+.demoT {
+  width: 100%;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  background: #fff;
+  text-align: center;
+}
+
+.demoT img {
+  width: 300px;
+}
+
+.demoP {
+  margin-top: 25%;
+  background: #fff;
+  text-align: center;
+  
+} 
+
+.demoR {
  
-} */
+  margin-top: 20%;
+  background: #fff;
+  text-align: center;
+} 
+.demoE {
+ 
+  margin-top: 8%;
+  background: #fff;
+  text-align: center;
+} 
+.demoG {
+  
+  margin-top: 8%;
+  background: #fff;
+  margin-bottom: 10%;
+  text-align: center;
+} 
 
 .btn-create {
   color: white;
@@ -108,14 +78,16 @@ h3 {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   background: rgb(202, 60, 60);
   /* this is a maroon */
-  height: 45px;
-  width: 265px;
+  height: 60px;
+  width: 80%;
   font-size: 100%;
   
 }
 
+
 .btn-google {
   width:80%;
+  height: 60px;
   text-align: center;
   cursor: pointer;
   color: rgb(29, 47, 105);
@@ -131,88 +103,6 @@ h3 {
   background-color: rgb(45, 162, 230);
 }
 
-.row-btn-google{
-  display: flex;
-  flex-direction:row;
-  width:100%;
-  align-self: center;
+.aa{
+  font-size: 22px;
 }
-
-/* #back {
-  width: 60px;
-  height: 43px;
-  background:transparent;
-  background-image:url('https://img.icons8.com/cotton/2x/circled-left--v1.png');
-  background-size:40px;
-  background-repeat:no-repeat;
-  border: none;
-  margin-top: 10px;
-} */
-
-
-/*pensado en el responsive
-@media screen and (max-width:300px){
-  #home-form {
-    display: none;
-  }
-  
-}
-*/
-/*
-#title {
-  text-align: center;
-  font-family: 'Segoe UI';
-  color: rgba(202, 15, 15, 0.76);
-  font-size: 2em; 
-
-}
-
-/* start CSS templateMuro */
-.wrapper {
-  display: flex;  
-  flex-flow: row wrap;
-  font-weight: bold;
-  text-align: center;
-}
-
-.wrapper > * {
-  padding: 10px;
-  flex: 1 100%;
-}
-
-.header {
-  background: tomato;
-}
-
-.footer {
-  background: lightgreen;
-}
-
-.main {
-  text-align: left;
-  background: deepskyblue;
-}
-
-.aside-1 {
-  background: gold;
-}
-
-/* .aside-2 {
-  background: hotpink;
-} */
-
-@media all and (min-width: 400px) {
-  .aside { flex: 1 0 0; }
-}
-
-@media all and (min-width: 800px) {
-  .main    { flex: 3 0px; }
-  .aside-1 { order: 1; } 
-  .main    { order: 2; }
-  /* .aside-2 { order: 3; } */
-  .footer  { order: 4; }
-}
-
-
-
-/* end css el muro */

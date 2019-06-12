@@ -8,38 +8,35 @@ import {
 
 export const templateHome = () => {
 
-  document.getElementById("root").innerHTML = `     <header class="containerHeader">
-                                                       <div >
-                                                         <img class =imgHeader src="./img/headerapp.png" class="img-fluid" alt="Responsive image">
-                                                       </div> 
-                                                    </header>
-                                                    <div class="row containerPhraseWelcome">
-                                                      <div class="col">
-                                                         <h3 >Bienvenidos</h3>
-                                                      </div>
-                                                    </div>
-                                          
-                                                  <section class="modal" id="modal-home" >
-                                                    <div class="modal-content">
-                                                      <form id="home-form">
-                                                        <div class="row input-home">
-                                                          <div class="col input-field">
-                                                            <button class="btn-create" id="btnRegistreHome" >Registrar</button>
-                                                          </div>
-                                                        </div>
-                                                        <div class="row input-home">
-                                                          <div class="col input-field">
-                                                            <button class="btn-create" id="btnLoginHome" >Entrar</button>
-                                                          </div>
-                                                        </div>
-                                                        <div class="row input-home">
-                                                          <div class="col input-field">
-                                                            <button class="btn-google" type="button" id="buttonGoogleHome">Google</button>
-                                                          </div>
-                                                        </div>     
-                                                      </form>
-                                                    </div>
-                                                  </section>`;
+  document.getElementById("root").innerHTML = `
+  <div class="flexbox-item fixed">
+
+  <div class="demoT">
+
+  
+    <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid" >
+   
+  </div>
+
+  <div class="demoP">
+     <p class="aa">bienvenido</p>
+
+   </div>
+
+   <div class="demoR">
+      <button class="btn-create" id="btnRegistreHome" >Registrar</button>
+   </div>
+
+  <div class="demoE"> 
+     <button class="btn-create" id="btnLoginHome" >Entrar</button>
+  </div>
+
+  <div class="demoG">
+     <button class="btn-google" type="button" id="buttonGoogleHome">Google</button>
+
+  </div>
+
+</div>`;
 
   // initRealTime ();
   //<div id="app" class="title"></div>

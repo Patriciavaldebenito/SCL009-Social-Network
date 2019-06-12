@@ -76,8 +76,6 @@ export const signLogin = (email, password) => {
   // var emailVerifiedReturn = user.emailVerified;
 
   firebase.auth().signInWithEmailAndPassword(email, password)
-
-
     .then(
       function () {
         validationFormSignLogin();
@@ -159,8 +157,7 @@ export const verificationEmail = () => {
   // para enviar un mensaje de direccion a un usuario ...
   var user = firebase.auth().currentUser;
 
-  user
-    .sendEmailVerification()
+  user.sendEmailVerification()
 
     .then(function () {
       console.log("se envia mje de verificacion ");
