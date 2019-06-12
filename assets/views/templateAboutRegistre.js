@@ -30,12 +30,12 @@ export const templateRegistre = () => {
            <label for="signup-password"></label>
   
          <button class="btn-createR" id="btnRegistre" >Crear</button>
-    
+         <button class="btn-googleR" type="button" id="buttonGoogle">Google</button>
+
+         <button class="back" id="back" type="button"></button>
       </form>
 
-  <button class="btn-googleR" type="button" id="buttonGoogle">Google</button>
-
-  <button class="back" id="back" type="button"></button>
+  
 `;
   containerRegistre.innerHTML = contenidoRegistre;
 
