@@ -1,16 +1,9 @@
-import {
-  validationFormRegistre
-} from "../controller/validation.js";
-import {
-  createUser
-} from "./../js/firebase_auth.js";
+import { validationFormRegistre } from "../controller/validation.js";
+import { createUser } from "./../js/firebase_auth.js";
 // import { templateMuro } from "./templateMuro.js";
-import {
-  loginGoogle
-} from "./../js/firebase_auth.js";
-import {
-  templateHome
-} from "./templateHome.js";
+import { loginGoogle } from "./../js/firebase_auth.js";
+import { templateHome } from "./templateHome.js";
+
 
 export const templateRegistre = () => {
   let containerRegistre = document.getElementById("root");
@@ -51,6 +44,7 @@ export const templateRegistre = () => {
   // 1. En registre click en btn probando ****cambiar name gaba??¡¡
   document.getElementById("btnRegistre").addEventListener("click", (e) => {
     e.preventDefault();
+    
     console.log("click en boton registrar");
     let user = document.getElementById("signup-user").value;
     let age = document.getElementById("signup-age").value;

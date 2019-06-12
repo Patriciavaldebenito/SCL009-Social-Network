@@ -230,6 +230,19 @@ body {
   
 }
 
+table tr th,
+table tr td {
+  padding: 0.5625em 0.625em;
+  font-size: 0.875em;
+  color: #222222;
+  border: 1px solid #dddddd;
+}
+
+table tr.even,
+table tr.alt,
+table tr:nth-of-type(even) {
+  background: #f9f9f9;
+}
 
 .btn-googleLogin {
   width:80%;
