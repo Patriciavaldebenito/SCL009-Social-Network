@@ -3,11 +3,12 @@ import { validationFormSignLogin } from "../controller/validation.js";
 import { signLogin } from "../js/firebase_auth.js";
 //import { aparece } from "../js/firebase_auth.js";
 import { templateHome } from "./templateHome.js";
+
 // import { loginGoogle } from "./../js/firebase_auth.js"; **** revisar ruta ****
 // import {} from "";
 
 export const templateLogin = () => {
-  
+
   document.getElementById("root").innerHTML = `
   <div class="demoT">
    <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid" > 
@@ -15,19 +16,20 @@ export const templateLogin = () => {
 
 <h3 class ="parrLogin">Inicia Sesión</h3>
      
-<form class ="formlogin"id="login-form">       
+<form class ="formlogin" id="login-form">       
    <input type="email" placeholder="Correo" class ="barr" id="login-email"/>
    <label for="login-email"></label>
    
    <input type="password" placeholder="Contraseña" class ="barr" id="login-password"/>
    <label for="login-password"></label>
   
-   <button id="btnLogin" class="btn-createLogin">Ingresa</button>
+   <button class="btn-createLogin" id="btnLogin">Ingresa</button>
            
-   <button class="btn-googleLogin" type="button" id="buttonGoogleLogin">Acceso con Google</button>
+   <button class="btn-googleLogin" type="button" id="buttonGoogleLogin">Google</button>
             
-   <button id="back" type="button"></button>         
+        
 </form>
+<button class ="back" id="back" type="button"></button>    
 </div>`;
 
   // 1. En Login click en btnLogin
@@ -65,6 +67,7 @@ export const templateLogin = () => {
   document.getElementById("buttonGoogleLogin").addEventListener("click", () => {
     console.log("presionaste boton google en Home!");
     loginGoogle();
+
 
 
   });

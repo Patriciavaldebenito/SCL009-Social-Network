@@ -1,29 +1,20 @@
-import {
-  validationFormRegistre
-} from "../controller/validation.js";
-import {
-  createUser
-} from "./../js/firebase_auth.js";
+import { validationFormRegistre } from "../controller/validation.js";
+import { createUser } from "./../js/firebase_auth.js";
 // import { templateMuro } from "./templateMuro.js";
-import {
-  loginGoogle
-} from "./../js/firebase_auth.js";
-import {
-  templateHome
-} from "./templateHome.js";
+import { loginGoogle } from "./../js/firebase_auth.js";
+import { templateHome } from "./templateHome.js";
+
 
 export const templateRegistre = () => {
   let containerRegistre = document.getElementById("root");
 
   let contenidoRegistre = ` <div class="demoT">
+                             <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid" >
+                            </div>
 
-  
-  <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid" >
- 
-</div>
   <h3 class="parrRegistre">Crea tu cuenta</h3>
 
-  <form id="signup-form">
+      <form class= "formRegistre" id="signup-form">
 
           <input type="text" placeholder="Nombre" class ="barr inputUser" id="signup-user" />
           <label for="signup-user"></label>
@@ -39,18 +30,19 @@ export const templateRegistre = () => {
            <label for="signup-password"></label>
   
          <button class="btn-createR" id="btnRegistre" >Crear</button>
-    
-  </form>
+         <button class="btn-googleR" type="button" id="buttonGoogle">Google</button>
 
-  <button class="btn-googleR" type="button" id="buttonGoogle">Acceso con Google</button>
+         <button class="back" id="back" type="button"></button>
+      </form>
 
-  <button id="back" type="button"></button>
+  
 `;
   containerRegistre.innerHTML = contenidoRegistre;
 
   // 1. En registre click en btn probando ****cambiar name gaba??¡¡
   document.getElementById("btnRegistre").addEventListener("click", (e) => {
     e.preventDefault();
+    
     console.log("click en boton registrar");
     let user = document.getElementById("signup-user").value;
     let age = document.getElementById("signup-age").value;
