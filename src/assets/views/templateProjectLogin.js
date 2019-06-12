@@ -56,8 +56,7 @@ export const templateLogin = () => {
     let email = document.getElementById('login-email').value;
 
     let password = document.getElementById('login-password').value;
-    console.log(email);
-    console.log(password);
+    
 
     let resSignLogin = validationFormSignLogin(email, password);
     // conditions
