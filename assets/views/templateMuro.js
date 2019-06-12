@@ -1,7 +1,7 @@
 import { signOutRedSocial } from './../js/firebase_auth.js';
 import { savePostData } from '../js/firebase_data.js';
 import { getDataPost } from '../js/firebase_data.js';
-import { getDataRegistry } from '../js/firebase_data.js';
+// import { getDataRegistry } from '../js/firebase_data.js';
 
 export const templateMuro = () => {
   getDataRegistry();
@@ -140,7 +140,7 @@ export const templateMuro = () => {
   document.getElementById('back').addEventListener('click', () => {
     templateProjectLogin();
   });
-  
+
   document.getElementById('buttonSignOut').addEventListener('click', () => {
     signOutRedSocial();
   });

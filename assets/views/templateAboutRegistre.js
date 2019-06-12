@@ -16,17 +16,17 @@ export const templateRegistre = () => {
 
       <form class= "formRegistre" id="signup-form">
 
-          <input type="text" placeholder="Nombre" class ="barr inputUser" id="signup-user" />
+          <input type="text" placeholder=" Nombre" class ="barr inputUser" id="signup-user" />
           <label for="signup-user"></label>
 
-          <input type="number" placeholder="Edad" class ="barr inputAge" id="signup-age"/>
+          <input type="number" placeholder=" Edad" class ="barr inputAge" id="signup-age"/>
           <label for="signup-age"></label>
    
   
-          <input type="email" placeholder="Correo" class ="barr inputEmail" id="signup-email"/>
+          <input type="email" placeholder=" Correo" class ="barr inputEmail" id="signup-email"/>
           <label for="signup-email"></label>
    
-           <input type="password" placeholder="Contraseña" class ="barr inputPassword" id="signup-password"/>
+           <input type="password" placeholder=" Contraseña" class ="barr inputPassword" id="signup-password"/>
            <label for="signup-password"></label>
   
          <button class="btn-createR" id="btnRegistre" >Crear</button>

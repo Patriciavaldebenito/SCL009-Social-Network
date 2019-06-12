@@ -17,19 +17,19 @@ export const templateLogin = () => {
 <h3 class ="parrLogin">Inicia Sesión</h3>
      
 <form class ="formlogin" id="login-form">       
-   <input type="email" placeholder="Correo" class ="barr" id="login-email"/>
+   <input type="email" placeholder=" Correo" class ="barr" id="login-email"/>
    <label for="login-email"></label>
    
-   <input type="password" placeholder="Contraseña" class ="barr" id="login-password"/>
+   <input type="password" placeholder=" Contraseña" class ="barr" id="login-password"/>
    <label for="login-password"></label>
   
    <button class="btn-createLogin" id="btnLogin">Ingresa</button>
            
    <button class="btn-googleLogin" type="button" id="buttonGoogleLogin">Google</button>
             
-        
+   <button class ="back" id="back" type="button"></button>  
 </form>
-<button class ="back" id="back" type="button"></button>    
+  
 </div>`;
 
   // 1. En Login click en btnLogin
@@ -39,8 +39,7 @@ export const templateLogin = () => {
     let email = document.getElementById('login-email').value;
 
     let password = document.getElementById('login-password').value;
-    console.log(email);
-    console.log(password);
+    
 
     let resSignLogin = validationFormSignLogin(email, password);
     // conditions

@@ -27,6 +27,7 @@ export let saveRegistryData = ()=> {
 // HU4 Guardando Data
 //agregando a la collection Posts
 export let savePostData = () =>{
+
     let dbPost = firebase.firestore();
     let event = document.getElementById('event').value;
     let address = document.getElementById('address').value;
@@ -88,19 +89,21 @@ export let getDataPost = () =>{
 }
 
 
-export let getDataRegistry = () =>{
-    let db = firebase.firestore();
-    let title = document.getElementById('title');
-    db.collection("post").onSnapshot((querySnapshot) => {
-        title.innerHTML = '';
-        querySnapshot.forEach((doc) => {
-            console.log(`${doc.id} => ${doc.data().user}`);
-            title.innerHTML += `
-            <p><a>${doc.data().user}</a></p>
-          `
-        });
-    });
-}
+// export let getDataRegistry = () =>{
+//     let db = firebase.firestore();
+//     let title = document.getElementById('title');
+//     db.collection("post").onSnapshot((querySnapshot) => {
+//         title.innerHTML = '';
+//         querySnapshot.forEach((doc) => {
+//             console.log(`${doc.id} => ${doc.data().user}`);
+//             title.innerHTML += `
+//             <p><a>${doc.data().user}</a></p>
+//           `
+//         });
+//     });
+
+// }
+
 // Leer documentos Example
 // export let getDataName = () =>{
 //     let db = firebase.firestore();
