@@ -1,7 +1,7 @@
 // Validation of registration fields
 
 
-// Validation of HU2 Registry Email
+// HU2 Validation Email Registry.
 export const validationUser = user => {
   if (user === "") {
     Swal.fire('Ingrese un nombre de usuario');
@@ -50,7 +50,7 @@ export const validationEmail = email => {
     return false;
   }
   if (typeof email === "undefined") {
-    swal.fire('Ingrese un correo correcto ejemplo: andre.poblete@mail.cl');
+    swal.fire('Ingrese un correo valido');
     console.log("correo indefinido");
     return false;
   }
@@ -87,7 +87,9 @@ export const validationExpRegEmail = email => {
   // var re = /\S+@\S+/;
   //La prueba de validación de correo electrónico simple y futura será verificar la presencia del símbolo @
   var re = /^(?:[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/;
+  swal.fire('Ingrese un correo valido');
   return re.test(email);
+  
 };
 
 export const validationFormRegistre = (user, age, email, password) => {
@@ -110,10 +112,28 @@ export const validationFormRegistre = (user, age, email, password) => {
 };
 
 
-//Validation HU3 Login Email
+// HU3 Validation Login Email
 // export const resultValidationForm = validationForm(email, password);
+
+export const validationEmailSing = email => {
+  if (email === "") {
+    swal.fire('Ingresa tu correo');
+
+    console.log("sin correo ");
+    return false;
+  }
+}
+
+export const validationPasswordSing = password => {
+  if (password === "") {
+    swal.fire('Ingresa una contraseña con mayor o igual a 6 caracteres');
+
+    console.log("sin password ");
+    return false;
+  }
+}
 export const validationFormSignLogin = (email, password) => {
-  if (validationEmail(email) === false || validationPassword(password) === false || !validationExpRegEmail(email)) {
+  if (validationEmailSing(email) === false || validationPasswordSing(password) === false || !validationExpRegEmail(email)) {
 
     console.log("Un campo no cumple el testeo");
     return false;
@@ -128,7 +148,7 @@ export const validationFormSignLogin = (email, password) => {
 
 };
 
-//Validation HU4 PublicationPost
+//HU4 Validation Post Publication.
 
 export const validationDate = date => {
   if (date === "") {
