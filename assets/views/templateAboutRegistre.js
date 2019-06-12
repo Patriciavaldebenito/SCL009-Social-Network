@@ -14,7 +14,14 @@ import {
 
 export const templateRegistre = () => {
   let containerRegistre = document.getElementById("root");
-  let contenidoRegistre = `<h3>Crea tu cuenta</h3>
+
+  let contenidoRegistre = ` <div class="demoT">
+
+  
+  <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid" >
+ 
+</div>
+  <h3>Crea tu cuenta</h3>
 
   <form id="signup-form">
 
