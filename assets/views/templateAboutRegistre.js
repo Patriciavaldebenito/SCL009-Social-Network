@@ -33,7 +33,7 @@ export const templateRegistre = () => {
     
       </form>
 
-  <button class="btn-googleR" type="button" id="buttonGoogle">Acceso con Google</button>
+  <button class="btn-googleR" type="button" id="buttonGoogle">Google</button>
 
   <button class="back" id="back" type="button"></button>
 `;
