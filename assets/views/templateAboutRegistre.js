@@ -9,14 +9,12 @@ export const templateRegistre = () => {
   let containerRegistre = document.getElementById("root");
 
   let contenidoRegistre = ` <div class="demoT">
+                             <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid" >
+                            </div>
 
-  
-  <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid" >
- 
-</div>
   <h3 class="parrRegistre">Crea tu cuenta</h3>
 
-  <form id="signup-form">
+      <form class= "formRegistre" id="signup-form">
 
           <input type="text" placeholder="Nombre" class ="barr inputUser" id="signup-user" />
           <label for="signup-user"></label>
@@ -33,11 +31,11 @@ export const templateRegistre = () => {
   
          <button class="btn-createR" id="btnRegistre" >Crear</button>
     
-  </form>
+      </form>
 
   <button class="btn-googleR" type="button" id="buttonGoogle">Acceso con Google</button>
 
-  <button id="back" type="button"></button>
+  <button class="back" id="back" type="button"></button>
 `;
   containerRegistre.innerHTML = contenidoRegistre;
 

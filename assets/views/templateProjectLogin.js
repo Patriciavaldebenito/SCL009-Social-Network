@@ -23,11 +23,11 @@ export const templateLogin = () => {
    <input type="password" placeholder="Contraseña" class ="barr" id="login-password"/>
    <label for="login-password"></label>
   
-   <button id="btnLogin" class="btn-createLogin">Ingresa</button>
+   <button class="btn-createLogin id="btnLogin" ">Ingresa</button>
            
    <button class="btn-googleLogin" type="button" id="buttonGoogleLogin">Acceso con Google</button>
             
-   <button id="back" type="button"></button>         
+   <button class ="back" id="back" type="button"></button>         
 </form>
 </div>`;
 

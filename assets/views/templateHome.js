@@ -9,30 +9,29 @@ import {
 export const templateHome = () => {
 
   document.getElementById("root").innerHTML = `
-  <div class="flexbox-item fixed">
+  <div class="flexbox-item">
 
   <div class="demoT">
 
   
-    <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid" >
+    <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid">
    
   </div>
 
   <div class="containerparrafohome">
-     <p class="welcomeHome">bienvenido</p>
+     <p class="welcomeHome">Bienvenido</p>
    </div>
 
    <div class="containerbotoncreatehome">
-      <button class="btn-create" id="btnRegistreHome" >Registrar</button>
+      <button class="btn-create" id="btnRegistreHome">Registrar</button>
    </div>
 
   <div class="containerbotonentrarhome"> 
-     <button class="btn-create" id="btnLoginHome" >Entrar</button>
+     <button class="btn-create" id="btnLoginHome">Entrar</button>
   </div>
 
   <div class="containerbotongooglehome">
-     <button class="btn-google" type="button" id="buttonGoogleHome">Google</button>
-
+    <button class="btn-google" type="button" id="buttonGoogleHome">Google</button>
   </div>
 
 </div>`;

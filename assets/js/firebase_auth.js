@@ -192,11 +192,12 @@ export const verificationEmail = () => {
 
 //Función Cerrar Sesión
 export const signOutRedSocial = () => {
+  
   firebase.auth().signOut()
     .then(function () {
       // aqui no va al login aqui se cierra la sesion hacer un cuadro de salida
       console.log("La sesion ha sido cerrada...");
-      window.location.hash = "#/signOut";
+      window.location.hash = "#/home";
       // Sign-out successful.
     })
     .catch(function (error) {

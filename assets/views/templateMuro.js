@@ -140,6 +140,7 @@ export const templateMuro = () => {
   document.getElementById('back').addEventListener('click', () => {
     templateProjectLogin();
   });
+  
   document.getElementById('buttonSignOut').addEventListener('click', () => {
     signOutRedSocial();
   });

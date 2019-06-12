@@ -8,6 +8,7 @@ body {
   margin: 0;
   color:#f2f2f2;
   font-size: 20px;
+  font-family: sans-serif;
 }
 
 /* style container root */
@@ -21,9 +22,13 @@ body {
   margin-bottom: 8%;
   padding: 2%;
   flex-direction:column;
-  
 }
 
+
+
+/* style      HOME */
+
+/* div class home */
 .flexbox-item {
   max-width: 85%;
   background:#fff;
@@ -31,7 +36,7 @@ body {
 
 }
 
-/* style      HOME */
+/* container img header */
 .demoT {
   width: 100%;
   margin-bottom: 2%;
@@ -40,10 +45,12 @@ body {
   text-align: center;
 }
 
+/* div img --> registre and login  */
 .demoT img {
   width: 300px;
 }
 
+/* container h3 title  --> registre and login */
 .containerparrafohome {
   margin-bottom: 20%;
   margin-top: 35%;
@@ -52,18 +59,23 @@ body {
   
 } 
 
+/* container button " registrar "  --> registre  */
 .containerbotoncreatehome {
  
   margin-top: 4%;
   background: #fff;
   text-align: center;
 } 
+
+/* container button "entrar"  --> registre  */
 .containerbotonentrarhome {
  
   margin-top: 4%;
   background: #fff;
   text-align: center;
 } 
+
+/* container button "google"  --> registre  */
 .containerbotongooglehome {
   
   margin-top: 6%;
@@ -71,13 +83,13 @@ body {
   margin-bottom: 10%;
   text-align: center;
 } 
-
+/* style button registrar and login Home  */
 .btn-create {
   margin-bottom: 5%;
   color: white;
   margin-top: 5%;
   align-items: center;
-  border-radius: 5px;
+  border-radius: 2%;
   font-family: sans-serif;
   text-align: center;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -89,7 +101,7 @@ body {
   
 }
 
-
+/* style button google Home */
 .btn-google {
   width:80%;
   height: 50px;
@@ -99,7 +111,7 @@ body {
   margin-top: 5%;
   padding: 10px 50px;
   border: 30px;
-  border-radius: 5px;
+  border-radius: 2%;
   font-family: sans-serif;
   font-size: 18px;
   margin-bottom: 10px;
@@ -108,9 +120,10 @@ body {
   background-color: rgb(45, 162, 230);
 }
 
+/* style paragraph home */
 .welcomeHome {
   font-size: 22px;
-  color:#000;
+  color: #34495E;
 }
 
 /* ---------------------------------------------------------------------------------------------- */
@@ -120,21 +133,36 @@ body {
 
 
 /* style      REGISTRE */
+
 .parrRegistre {
+  font-size: 22px;
   text-align: center;
-  color:#000;
+  color:#34495E;
+  font-weight: normal;
  }
 
- form {
-   margin-top: 5%;
+ .formRegistre {
+  margin-top: 5%;
   display: flex;
   width: 80%;
-  background:#f2f2f2;
+  background:#D4E6F1;
   align-items: center;
   justify-content: center;
   flex-direction:column;
 
 }
+
+.formlogin {
+  text-align: center;
+  margin-top: 5%;
+  display: flex;
+  width: 80%;
+  background: #d4e6f1;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column;
+}
+
 
 .barr {
   margin-top: 10%;
@@ -142,7 +170,7 @@ body {
   margin-bottom: 5%;
   width: 80%;
   height: 2.5em;
-  border:0;border-bottom:1px solid black
+  border:0;border-bottom:1px solid #34495E;  
   /* text-align: center; */
 }
 
@@ -150,7 +178,7 @@ body {
   color: white;
   margin-top: 5%;
   align-items: center;
-  border-radius: 5px;
+  border-radius: 2%;
   font-family: sans-serif;
   text-align: center;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -172,7 +200,7 @@ body {
   margin-top: 5%;
   padding: 10px 50px;
   border: 30px;
-  border-radius: 5px;
+  border-radius: 2%;
   font-family: sans-serif;
   font-size: 18px;
   margin-bottom: 10px;
@@ -190,15 +218,17 @@ body {
 
 /*  style     Button reverse */
  .parrLogin {
+
   text-align: center;
-  color:#000;
+  color:#34495E;
   margin-top: 10%;
+  font-size: 22px;
+  font-weight: normal;
+
  }
 
 
-
-
-#back {
+.back {
   width: 60px;
   height: 43px;
   background:transparent;
@@ -209,16 +239,13 @@ body {
   margin-top: 10px;
 } 
 
-.formlogin{
-  margin-top: 10%;
-}
 
 .btn-createLogin {
   margin-bottom: 5%;
   color: white;
   margin-top: 25%;
   align-items: center;
-  border-radius: 5px;
+  border-radius:2%;
   font-family: sans-serif;
   text-align: center;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -253,7 +280,7 @@ table tr:nth-of-type(even) {
   margin-top: 5%;
   padding: 10px 50px;
   border: 30px;
-  border-radius: 5px;
+  border-radius: 2%;
   font-family: sans-serif;
   font-size: 18px;
   margin-bottom: 10px;

@@ -64,7 +64,7 @@ export let savePostData = () =>{
 export let getDataPost = () =>{
     let db = firebase.firestore();
     let tabla = document.getElementById('tabla');
-    let div = documentacion.getElementById('"containerDatosG"');
+  
     db.collection("post").onSnapshot((querySnapshot) => {
         tabla.innerHTML = '';
         
@@ -82,18 +82,7 @@ export let getDataPost = () =>{
             <td>${doc.data().message}</td>
             </tr>
           `
-            div.innerHTML += `
-            
-            <div>
-               <div>${doc.data().user}</div>
-               <div>${doc.data().event}</div>
-               <div>${doc.data().address}</div>
-               <div>${doc.data().subway}</div>
-               <div>${doc.data().date}</div>
-               <div>${doc.data().message}</div>
-               
-            <div/>
-          `
+          
         });
     });
 }
