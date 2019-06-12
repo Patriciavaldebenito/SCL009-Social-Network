@@ -9,33 +9,33 @@ import {
 export const templateHome = () => {
 
   document.getElementById("root").innerHTML = `
-                                                  <div class="modal" id="modal-home" >
-                                                    <div class="modal-content">
-                                                      <form id="home-form">
-                                                        <br>
-                                                        <div class="row">
-                                                          <div class="col input-field">
-                                                            <h3>Bienvenidos</h3>
-                                                          </div>
-                                                        </div>
-                                                        <div class="row">
-                                                          <div class="col input-field">
-                                                            <button class="btn-create" id="btnRegistreHome" >Registrar</button>
-                                                          </div>
-                                                        </div>
-                                                        <div class="row">
-                                                          <div class="col input-field">
-                                                            <button class="btn-create" id="btnLoginHome" >Entrar</button>
-                                                          </div>
-                                                        </div>
-                                                        <div class="row">
-                                                          <div class="col input-field">
-                                                            <button class="btn-google" type="button" id="buttonGoogleHome">Google</button>
-                                                          </div>
-                                                        </div>     
-                                                      </form>
-                                                    </div>
-                                                  </div>`;
+  <div class="flexbox-item fixed">
+
+  <div class="demoT">
+
+  
+    <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid" >
+   
+  </div>
+
+  <div class="containerparrafohome">
+     <p class="welcomeHome">bienvenido</p>
+   </div>
+
+   <div class="containerbotoncreatehome">
+      <button class="btn-create" id="btnRegistreHome" >Registrar</button>
+   </div>
+
+  <div class="containerbotonentrarhome"> 
+     <button class="btn-create" id="btnLoginHome" >Entrar</button>
+  </div>
+
+  <div class="containerbotongooglehome">
+     <button class="btn-google" type="button" id="buttonGoogleHome">Google</button>
+
+  </div>
+
+</div>`;
 
   // initRealTime ();
   //<div id="app" class="title"></div>

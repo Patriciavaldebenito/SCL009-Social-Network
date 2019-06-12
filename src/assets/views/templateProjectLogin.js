@@ -9,44 +9,26 @@ import { templateHome } from "./templateHome.js";
 export const templateLogin = () => {
   
   document.getElementById("root").innerHTML = `
-                                                <div class="modal" id="modal-login">
-                                                  <div class="modal-content">
-                                                    <h3>Inicia Sesión</h3>
-                                                    <br>
-                                                    <form id="login-form">
-                                                      <div class="row input-field">
-                                                        <div class = "col" >
-                                                          <input type="email" placeholder="Correo" id="login-email"/>
-                                                          <label for="login-email"></label>
-                                                        </div>
-                                                      </div>
-                                                      <div class="row input-field">
-                                                        <div class = "col" >
-                                                          <input type="password" placeholder="Contraseña" id="login-password"/>
-                                                          <label for="login-password"></label>
-                                                        </div>
-                                                      </div>
-                                                      <br>
-                                                      
-                                                      <div class="row">
-                                                        <div class="col input-field">
-                                                          <button id="btnLogin" class="btn-create">Ingresa</button>
-                                                        </div>
-                                                      </div>
-                                                      
-                                                      <div class="row">
-                                                        <div class="col input-field">
-                                                          <button class="btn-google" type="button" id="buttonGoogleLogin">Acceso con Google</button>
-                                                        </div>
-                                                      </div>  
-                                                      <div class="row">
-                                                        <div class="col input-field">
-                                                          <button id="back" type="button"></button>
-                                                        </div>
-                                                      </div>
-                                                    </form>
-                                                  </div>
-                                                </div>`;
+  <div class="demoT">
+   <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid" > 
+</div> 
+
+<h3 class ="parrLogin">Inicia Sesión</h3>
+     
+<form class ="formlogin"id="login-form">       
+   <input type="email" placeholder="Correo" class ="barr" id="login-email"/>
+   <label for="login-email"></label>
+   
+   <input type="password" placeholder="Contraseña" class ="barr" id="login-password"/>
+   <label for="login-password"></label>
+  
+   <button id="btnLogin" class="btn-createLogin">Ingresa</button>
+           
+   <button class="btn-googleLogin" type="button" id="buttonGoogleLogin">Acceso con Google</button>
+            
+   <button id="back" type="button"></button>         
+</form>
+</div>`;
 
   // 1. En Login click en btnLogin
   document.getElementById("btnLogin").addEventListener("click", (e) => {
