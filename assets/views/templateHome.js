@@ -18,20 +18,19 @@ export const templateHome = () => {
    
   </div>
 
-  <div class="demoP">
-     <p class="aa">bienvenido</p>
-
+  <div class="containerparrafohome">
+     <p class="welcomeHome">bienvenido</p>
    </div>
 
-   <div class="demoR">
+   <div class="containerbotoncreatehome">
       <button class="btn-create" id="btnRegistreHome" >Registrar</button>
    </div>
 
-  <div class="demoE"> 
+  <div class="containerbotonentrarhome"> 
      <button class="btn-create" id="btnLoginHome" >Entrar</button>
   </div>
 
-  <div class="demoG">
+  <div class="containerbotongooglehome">
      <button class="btn-google" type="button" id="buttonGoogleHome">Google</button>
 
   </div>

@@ -14,66 +14,31 @@ import {
 
 export const templateRegistre = () => {
   let containerRegistre = document.getElementById("root");
-  let contenidoRegistre = `<br>
-  <div class="modal" id="modal-signup" >
-    <div class="modal-content">
-      <h3>Crea tu cuenta</h3>
-      <form id="signup-form">
+  let contenidoRegistre = `<h3>Crea tu cuenta</h3>
 
-        <div class="row input-field">
-          <div class = "col" >
-            <input type="text" placeholder="Nombre" class ="inputUser" id="signup-user" />
-            <label for="signup-user"></label>
-          </div>
-        </div>
+  <form id="signup-form">
 
-        <div class="row input-field">
-          <div class = "col" >
-            <input type="number" placeholder="Edad" class ="inputAge" id="signup-age"/>
-            <label for="signup-age"></label>
-          </div>
-        </div>
+          <input type="text" placeholder="Nombre" class ="barr inputUser" id="signup-user" />
+          <label for="signup-user"></label>
 
-        <div class="row input-field">
-          <div class = "col" >
-            <input type="email" placeholder="Correo" class ="inputEmail" id="signup-email"/>
-            <label for="signup-email"></label>
-          </div>
-        </div>
+          <input type="number" placeholder="Edad" class ="barr inputAge" id="signup-age"/>
+          <label for="signup-age"></label>
+   
+  
+          <input type="email" placeholder="Correo" class ="barr inputEmail" id="signup-email"/>
+          <label for="signup-email"></label>
+   
+           <input type="password" placeholder="Contraseña" class ="barr inputPassword" id="signup-password"/>
+           <label for="signup-password"></label>
+  
+         <button class="btn-create" id="btnRegistre" >Crear</button>
+    
+  </form>
 
-        <div class="row input-field">
-          <div class = "col" >
-             <input type="password" placeholder="Contraseña" class ="inputPassword" id="signup-password"/>
-             <label for="signup-password"></label>
-          </div>
-        </div>
+  <button class="btn-google" type="button" id="buttonGoogle">Acceso con Google</button>
 
-        <br>
-        <div class = "row" >
-          <div class = "col" >
-           <button class="btn-create" id="btnRegistre" >Crear</button>
-          </div>
-        </div>
-
-      </form>
-
-    </div>
-
-    <div class = "row" >
-      <div class = "col" >
-        <button class="btn-google" type="button" id="buttonGoogle">Acceso con Google</button>
-      </div>
-    </div>
-
-    <br>
-
-    <div class = "row" >
-      <div class = "col" >
-        <button id="back" type="button"></button>
-      </div>
-    </div>
-
-  </div>`;
+  <button id="back" type="button"></button>
+`;
   containerRegistre.innerHTML = contenidoRegistre;
 
   // 1. En registre click en btn probando ****cambiar name gaba??¡¡
