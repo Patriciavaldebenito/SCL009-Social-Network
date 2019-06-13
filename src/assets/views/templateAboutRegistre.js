@@ -33,7 +33,7 @@ export const templateRegistre = () => {
        
 
          <button class="btn-red" id="btn-registre" >Crear</button>
-         <button class="btn-blue" type="button" id="buttonGoogle">Google</button>
+         <button class="btn-blue" type="button" id="button-google">Google</button>
 
 
          <button class="back" id="back" type="button"></button>

@@ -23,7 +23,7 @@ export const templateHome = () => {
 
  
      <div class="container-button-red">
-        <button class="btn-red" id=id="btn-registre-home">Registrar</button>
+        <button class="btn-red" id="btn-registre-home">Registrar</button>
      </div>
 
     <div class="container-button-red"> 
