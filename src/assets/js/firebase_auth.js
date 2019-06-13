@@ -85,9 +85,9 @@ export const signLogin = (email, password) => {
     .then(
       function () {
         validationFormSignLogin();
-        Swal.fire('Bienvenido Nuevamente!', 'Disfruta de Panoramix!','success');
+        swal.fire('Bienvenido Nuevamente!', 'Disfruta de Panoramix!','success');
         observer();
-
+        
      
         //si user.verified es true entonces se va al muro
       }
@@ -165,7 +165,7 @@ function aparece(user) {
   console.log(user.email);
   var user = user;
   if (user.emailVerified) {
-    Swal.fire('Buen Trabajo!', 'Estás registrado en Panoramix!, Te enviamos correo.','success');
+    swal.fire('Buen Trabajo!', 'Estás registrado en Panoramix!, Te enviamos correo.','success');
      templateMuro();
      
    return true 
