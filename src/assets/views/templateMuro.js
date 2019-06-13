@@ -10,10 +10,10 @@ export const templateMuro = () => {
 
     <div class="wrapper">
       <header class="header">
-      <h3>Publica tu Evento Aquí. </h3><h4 id="title"></h4></h4><br>
+      <h3>Publica tu Evento Aquí. </h3><br>
       </header>
       <aside class="aside aside-1">
-        <div class="modal" id="modal-toPost" >
+        <div class="modal" id="modal-post" >
           <div class="modal-content">
             
             <br>

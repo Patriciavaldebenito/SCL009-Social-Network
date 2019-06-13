@@ -202,3 +202,8 @@ table tr:nth-of-type(even) {
   background: #f9f9f9;
 }
 
+p {
+  font-family: sans-serif;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
