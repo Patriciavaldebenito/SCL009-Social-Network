@@ -13,7 +13,7 @@ body {
 
 /* style container root */
 .root {
- width: 90%;
+  /* width: 90%; */
   background: #fff;
   display: flex;
   align-items: center;
@@ -45,7 +45,7 @@ body {
 
 /* div img --> registre and login  */
 .demo-header img {
- max-width: 300px;
+ max-width: 275px;
  text-align: center;
 }
 
@@ -60,6 +60,7 @@ body {
 } 
 /* style paragraph home */
 .welcome-home {
+
   font-size: 22px;
   color: #34495E;
 }
@@ -106,7 +107,7 @@ body {
 .btn-red {
   margin-bottom: 5%;
   color: white;
-  margin-top: 5%;
+  /* margin-top: 5%; */
   align-items: center;
   border-radius: 2%;
   font-family: sans-serif;
@@ -114,18 +115,18 @@ body {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   background: rgb(202, 60, 60);
   /* this is a maroon */
-  height: 50px;
+  height: 40px;
   width: 80%;
   font-size: 100%;
   
 }
 .btn-blue {
   width:80%;
-  height: 50px;
+  height: 40px;
   text-align: center;
   cursor: pointer;
   color: rgb(29, 47, 105);
-  margin-top: 5%;
+  /* margin-top: 5%; */
   padding: 10px 50px;
   border: 30px;
   border-radius: 2%;
