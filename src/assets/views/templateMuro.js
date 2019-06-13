@@ -1,11 +1,13 @@
 import { signOutRedSocial } from './../js/firebase_auth.js';
 import { savePostData } from '../js/firebase_data.js';
 import { getDataPost } from '../js/firebase_data.js';
-import { getDataRegistry } from '../js/firebase_data.js';
+// import { getDataRegistry } from '../js/firebase_data.js';
 
 export const templateMuro = () => {
+
   getDataRegistry();
   document.getElementById('root').innerHTML = `<button class="btn-create2" id="button-sign-out"  type="button">Salir </button>                                               
+
     <div class="wrapper">
       <header class="header">
       <h3>Publica tu Evento Aquí. </h3><h4 id="title"></h4></h4><br>
@@ -140,8 +142,10 @@ export const templateMuro = () => {
   document.getElementById('back').addEventListener('click', () => {
     templateProjectLogin();
   });
+
   
   document.getElementById('button-sign-out').addEventListener('click', () => {
+
     signOutRedSocial();
   });
 
