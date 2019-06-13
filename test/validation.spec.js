@@ -21,6 +21,8 @@ describe('', () => {
     expect(validationEmail("ana@hotmail.com")).toBe(true)
     expect(validationPassword("1234567")).toBe(true)
     expect(validationFormRegistre("ana","33","ana@hotmail.com","1234567")).toBe(true)
+    expect(validationEmailSign("na@hotmail.com")).toBe(true)
+    expect(validationPasswordSign("1234567")).toBe(true)
     expect(validationFormSignLogin("ana@hotmail.com","1234567")).toBe(true)
     
   });

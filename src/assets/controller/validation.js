@@ -3,13 +3,13 @@
 // HU2 Validation Email Registry.
 export const validationUser = user => {
   if (user === "") {
-    alert('Ingrese un nombre de usuario');
+    // alert('Ingrese un nombre de usuario');
 
     console.log("sin unsuario");
     return false;
   }
   if (typeof user === "undefined") {
-    alert('Ingrese un nombre de usuario correcto');
+    // alert('Ingrese un nombre de usuario correcto');
 
     console.log("usuario indefinido");
     return false;
@@ -20,19 +20,19 @@ export const validationUser = user => {
 
 export const validationAge = age => {
   if (age === "") {
-    alert('ingresa tu edad');
+    // alert('ingresa tu edad');
 
     console.log("aun no tienes la edad");
     return false;
   }
   if (age < 16) {
-    alert('aun no tienes la edad');
+    // alert('aun no tienes la edad');
 
     console.log("aun no tienes la edad");
     return false;
   }
   if (typeof age === "undefined") {
-    alert('Ingresa una edad correcta');
+    // alert('Ingresa una edad correcta');
     console.log("edad indefinido");
     return false;
   }
@@ -43,13 +43,13 @@ export const validationAge = age => {
 
 export const validationEmail = email => {
   if (email === "") {
-    alert('Ingresa tu correo');
+    // alert('Ingresa tu correo');
 
     console.log("sin correo ");
     return false;
   }
   if (typeof email === "undefined") {
-    alert('Ingrese un correo valido');
+    // alert('Ingrese un correo valido');
     console.log("correo indefinido");
     return false;
   }
@@ -60,19 +60,19 @@ export const validationEmail = email => {
 
 export const validationPassword = password => {
   if (password === "") {
-    alert('Ingresa una contraseña con mayor o igual a 6 caracteres');
+    // alert('Ingresa una contraseña con mayor o igual a 6 caracteres');
 
     console.log("sin password ");
     return false;
   }
   if (typeof password === "undefined") {
-    alert('Ingresa una contraseña con mayor o igual a 6 caracteres');
+    // alert('Ingresa una contraseña con mayor o igual a 6 caracteres');
 
     console.log("password indefinido");
     return false;
   }
   if (password.length < 6) {
-    alert('Ingresa una contraseña mayor o igual a 6 caracteres');
+    // alert('Ingresa una contraseña mayor o igual a 6 caracteres');
 
     console.log("no cumple el largo de contraseña");
     return false;
@@ -86,7 +86,7 @@ export const validationExpRegEmail = email => {
   // var re = /\S+@\S+/;
   //La prueba de validación de correo electrónico simple y futura será verificar la presencia del símbolo @
   var re = /^(?:[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/;
-  alert('Ingrese un correo valido');
+  // alert('Ingrese un correo valido');
   return re.test(email);
   
 };
@@ -116,7 +116,7 @@ export const validationFormRegistre = (user, age, email, password) => {
 
 export const validationEmailSign = email => {
   if (email === "") {
-    alert('Ingresa tu correo');
+    // alert('Ingresa tu correo');
 
     console.log("sin correo ");
     return false;
@@ -125,7 +125,7 @@ export const validationEmailSign = email => {
 
 export const validationPasswordSign = password => {
   if (password === "") {
-    alert('Ingresa una contraseña con mayor o igual a 6 caracteres');
+    // alert('Ingresa una contraseña con mayor o igual a 6 caracteres');
 
     console.log("sin password ");
     return false;
@@ -152,7 +152,7 @@ export const validationFormSignLogin = (email, password) => {
 
 export const validationEvent = event => {
   if (event === "") {
-    alert('Ingrese tipo de evento');
+    // alert('Ingrese tipo de evento');
 
     console.log("sin tipo de evento");
     return false;
@@ -163,13 +163,13 @@ export const validationEvent = event => {
 
 export const validationDate = date => {
   if (date === "") {
-    alert('Ingrese fecha');
+    // alert('Ingrese fecha');
 
     console.log("sin fecha");
     return false;
   }
   if (typeof date === "undefined") {
-    alert('Ingrese fecha correcta');
+    // alert('Ingrese fecha correcta');
 
     console.log("fecha indefinida");
     return false;
@@ -180,13 +180,13 @@ export const validationDate = date => {
 
 export const validationAddress = address => {
   if (address === "") {
-    alert('Ingrese dirección');
+    // alert('Ingrese dirección');
 
     console.log("sin dirección");
     return false;
   }
   if (typeof address === "undefined") {
-    alert('Ingrese dirección correcta');
+    // alert('Ingrese dirección correcta');
 
     console.log("dirección indefinida");
     return false;
@@ -197,13 +197,13 @@ export const validationAddress = address => {
 
 export const validationSubway = subway => {
   if (subway === "") {
-    alert('Ingrese metro referencia');
+    // alert('Ingrese metro referencia');
 
     console.log("sin metro referencia");
     return false;
   }
   if (typeof subway === "undefined") {
-    alert('Ingrese metro correctamente');
+    // alert('Ingrese metro correctamente');
 
     console.log("metro indefinido");
     return false;
@@ -214,7 +214,7 @@ export const validationSubway = subway => {
 
 export const validationMessage = message => {
   if (message === "") {
-    alert('Ingrese algun comentario');
+    // alert('Ingrese algun comentario');
 
     console.log("sin comentario");
     return false;
