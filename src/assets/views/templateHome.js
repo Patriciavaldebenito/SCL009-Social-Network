@@ -1,6 +1,4 @@
-import {
-  loginGoogle
-} from "./../js/firebase_auth.js";
+import { loginGoogle } from "./../js/firebase_auth.js";
 // import { templateMuro } from "./templateMuro.js";
 
 
@@ -11,27 +9,32 @@ export const templateHome = () => {
   document.getElementById("root").innerHTML = `
   <div class="flexbox-item">
 
-  <div class="demoT">
-
-  
+  <div class="demo-header">
     <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid">
-   
   </div>
+  <div class="paragraph-home">
+    <p class="welcome-home">Bienvenido</p>
+  </div>  
 
-  <div class="containerparrafohome">
-     <p class="welcomeHome">Bienvenido</p>
-   </div>
+  <div class:"home-form">
 
-   <div class="containerbotoncreatehome">
-      <button class="btn-create" id="btn-registre-home">Registrar</button>
-   </div>
 
-  <div class="containerbotonentrarhome"> 
-     <button class="btn-create" id="btn-login-home">Entrar</button>
-  </div>
+   <form class:"home-form">
 
-  <div class="containerbotongooglehome">
-    <button class="btn-google" type="button" id="button-google-home">Google</button>
+ 
+     <div class="container-button-red">
+        <button class="btn-red" id=id="btn-registre-home">Registrar</button>
+     </div>
+
+    <div class="container-button-red"> 
+      <button class="btn-red" id="btn-login-home">Entrar</button>
+    </div>
+
+    <div class="container-button-blue">
+      <button class="btn-blue" type="button" id="button-google-home">Google</button>
+    </div>
+
+   </form>
   </div>
 
 </div>`;
@@ -49,7 +52,7 @@ export const templateHome = () => {
   document.getElementById("button-google-home").addEventListener("click", () => {
     console.log("presionaste boton google en Home!");
     loginGoogle();
-    
+
   });
 
   //3. En home click en btn login

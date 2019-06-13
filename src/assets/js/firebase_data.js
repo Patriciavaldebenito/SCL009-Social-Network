@@ -2,6 +2,7 @@
 
 //HU4 Comenzando a Guardar Data
 //agregando a la collection Users
+//Datos input template registry 
 export let saveRegistryData = ()=> {
     let db = firebase.firestore();
     let user = document.getElementById('signup-user').value;
@@ -27,6 +28,7 @@ export let saveRegistryData = ()=> {
 // HU4 Guardando Data
 //agregando a la collection Posts
 export let savePostData = () =>{
+
     let dbPost = firebase.firestore();
     let event = document.getElementById('event').value;
     let address = document.getElementById('address').value;
@@ -35,6 +37,7 @@ export let savePostData = () =>{
     let message = document.getElementById('message').value;
 
         dbPost.collection("post").add({
+          
             event: event,
             address: address,
             subway: subway,
@@ -70,9 +73,11 @@ export let getDataPost = () =>{
         
         querySnapshot.forEach((doc) => {
 
-            console.log(`${doc.id} => ${doc.data().user}`);
+            console.log(`${doc.id} => ${doc.data().user}`); // dato nombre usuario con id 
+            console.log( doc.data());// json con los valores ingresados para publicar el evento
 
             tabla.innerHTML += `
+            <div>
             <tr>
             <th scope="row">${doc.data().user}</th>
             <td>${doc.data().event}</td>
@@ -81,6 +86,7 @@ export let getDataPost = () =>{
             <td>${doc.data().date}</td>
             <td>${doc.data().message}</td>
             </tr>
+            </div>
           `
           
         });
@@ -88,19 +94,21 @@ export let getDataPost = () =>{
 }
 
 
-export let getDataRegistry = () =>{
-    let db = firebase.firestore();
-    let title = document.getElementById('title');
-    db.collection("post").onSnapshot((querySnapshot) => {
-        title.innerHTML = '';
-        querySnapshot.forEach((doc) => {
-            console.log(`${doc.id} => ${doc.data().user}`);
-            title.innerHTML += `
-            <p><a>${doc.data().user}</a></p>
-          `
-        });
-    });
-}
+// export let getDataRegistry = () =>{
+//     let db = firebase.firestore();
+//     let title = document.getElementById('title');
+//     db.collection("post").onSnapshot((querySnapshot) => {
+//         title.innerHTML = '';
+//         querySnapshot.forEach((doc) => {
+//             console.log(`${doc.id} => ${doc.data().user}`);
+//             title.innerHTML += `
+//             <p><a>${doc.data().user}</a></p>
+//           `
+//         });
+//     });
+
+// }
+
 // Leer documentos Example
 // export let getDataName = () =>{
 //     let db = firebase.firestore();
