@@ -14,6 +14,7 @@ export const initiationFirebase = () => {
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
 
+
     return firebase.firestore();
 
 }

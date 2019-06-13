@@ -13,8 +13,7 @@ body {
 
 /* style container root */
 .root {
-  max-width: 350px;
-  max-height: 600px;
+  /* width: 90%; */
   background: #fff;
   display: flex;
   align-items: center;
@@ -108,7 +107,7 @@ body {
 .btn-red {
   margin-bottom: 5%;
   color: white;
-  margin-top: 5%;
+  /* margin-top: 5%; */
   align-items: center;
   border-radius: 2%;
   font-family: sans-serif;
@@ -127,7 +126,7 @@ body {
   text-align: center;
   cursor: pointer;
   color: rgb(29, 47, 105);
-  margin-top: 5%;
+  /* margin-top: 5%; */
   padding: 10px 50px;
   border: 30px;
   border-radius: 2%;

@@ -4,6 +4,7 @@
 //agregando a la collection Users
 //Datos input template registry 
 export let saveRegistryData = ()=> {
+
     let db = firebase.firestore();
     let user = document.getElementById('signup-user').value;
     let age = document.getElementById('signup-age').value;
@@ -27,7 +28,7 @@ export let saveRegistryData = ()=> {
 
 // HU4 Guardando Data
 //agregando a la collection Posts
-export let savePostData = () =>{
+export let savePostData = () => {
 
     let dbPost = firebase.firestore();
     let event = document.getElementById('event').value;
@@ -63,14 +64,22 @@ export let savePostData = () =>{
 }
 
 
+
+
+
+
+
+
+
 // Read Data documents
 export let getDataPost = () =>{
+   // let usuario 
     let db = firebase.firestore();
     let tabla = document.getElementById('tabla');
   
     db.collection("post").onSnapshot((querySnapshot) => {
         tabla.innerHTML = '';
-        
+        // usar parametro user
         querySnapshot.forEach((doc) => {
 
             console.log(`${doc.id} => ${doc.data().user}`); // dato nombre usuario con id 

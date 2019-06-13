@@ -15,100 +15,89 @@ export const templateMuro = () => {
           <div class="modal-content">
             
             <br>
-            <form id="toPost-form">
+              <form id="toPost-form">
              
-              <div class="row input-field2">
-                <div class = "col" >
-                  <p>Tipo de Actividad o Evento:</p>
-                  <input type="text" placeholder="Danza,Teatro,Música, etc." class ="inputevent" id="event" />
-                  <label for="event"></label>
+                 <div class="row input-field2">
+                    <div class = "col" >
+                      <p>Tipo de Actividad o Evento:</p>
+                      <input type="text" placeholder="Danza,Teatro,Música, etc." class ="inputevent" id="event" />
+                      <label for="event"></label>
+                    </div>
+                 </div>
+
+                               <br>
+                <div class="row input-field2">
+                   <div class = "col" >
+                      <p> Coodenadas </p>
+                      <input type="text" placeholder="Dirección" class ="inputadrees" id="address"/>
+                      <label for="address"></label>
+                   </div>
                 </div>
-              </div>
-              <br>
-              <div class="row input-field2">
-                <div class = "col" >
-                  <p> Coodenadas </p>
-                  <input type="text" placeholder="Dirección" class ="inputadrees" id="address"/>
-                  <label for="address"></label>
+                
+                               <br>
+                <div class="row input-field2">
+                   <div class = "col" >
+                     <p>Metro de Referencia</p>
+                     <input type="text" placeholder="Baquedano, Salvador, etc." class ="inputsubway" id="subway"/>
+                     <label for="subway"></label>
+                   </div>
                 </div>
-              </div>
-              <br>
-              <div class="row input-field2">
-                 <div class = "col" >
-                  <p>Metro de Referencia</p>
-                  <input type="text" placeholder="Baquedano, Salvador, etc." class ="inputsubway" id="subway"/>
-                  <label for="subway"></label>
+
+                                <br>
+                <div class="row input-field2">
+                    <div class = "col" >
+                      <p> Fecha del Evento</p>
+                      <input type="text" placeholder="01-06" class ="inputdate" id="date"/>
+                      <label for="date"></label>
+                    </div>
                 </div>
-              </div>
-              <br>
-              <div class="row input-field2">
-                <div class = "col" >
-                  <p> Fecha del Evento</p>
-                  <input type="text" placeholder="01-06" class ="inputdate" id="date"/>
-                  <label for="date"></label>
+                                <br>
+
+                <div class="row input-field2">
+                   <div class = "col" >
+                     <p> Comentarios </p>
+                     <input type="text" placeholder="Descripcion del evento" class ="inputmessage" id="message" />
+                     <label for="message"></label>
+                   </div>
                 </div>
+
+               <div class = "row" >
+                  <div class = "col" >
+                     <button class="btn-create2" id="btnToPost" >Publicar</button>
+                  </div>
               </div>
-              <br>
-              <div class="row input-field2">
-                <div class = "col" >
-                  <p> Comentarios </p>
-                  <input type="text" placeholder="Descripcion del evento" class ="inputmessage" id="message" />
-                  <label for="message"></label>
-                </div>
-              </div>
+
               <div class = "row" >
                 <div class = "col" >
-                   <button class="btn-create2" id="btnToPost" >Publicar</button>
+                   <button class="btn-create2" id="btnDelete" >Borrar</button>
                 </div>
               </div>
-              <div class = "row" >
-      <div class = "col" >
-        <button class="btn-create2" id="btnDelete" >Borrar</button>
-      </div>
-    </div>
-            </form>
-          </div>
+          </form>
         </div>
-      </aside>
-      <section class="main">
-        <article ><br><h3>Observa El Muro con lo Publicado...</h3>
-        <div class = "row" >
-          <div class = "col" >
-            <button class="btn-create2" id="btnEdit" >Editar</button>
-          </div>
         </div>
-        <table class="resp">
-        <thead>
-          <tr>
-            <h3>
-            <th scope="col">USUARIO</th>
-            <th scope="col">EVENTO</th>
-            <th scope="col">COORDENADAS</th>
-            <th scope="col">METRO</th>
-            <th scope="col">FECHA</th>
-            <th scope="col">COMENTARIOS</th>
-            <th scope="col">ME GUSTA</th>
-            </h3>
-          </tr>
-        </thead>
-        <tbody id="tabla">
-         
-        </tbody>
-      </table>
+       </aside>
+
+       <section class="main">
+          <article ><br><h3>Observa El Muro con lo Publicado...</h3>
+            <div class = "row" >
+              <div class = "col" >
+                <button class="btn-create2" id="btnEdit" >Editar</button>
+              </div>
+            </div>
         
-        </article>
-      </section>
+            <div id="tabla"></div>
+          </article>
+       </section>
       
-      <div id="containerDatosG" ></div>
-      
-      
-    <footer class="footer">
-    <div class = "row" >
-    <div class = "col" >
-      <button id="back" type="button"></button>
-    </div>
-  </div>
-    </footer>
+       <div id="containerDatosG" ></div>
+   
+       <footer class="footer">
+          <div class = "row" >
+            <div class = "col" >
+                 <button id="back" type="button"></button>
+            </div>
+          </div>
+        </footer>
   </div>`;
   getDataPost();
 //<aside class="aside aside-2"></aside>
