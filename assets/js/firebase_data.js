@@ -2,6 +2,7 @@
 
 //HU4 Comenzando a Guardar Data
 //agregando a la collection Users
+//Datos input template registry 
 export let saveRegistryData = ()=> {
     let db = firebase.firestore();
     let user = document.getElementById('signup-user').value;
@@ -76,6 +77,7 @@ export let getDataPost = () =>{
             console.log( doc.data());// json con los valores ingresados para publicar el evento
 
             tabla.innerHTML += `
+            <div>
             <tr>
             <th scope="row">${doc.data().user}</th>
             <td>${doc.data().event}</td>
@@ -84,6 +86,7 @@ export let getDataPost = () =>{
             <td>${doc.data().date}</td>
             <td>${doc.data().message}</td>
             </tr>
+            </div>
           `
           
         });
