@@ -18,19 +18,20 @@ export const templateHome = () => {
 
   <div class:"home-form">
 
+
    <form class:"home-form">
 
  
      <div class="container-button-red">
-        <button class="btn-red" id="btnRegistreHome">Registrar</button>
+        <button class="btn-red" id=id="btn-registre-home">Registrar</button>
      </div>
 
     <div class="container-button-red"> 
-      <button class="btn-red" id="btnLoginHome">Entrar</button>
+      <button class="btn-red" id="btn-login-home">Entrar</button>
     </div>
 
     <div class="container-button-blue">
-      <button class="btn-blue" type="button" id="buttonGoogleHome">Google</button>
+      <button class="btn-blue" type="button" id="button-google-home">Google</button>
     </div>
 
    </form>
@@ -42,13 +43,13 @@ export const templateHome = () => {
   //<div id="app" class="title"></div>
 
   // 1. En home click en btn  registrar
-  document.getElementById("btnRegistreHome").addEventListener("click", () => {
+  document.getElementById("btn-registre-home").addEventListener("click", () => {
 
     window.location.hash = "#/registre";
   });
 
   // 2. En home click en btn google
-  document.getElementById("buttonGoogleHome").addEventListener("click", () => {
+  document.getElementById("button-google-home").addEventListener("click", () => {
     console.log("presionaste boton google en Home!");
     loginGoogle();
 
@@ -56,7 +57,7 @@ export const templateHome = () => {
 
   //3. En home click en btn login
 
-  document.getElementById("btnLoginHome").addEventListener("click", () => {
+  document.getElementById("btn-login-home").addEventListener("click", () => {
     window.location.hash = "#/login";
   });
 

@@ -4,8 +4,10 @@ import { getDataPost } from '../js/firebase_data.js';
 // import { getDataRegistry } from '../js/firebase_data.js';
 
 export const templateMuro = () => {
-  // getDataRegistry();
-  document.getElementById('root').innerHTML = `<button class="btn-create2" id="buttonSignOut"  type="button">Salir </button>                                               
+
+  getDataRegistry();
+  document.getElementById('root').innerHTML = `<button class="btn-create2" id="button-sign-out"  type="button">Salir </button>                                               
+
     <div class="wrapper">
       <header class="header">
       <h3>Publica tu Evento Aquí. </h3><h4 id="title"></h4></h4><br>
@@ -15,7 +17,7 @@ export const templateMuro = () => {
           <div class="modal-content">
             
             <br>
-              <form id="toPost-form">
+            <form id="post-form">
              
                  <div class="row input-field2">
                     <div class = "col" >
@@ -69,11 +71,24 @@ export const templateMuro = () => {
 
               <div class = "row" >
                 <div class = "col" >
-                   <button class="btn-create2" id="btnDelete" >Borrar</button>
+                   <button class="btn-create2" id="btn-post" >Publicar</button>
                 </div>
               </div>
-          </form>
+              <div class = "row" >
+      <div class = "col" >
+        <button class="btn-create2" id="btn-delete" >Borrar</button>
+      </div>
+    </div>
+            </form>
+          </div>
         </div>
+      </aside>
+      <section class="main">
+        <article ><br><h3>Observa El Muro con lo Publicado...</h3>
+        <div class = "row" >
+          <div class = "col" >
+            <button class="btn-create2" id="btn-edit" >Editar</button>
+          </div>
         </div>
        </aside>
 
@@ -85,9 +100,10 @@ export const templateMuro = () => {
               </div>
             </div>
         
-            <div id="tabla"></div>
-          </article>
-       </section>
+        </article>
+      </section>
+      
+      <div id="container-datos-g" ></div>
       
        <div id="containerDatosG" ></div>
    
@@ -104,7 +120,7 @@ export const templateMuro = () => {
   // Eventos en el muro de la aplicacion 
 
 
-  document.getElementById("btnToPost").addEventListener("click", (e) => {
+  document.getElementById("btn-post").addEventListener("click", (e) => {
     e.preventDefault();
     savePostData();
     getDataPost();
@@ -130,7 +146,9 @@ export const templateMuro = () => {
     templateProjectLogin();
   });
 
-  document.getElementById('buttonSignOut').addEventListener('click', () => {
+  
+  document.getElementById('button-sign-out').addEventListener('click', () => {
+
     signOutRedSocial();
   });
 
