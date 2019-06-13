@@ -10,26 +10,26 @@ import { templateHome } from "./templateHome.js";
 export const templateLogin = () => {
 
   document.getElementById("root").innerHTML = `
-  <div class="demoT">
+  <div class="demo-header">
    <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid" > 
 </div> 
 
-<h3 class ="parrLogin">Inicia Sesión</h3>
+<h3 class ="paragraph-login">Inicia Sesión</h3>
      
-<form class ="formlogin" id="login-form">       
-   <input type="email" placeholder="Correo" class ="barr" id="login-email"/>
+<form class ="form-login" id="login-form">       
+   <input type="email" placeholder=" Correo" class ="input-field" id="login-email"/>
    <label for="login-email"></label>
    
-   <input type="password" placeholder="Contraseña" class ="barr" id="login-password"/>
+   <input type="password" placeholder=" Contraseña" class ="input-field" id="login-password"/>
    <label for="login-password"></label>
   
-   <button class="btn-createLogin" id="btnLogin">Ingresa</button>
+   <button class="btn-red" id="btnLogin">Ingresa</button>
            
-   <button class="btn-googleLogin" type="button" id="buttonGoogleLogin">Google</button>
+   <button class="btn-blue" type="button" id="buttonGoogleLogin">Google</button>
             
-        
+   <button class ="back" id="back" type="button"></button>  
 </form>
-<button class ="back" id="back" type="button"></button>    
+  
 </div>`;
 
   // 1. En Login click en btnLogin

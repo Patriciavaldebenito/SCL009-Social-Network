@@ -8,29 +8,29 @@ import { templateHome } from "./templateHome.js";
 export const templateRegistre = () => {
   let containerRegistre = document.getElementById("root");
 
-  let contenidoRegistre = ` <div class="demoT">
+  let contenidoRegistre = ` <div class="demo-header">
                              <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid" >
                             </div>
 
-  <h3 class="parrRegistre">Crea tu cuenta</h3>
+  <h3 class="paragraph-registre">Crea tu cuenta</h3>
 
-      <form class= "formRegistre" id="signup-form">
+      <form class= "form-registre" id="signup-form">
 
-          <input type="text" placeholder="Nombre" class ="barr inputUser" id="signup-user" />
+          <input type="text" placeholder=" Nombre" class ="input-field inputUser" id="signup-user" />
           <label for="signup-user"></label>
 
-          <input type="number" placeholder="Edad" class ="barr inputAge" id="signup-age"/>
+          <input type="number" placeholder=" Edad" class ="input-field inputAge" id="signup-age"/>
           <label for="signup-age"></label>
    
   
-          <input type="email" placeholder="Correo" class ="barr inputEmail" id="signup-email"/>
+          <input type="email" placeholder=" Correo" class ="input-field inputEmail" id="signup-email"/>
           <label for="signup-email"></label>
    
-           <input type="password" placeholder="Contraseña" class ="barr inputPassword" id="signup-password"/>
+           <input type="password" placeholder=" Contraseña" class ="input-field inputPassword" id="signup-password"/>
            <label for="signup-password"></label>
   
-         <button class="btn-createR" id="btnRegistre" >Crear</button>
-         <button class="btn-googleR" type="button" id="buttonGoogle">Google</button>
+         <button class="btn-red" id="btnRegistre" >Crear</button>
+         <button class="btn-blue" type="button" id="buttonGoogle">Google</button>
 
          <button class="back" id="back" type="button"></button>
       </form>
