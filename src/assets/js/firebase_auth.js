@@ -55,7 +55,10 @@ export const createUser = (user, age, email, password) => {
     .then(function () {
       console.log("se creo usuario en firebase");
       saveRegistryData();
+      
       verificationEmail();
+      
+      
       window.location.hash = "#/login";
     })
 
@@ -82,6 +85,7 @@ export const signLogin = (email, password) => {
     .then(
       function () {
         validationFormSignLogin();
+        Swal.fire('Bienvenido Nuevamente!', 'Disfruta de Panoramix!','success');
         observer();
 
      
@@ -112,7 +116,7 @@ export const observer = () => {
       console.log("*****************");
       console.log(user.emailVerified);
       console.log("*****************");
-
+        
 
       var email = user.email;
       var displayName = user.displayName;
@@ -161,13 +165,15 @@ function aparece(user) {
   console.log(user.email);
   var user = user;
   if (user.emailVerified) {
+    Swal.fire('Buen Trabajo!', 'Estás registrado en Panoramix!, Te enviamos correo.','success');
      templateMuro();
+     
    return true 
   }
   if (!user.emailVerified) {
    
       console.log("el correo no ha sido verificado");
-      swal.fire("Verificar tu correo. Cuando este ok, Inicia Sesion!");
+      swal.fire("Verificar tu correo. Cuando este ok, debes Iniciar Sesion!");
       window.location.hash = "#/login";
     }
 
@@ -182,6 +188,7 @@ export const verificationEmail = () => {
 
     .then(function () {
       console.log("se envia mje de verificacion ");
+      
     })
 
     .catch(function (error) {
