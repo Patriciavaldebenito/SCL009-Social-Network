@@ -47,14 +47,14 @@ export let savePostData = () => {
         })
         .then(function(docRef) {
             console.log("Document written with ID: ", docRef.id);
-            document.getElementById("textpost").value=''; 
+            // document.getElementById("textpost").value=''; 
             document.getElementById('event').value=''; 
             document.getElementById('address').value=''; 
             document.getElementById('subway').value=''; 
             document.getElementById('date').value=''; 
             document.getElementById('message').value=''; 
             window.location.hash="#/muro";
-            /*postRead();  */
+            
         })
         .catch(function(error) {
             console.error("Error adding document: ", error);
@@ -62,72 +62,3 @@ export let savePostData = () => {
 
 
 }
-
-
-
-
-
-
-
-
-
-// Read Data documents
-export let getDataPost = () =>{
-   // let usuario 
-    let db = firebase.firestore();
-    let tabla = document.getElementById('tabla');
-  
-    db.collection("post").onSnapshot((querySnapshot) => {
-        tabla.innerHTML = '';
-        // usar parametro user
-        querySnapshot.forEach((doc) => {
-
-            console.log(`${doc.id} => ${doc.data().user}`); // dato nombre usuario con id 
-            console.log( doc.data());// json con los valores ingresados para publicar el evento
-
-            tabla.innerHTML += `
-            <div>
-            <tr>
-            <th scope="row">${doc.data().user}</th>
-            <td>${doc.data().event}</td>
-            <td>${doc.data().address}</td>
-            <td>${doc.data().subway}</td>
-            <td>${doc.data().date}</td>
-            <td>${doc.data().message}</td>
-            </tr>
-            </div>
-          `
-          
-        });
-    });
-}
-
-
-// export let getDataRegistry = () =>{
-//     let db = firebase.firestore();
-//     let title = document.getElementById('title');
-//     db.collection("post").onSnapshot((querySnapshot) => {
-//         title.innerHTML = '';
-//         querySnapshot.forEach((doc) => {
-//             console.log(`${doc.id} => ${doc.data().user}`);
-//             title.innerHTML += `
-//             <p><a>${doc.data().user}</a></p>
-//           `
-//         });
-//     });
-
-// }
-
-// Leer documentos Example
-// export let getDataName = () =>{
-//     let db = firebase.firestore();
-//consulta para obtener los datos del usuario
-//     let userProfile = dbProfiles.collection("users").where("email","==",email);
-//    
- //.get().then((querySnapshot) => {
-//         querySnapshot.forEach((doc)=>{
-//             firebase.auth().currentUser.profileName = doc.data().firstname + " " +doc.data().lastname;
-//         })
-        
-//     });
-// )}

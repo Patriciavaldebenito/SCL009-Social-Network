@@ -73,6 +73,11 @@ export const templateMuro = () => {
     <div>
 
    <div>
+   <div class="container">
+    <form id="add-event">
+      <ul id="event-list></ul>
+    </form>
+   </div>
    <table class="resp">
    <thead>
      <tr>
