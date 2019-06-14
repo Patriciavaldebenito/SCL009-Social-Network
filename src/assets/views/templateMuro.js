@@ -1,17 +1,17 @@
 import { signOutRedSocial } from './../js/firebase_auth.js';
 import { savePostData } from '../js/firebase_data.js';
 import { getDataPost } from '../js/firebase_data.js';
-// import { getDataRegistry } from '../js/firebase_data.js';
+// import { getNameData } from '../js/firebase_data.js';
 
 export const templateMuro = () => {
-
-  // getDataRegistry();
-  document.getElementById('root-two').innerHTML = ` 
+  getDataPost();
+  // getNameData();
+  document.getElementById('root').innerHTML = ` 
 
   <header class="header">
   <div class="wall-header">
       <h3>Publica tu Evento Aquí. </h3>
-      <! --<h4 id="title"></h4></h4><br> -->
+      <h4 id="userName"></h4>
       <button class="btn-create2" id="button-sign-out"  type="button">Salir </button>              
   </div>
 </header>
@@ -78,26 +78,6 @@ export const templateMuro = () => {
       <ul id="event-list></ul>
     </form>
    </div>
-   <table class="resp">
-   <thead>
-     <tr>
-       <h3>
-       <th scope="col">USUARIO</th>
-       <th scope="col">EVENTO</th>
-       <th scope="col">COORDENADAS</th>
-       <th scope="col">METRO</th>
-       <th scope="col">FECHA</th>
-       <th scope="col">COMENTARIOS</th>
-       <th scope="col">ME GUSTA</th>
-       </h3>
-     </tr>
-   </thead>
-   <tbody id="tabla">
-    
-   </tbody>
- </table>
-   <div>
-
   <div class = "row" >
       <button class="btn-create2" id="btn-edit" >Editar</button>
   </div>
@@ -117,10 +97,26 @@ export const templateMuro = () => {
       </div>
     </div>
   </footer>`;
-  getDataPost();
+  
 //<aside class="aside aside-2"></aside>
   // Eventos en el muro de la aplicacion 
-
+//<table class="resp">
+  // <thead>
+    // <tr>
+      // <h3>
+      // <th scope="col">USUARIO</th>
+      // <th scope="col">EVENTO</th>
+      // <th scope="col">COORDENADAS</th>
+      // <th scope="col">METRO</th>
+      // <th scope="col">FECHA</th>
+      // <th scope="col">COMENTARIOS</th>
+      // <th scope="col">ME GUSTA</th>
+      // </h3>
+    // </tr>
+  // </thead>
+ //  <tbody id="tabla">
+  //</tbody>
+ //</table>
 
   document.getElementById("btn-post").addEventListener("click", (e) => {
     e.preventDefault();

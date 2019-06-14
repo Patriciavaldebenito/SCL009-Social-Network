@@ -1,3 +1,5 @@
+
+
 //Inicializar con Cloud firestore 
 
 //HU4 Comenzando a Guardar Data
@@ -59,6 +61,4 @@ export let savePostData = () => {
         .catch(function(error) {
             console.error("Error adding document: ", error);
         });
-
-
 }

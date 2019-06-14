@@ -60,8 +60,10 @@ export const templateRegistre = () => {
     if (resRegistre) {
       console.log("al retornar true, se ejecutara createUser");
       createUser(user, age, email, password);
-     
+      
       console.log("createUser  ejecutando ");
+      //swal.fire('Buen Trabajo!', 'Estás registrado en Panoramix!, Te enviamos correo.','success');
+
     } else {
       console.log("NO     createUser / parametros validos");
     }
