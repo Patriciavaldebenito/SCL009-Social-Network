@@ -61,4 +61,58 @@ export let savePostData = () => {
         .catch(function(error) {
             console.error("Error adding document: ", error);
         });
+
+
+}
+
+// ----------------------------------------------------------------------------------------------------
+// Read Data documents
+export let getName = () =>{
+    // let usuario 
+  
+     let db = firebase.firestore();
+  
+    //  let paraghaphName = document.getElementById('paraghaphName');
+   
+     db.collection('users').onSnapshot((querySnapshot) => {
+        
+        querySnapshot.forEach((doc) => {
+
+            document.getElementById('publications-users').innerHTML+=`<p class="paraghaphName" >${doc.data().user}</p>`;
+            console.log(doc.data().user);
+            
+     })
+
+     });
+ }
+
+// Read Data documents
+export let getDataPost = () =>{
+   // let usuario 
+    let db = firebase.firestore();
+    let tabla = document.getElementById('tabla');
+  
+    db.collection("post").onSnapshot((querySnapshot) => {
+        tabla.innerHTML = '';
+        // usar parametro user
+        querySnapshot.forEach((doc) => {
+
+            console.log(`${doc.id} => ${doc.data().user}`); // dato nombre usuario con id 
+            console.log( doc.data());// json con los valores ingresados para publicar el evento
+
+            tabla.innerHTML += `
+            <div>
+            <tr>
+            <th scope="row">${doc.data().user}</th>
+            <td>${doc.data().event}</td>
+            <td>${doc.data().address}</td>
+            <td>${doc.data().subway}</td>
+            <td>${doc.data().date}</td>
+            <td>${doc.data().message}</td>
+            </tr>
+            </div>
+          `
+          
+        });
+    });
 }

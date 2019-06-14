@@ -201,8 +201,15 @@ table tr:nth-of-type(even) {
   background: #f9f9f9;
 }
 
+<<<<<<< HEAD
 p {
   font-family: sans-serif;
   text-align: center;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+=======
+/* ----------------------------------------------------------------------------------------------- */
+
+.paraghaphName{
+  color:#000;
+>>>>>>> 461a987291fd10622afbac74d833c743423a2648
 }
