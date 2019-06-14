@@ -1,5 +1,5 @@
 import { loginGoogle } from "./../js/firebase_auth.js";
-import { validationFormSignLogin } from "../controller/validation.js";
+import { validationFormSignLoginDates } from "../controller/validation_dates.js";
 import { signLogin } from "../js/firebase_auth.js";
 //import { aparece } from "../js/firebase_auth.js";
 import { templateHome } from "./templateHome.js";
@@ -44,7 +44,7 @@ export const templateLogin = () => {
     let password = document.getElementById('login-password').value;
     
 
-    let resSignLogin = validationFormSignLogin(email, password);
+    let resSignLogin = validationFormSignLoginDates(email, password);
     // conditions
     // para logearse los datos ingresados por el usuario deben estar completos y pasar las validaciones 
     // y ademas el user.emailverified deben retornar true
@@ -53,7 +53,7 @@ export const templateLogin = () => {
     if (resSignLogin) {
       signLogin(email, password);
       console.log("logeado / parametros validados");
-
+      swal.fire('Bienvenido Nuevamente!', 'Disfruta de Panoramix!','success');
     } else {
       console.log("NO    createUser / parametros validos");
     }

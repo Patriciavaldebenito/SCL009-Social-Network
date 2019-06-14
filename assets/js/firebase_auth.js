@@ -19,7 +19,7 @@ export const loginGoogle = () => {
       var token = result.credential.accessToken;
       // The signed-in user info.
       var user = result.user;
-      
+      //var name = result.user.displayName;
       // ...
       
       
@@ -85,7 +85,7 @@ export const signLogin = (email, password) => {
     .then(
       function () {
         validationFormSignLogin();
-        swal.fire('Bienvenido Nuevamente!', 'Disfruta de Panoramix!','success');
+       
         observer();
         
      
@@ -119,7 +119,11 @@ export const observer = () => {
         
 
       var email = user.email;
+      
       var displayName = user.displayName;
+      //var userPhoto = user.photoURL;
+      // userName.textContent = displayName;
+      // userImage.style.backgroundImage= "url("+userPhoto+")";
       console.log("displayName = " + displayName);
       console.log("email = " + email);
 
@@ -165,7 +169,7 @@ function aparece(user) {
   console.log(user.email);
   var user = user;
   if (user.emailVerified) {
-    swal.fire('Buen Trabajo!', 'Estás registrado en Panoramix!, Te enviamos correo.','success');
+    
      templateMuro();
      
    return true 
@@ -212,23 +216,3 @@ export const signOutRedSocial = () => {
     });
 };
 
-//Conectar Basedatos RealTime
-
-// export const initRealTime = () => {
-//   let app = document.getElementById('app');
-//   let dbref = firebase.database().ref('titulo');
-
-//   dbref.on('value')
-//     .then(function (snap) {
-//       app.innerText = snap.val()
-
-//     })
-// }
-//first example
-/*
-let $title = $('#title');
-let database = firebase.database().ref().child('titulo');
-database.on("value", function(snapshot) {
-$title.text(snapshot.val());
-})
-*/
