@@ -93,7 +93,7 @@ export let getDataPost = () =>{
     let tabla = document.getElementById('tabla');
   
     db.collection("post").onSnapshot((querySnapshot) => {
-        tabla.innerHTML = '';
+       // tabla.innerHTML = '';
         // usar parametro user
         querySnapshot.forEach((doc) => {
 
@@ -103,9 +103,9 @@ export let getDataPost = () =>{
             tabla.innerHTML += `
             <div>
             <tr>
-            <th scope="row">${doc.data().user}</th>
+            <!--<th scope="row">${doc.data().user}</th>-->
             <td>${doc.data().event}</td>
-            <td>${doc.data().address}</td>
+            <!--<td>${doc.data().address}</td>-->
             <td>${doc.data().subway}</td>
             <td>${doc.data().date}</td>
             <td>${doc.data().message}</td>
