@@ -104,7 +104,7 @@ body {
 /* ------------------------------------------------ */
 
 /* style button registrar and login Home  */
-.btn-red {
+.btn-red  {
   margin-bottom: 5%;
   color: white;
   /* margin-top: 5%; */
@@ -192,13 +192,20 @@ table tr td {
   padding: 0.5625em 0.625em;
   font-size: 0.875em;
   color: #222222;
-  border: 1px solid #dddddd;
+  border: 1px solid #5de4cd;
+  align-items: center;
+  margin-top: 10%;
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
 table tr.even,
 table tr.alt,
 table tr:nth-of-type(even) {
-  background: #f9f9f9;
+  background: #27f0d54d;
+  align-items: center;
+  margin-top: 10%;
+  
 }
 
 /* ----------------------------------------------------------------------------------------------- */
@@ -207,13 +214,35 @@ table tr:nth-of-type(even) {
   color:#000;
 }
 
-.post-wall{
-  background: #4AB3F9;
-  padding: 4%;
- justify-content: center;
- align-items: center;
- text-align: center;
 
-  color:#000;
+/*************************************/
+
+.welcome-muro {
+  margin-top: 5%;
+  font-size: 22px;
+  color: rgb(62, 102, 143);
+  text-align: center;
+
 }
-
+.btn-create2 {
+  margin-bottom: 5%;
+  color: white;
+  margin-top: 5%; 
+  align-items: center;
+  border-radius: 2%;
+  font-family: sans-serif;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: rgb(202, 60, 60);
+  /* this is a maroon */
+  height: 20px;
+  
+  font-size: 80%;
+  
+}
+.resp {
+  height: 50px;
+  width: 50%;
+  margin-left: 20%;
+  margin-right: 30%;
+}

@@ -1,4 +1,4 @@
-import { validationFormRegistre } from "../controller/validation.js";
+import { validationFormRegistreDates } from "../controller/validation_dates.js";
 import { createUser } from "./../js/firebase_auth.js";
 // import { templateMuro } from "./templateMuro.js";
 import { loginGoogle } from "./../js/firebase_auth.js";
@@ -53,15 +53,17 @@ export const templateRegistre = () => {
     let email = document.getElementById("signup-email").value;
     let password = document.getElementById("signup-password").value;
 
-    let resRegistre = validationFormRegistre(user, age, email, password);
+    let resRegistre = validationFormRegistreDates(user, age, email, password);
 
-    console.log("la funcion validationFormRegistre  retorna = " + resRegistre);
+    console.log("la funcion validationFormRegistredates  retorna = " + resRegistre);
 
     if (resRegistre) {
       console.log("al retornar true, se ejecutara createUser");
       createUser(user, age, email, password);
       
       console.log("createUser  ejecutando ");
+      //swal.fire('Buen Trabajo!', 'Estás registrado en Panoramix!, Te enviamos correo.','success');
+
     } else {
 
      
