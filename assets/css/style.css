@@ -12,7 +12,7 @@ body {
 }
 
 /* style container root */
-.root {
+.one-root {
   /* width: 90%; */
   background: #fff;
   display: flex;
@@ -201,3 +201,8 @@ table tr:nth-of-type(even) {
   background: #f9f9f9;
 }
 
+/* ----------------------------------------------------------------------------------------------- */
+
+.paraghaphName{
+  color:#000;
+}

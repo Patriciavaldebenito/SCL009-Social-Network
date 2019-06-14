@@ -1,7 +1,7 @@
 // // Import logoutMessage function from
 // Evento para Formulario Registro
 // Eventos de botones templeHome
-// document.getElementById('btnLogin').addEventListener('click', () => {
+// document.getElementById('btn-login').addEventListener('click', () => {
 //   templateLogin(); // ir alli
 //   window.location.hash = '#/login';
 // })
