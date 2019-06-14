@@ -53,7 +53,7 @@ export const templateLogin = () => {
     if (resSignLogin) {
       signLogin(email, password);
       console.log("logeado / parametros validados");
-
+      swal.fire('Bienvenido Nuevamente!', 'Disfruta de Panoramix!','success');
     } else {
       console.log("NO    createUser / parametros validos");
     }
