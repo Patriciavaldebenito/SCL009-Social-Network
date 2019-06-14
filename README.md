@@ -204,7 +204,13 @@ Se crea bosquejo(papel y lápiz), pensando en las primeras vistas antes del ingr
 ![FlujoMuro](https://i.ibb.co/ThCQYjw/flujomuro.jpg)
 
 
+### Iteraciones:
 
+Durante el desarrollo del proyecto se realizaron iteraciones de:
+- Definición de idea
+- Diseño interfaz historia de usuario 1, 2, 3 
+- Tamaño y localización de elementos 
+- Avisos para el usuario 
 
 ### Desición de diseño
 

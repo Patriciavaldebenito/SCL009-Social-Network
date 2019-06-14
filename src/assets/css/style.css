@@ -13,7 +13,7 @@ body {
 
 /* style container root */
 .root {
-  /* width: 90%; */
+  width: 90%;
   background: #fff;
   display: flex;
   align-items: center;
@@ -244,5 +244,5 @@ table tr:nth-of-type(even) {
   height: 50px;
   width: 50%;
   margin-left: 20%;
-  margin-right: 30p%;
+  margin-right: 30%;
 }
