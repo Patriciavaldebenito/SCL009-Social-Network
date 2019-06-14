@@ -15,6 +15,7 @@ export let saveRegistryData = ()=> {
 
     db.collection("users").add({
         user: user,
+        
         age: age,
         email: email,
         password: password

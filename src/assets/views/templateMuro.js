@@ -22,7 +22,7 @@ export const templateMuro = () => {
 <section class="aside aside-1">
   <div class="modal" id="modal-post" >
       
-      <form id="post-form">
+      <form id="event-list">
           <!-- input event -->
            <div class="input-field2">
                 <p class="welcome-home">Tipo de Actividad o Evento:</p>
@@ -115,7 +115,8 @@ export const templateMuro = () => {
            <button id="back" type="button"></button>
       </div>
     </div>
-  </footer>`;
+  </footer>
+  </div>`;
   getDataPost();
   // <!--<form id="add-event">
   //<ul id="event-list></ul>
@@ -145,7 +146,7 @@ export const templateMuro = () => {
   })
 
   document.getElementById('back').addEventListener('click', () => {
-    templateProjectLogin();
+    templateLogin();
   });
 
   

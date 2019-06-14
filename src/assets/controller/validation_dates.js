@@ -1,12 +1,7 @@
-// Validation of registration fields
 
-// HU2 Validation Email Registry.
 export const validationUser = user => {
   if (user === "") {
-    
-    
-
-    
+    swal.fire("Ingresa tu nombre");    
     return false;
   }
   if (typeof user === "undefined") {
@@ -20,12 +15,12 @@ export const validationUser = user => {
 
 export const validationAge = age => {
   if (age === "") {
-    
+    swal.fire("Ingresa tu edad");    
     
     return false;
   }
   if (age < 16) {
-  
+    swal.fire("Debes ser mayor a 16 años");    
 
     ;
     return false;
@@ -41,11 +36,11 @@ export const validationAge = age => {
 
 export const validationEmail = email => {
   if (email === "") {
-    
+    swal.fire("Ingresa tu mail");    
     return false;
   }
   if (typeof email === "undefined") {
-   
+    swal.fire("Ingresa un email correcto");    
     return false;
   }
 
@@ -55,15 +50,15 @@ export const validationEmail = email => {
 
 export const validationPassword = password => {
   if (password === "") {
-    
+    swal.fire("Ingresa una contraseña");    
     return false;
   }
   if (typeof password === "undefined") {
-   
+    swal.fire("Ingresa una contraseña correcta");    
     return false;
   }
   if (password.length < 6) {
-   
+    swal.fire("La contraseña debe tener al menos 6 caracteres");    
     return false;
   }
 
@@ -79,19 +74,14 @@ export const validationExpRegEmail = email => {
   
 };
 
-export const validationFormRegistre = (user, age, email, password) => {
+export const validationFormRegistreDates = (user, age, email, password) => {
   if (validationUser(user) === false || validationAge(age) === false || validationEmail(email) === false || validationPassword(password) === false || !validationExpRegEmail(email)) {
 
     
     return false;
   }
   else {
-<<<<<<< HEAD
-    
-    console.log("true test Ok");
-=======
   
->>>>>>> 9d4810c95e7774fa0ea3ebe8fbe7e2a40cdeb7c7
     return true;
 
   }
@@ -104,31 +94,26 @@ export const validationFormRegistre = (user, age, email, password) => {
 
 export const validationEmailSign = email => {
   if (email === "") {
-   
+    swal.fire("Ingresa tu email correcto");    
     return false;
   }
 }
 
 export const validationPasswordSign = password => {
   if (password === "") {
-    
+    swal.fire("Ingresa tu contraseña");    
     return false;
   }
 }
-export const validationFormSignLogin = (email, password) => {
+
+export const validationFormSignLoginDates = (email, password) => {
   if (validationEmailSign(email) === false || validationPasswordSign(password) === false || !validationExpRegEmail(email)) {
 
    
     return false;
   }
   else {
-<<<<<<< HEAD
-    
-
-    console.log("validos los imput del formulario Login");
-=======
    
->>>>>>> 9d4810c95e7774fa0ea3ebe8fbe7e2a40cdeb7c7
     return true;
 
   }
@@ -203,13 +188,7 @@ export const validationFormPublication = (event, date, address, subway, message)
     return false;
   }
   else {
-<<<<<<< HEAD
-    
-
-    console.log("validos los imput de la publicación");
-=======
    
->>>>>>> 9d4810c95e7774fa0ea3ebe8fbe7e2a40cdeb7c7
     return true;
 
   }
