@@ -1,16 +1,17 @@
 import { signOutRedSocial } from './../js/firebase_auth.js';
 import { savePostData } from '../js/firebase_data.js';
 import { getDataPost } from '../js/firebase_data.js';
-// import { getNameData } from '../js/firebase_data.js';
+import { getName } from '../js/firebase_data.js';
 
 export const templateMuro = () => {
   
-  // getNameData();
+  getName();
   document.getElementById('root').innerHTML = ` 
 
   <header class="header">
   <div class="wall-header">
-      <h3 class="welcome-muro">Hola!! Publica tu Evento Aquí. </h3>
+      <h3 class="welcome-muro"> Publica tu Evento Aquí. </h3>
+      <div class= container></div>
       <h4 id="userName"></h4>
       <button class="btn-create2" id="button-sign-out"  type="button">Salir </button>
       <button class="back" id="back" type="button"></button>

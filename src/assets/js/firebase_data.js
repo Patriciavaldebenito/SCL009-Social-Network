@@ -72,20 +72,22 @@ export let getName = () =>{
     // let usuario 
   
      let db = firebase.firestore();
-  
-    //  let paraghaphName = document.getElementById('paraghaphName');
+     let app = document.getElementById('container');
+    //  let title = $('#title');
    
      db.collection('users').onSnapshot((querySnapshot) => {
-        
+        // app.innerHTML = '';
         querySnapshot.forEach((doc) => {
 
-            document.getElementById('publications-users').innerHTML+=`<p class="paraghaphName" >${doc.data().user}</p>`;
+            app.innerHTML =`${doc.data().user}`;
             console.log(doc.data().user);
             
      })
 
      });
  }
+
+
 
 // Read Data documents
 export let getDataPost = () =>{
@@ -94,7 +96,7 @@ export let getDataPost = () =>{
     let tabla = document.getElementById('tabla');
   
     db.collection("post").onSnapshot((querySnapshot) => {
-       // tabla.innerHTML = '';
+       tabla.innerHTML = '';
         // usar parametro user
         querySnapshot.forEach((doc) => {
 
