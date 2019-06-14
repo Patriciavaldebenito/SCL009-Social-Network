@@ -87,11 +87,15 @@ export const validationFormRegistre = (user, age, email, password) => {
   }
   else {
 <<<<<<< HEAD
+<<<<<<< HEAD
     
     console.log("true test Ok");
 =======
   
 >>>>>>> 9d4810c95e7774fa0ea3ebe8fbe7e2a40cdeb7c7
+=======
+
+>>>>>>> 28b541bf4095e7ac734f2a935bca486ebafe4271
     return true;
 
   }
@@ -123,12 +127,16 @@ export const validationFormSignLogin = (email, password) => {
   }
   else {
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 
     console.log("validos los imput del formulario Login");
 =======
    
 >>>>>>> 9d4810c95e7774fa0ea3ebe8fbe7e2a40cdeb7c7
+=======
+
+>>>>>>> 28b541bf4095e7ac734f2a935bca486ebafe4271
     return true;
 
   }
@@ -204,12 +212,16 @@ export const validationFormPublication = (event, date, address, subway, message)
   }
   else {
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 
     console.log("validos los imput de la publicación");
 =======
    
 >>>>>>> 9d4810c95e7774fa0ea3ebe8fbe7e2a40cdeb7c7
+=======
+
+>>>>>>> 28b541bf4095e7ac734f2a935bca486ebafe4271
     return true;
 
   }
