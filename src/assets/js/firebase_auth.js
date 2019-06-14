@@ -68,6 +68,7 @@ export const createUser = (user, age, email, password) => {
       var errorCode = error.code;
       var errorMessage = error.message;
       // ...
+      
     });
 
 };
@@ -177,7 +178,7 @@ function aparece(user) {
   if (!user.emailVerified) {
    
       console.log("el correo no ha sido verificado");
-      swal.fire("Verificar tu correo. Cuando este ok, debes Iniciar Sesion!");
+      
       window.location.hash = "#/login";
     }
 

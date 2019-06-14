@@ -98,11 +98,7 @@ export const validationFormRegistre = (user, age, email, password) => {
     return false;
   }
   else {
-    /*swal.fire(
-      'Buen Trabajo!',
-      'Te registraste en Panoramix!, Te enviamos correo.',
-      'success'
-    )*/
+    
     console.log("true test Ok");
     return true;
 
@@ -138,7 +134,7 @@ export const validationFormSignLogin = (email, password) => {
     return false;
   }
   else {
-    // swal.fire('vamos al muro logeado registrado')
+    
 
     console.log("validos los imput del formulario Login");
     return true;
@@ -230,7 +226,7 @@ export const validationFormPublication = (event, date, address, subway, message)
     return false;
   }
   else {
-    // swal.fire('vamos al muro logeado registrado')
+    
 
     console.log("validos los imput de la publicación");
     return true;

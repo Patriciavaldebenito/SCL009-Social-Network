@@ -43,7 +43,7 @@ export const templateRegistre = () => {
 `;
   containerRegistre.innerHTML = contenidoRegistre;
 
-  // 1. En registre click en btn probando ****cambiar name gaba??¡¡
+  // 1. En registre click en btn registre
   document.getElementById("btn-registre").addEventListener("click", (e) => {
     e.preventDefault();
     
@@ -62,11 +62,12 @@ export const templateRegistre = () => {
       createUser(user, age, email, password);
       
       console.log("createUser  ejecutando ");
-      //swal.fire('Buen Trabajo!', 'Estás registrado en Panoramix!, Te enviamos correo.','success');
+      
 
     } else {
       console.log("NO     createUser / parametros validos");
     }
+    
   });
 
   document.getElementById('back').addEventListener('click', () => {
