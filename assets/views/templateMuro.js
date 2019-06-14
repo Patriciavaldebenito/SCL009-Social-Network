@@ -9,20 +9,34 @@ export const templateMuro = () => {
   document.getElementById('root').innerHTML = ` 
 
   <header class="header">
-  <div class="wall-header">
-      <h3 class="welcome-muro">Hola!! Publica tu Evento Aquí. </h3>
+      <div class="demo-header">
+         <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid">
+       </div>
+      <div class="columna" >
+       <h3 class="welcome-muro">Hola!! Publica tu Evento Aquí. </h3>
+      </div>
+
+      <div class="items">
+
+        <div class="item">
+         <button class="btn-create2" id="button-sign-out"  type="button">Salir </button>
+        </div>
+
+        <div class="item">
+        <button class="back" id="back" type="button"></button>
+        </div>
+
+      </div>
+
       <h4 id="userName"></h4>
-      <button class="btn-create2" id="button-sign-out"  type="button">Salir </button>
-      <button class="back" id="back" type="button"></button>
-                   
-  </div>
+  
 </header>
 
 <!-- SECTION USERS WRITING EVENT WHITH DATES  -->
 <section class="aside aside-1">
   <div class="modal" id="modal-post" >
       
-      <form id="event-list">
+      <form class="event-list" id="event-list">
           <!-- input event -->
            <div class="input-field2">
                 <p class="welcome-home">Tipo de Actividad o Evento:</p>
