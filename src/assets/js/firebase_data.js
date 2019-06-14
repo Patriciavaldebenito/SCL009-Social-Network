@@ -63,13 +63,26 @@ export let savePostData = () => {
 
 }
 
+// ----------------------------------------------------------------------------------------------------
+// Read Data documents
+export let getName = () =>{
+    // let usuario 
+  
+     let db = firebase.firestore();
+  
+    //  let paraghaphName = document.getElementById('paraghaphName');
+   
+     db.collection('users').onSnapshot((querySnapshot) => {
+        
+        querySnapshot.forEach((doc) => {
 
+            document.getElementById('publications-users').innerHTML+=`<p class="paraghaphName" >${doc.data().user}</p>`;
+            console.log(doc.data().user);
+            
+     })
 
-
-
-
-
-
+     });
+ }
 
 // Read Data documents
 export let getDataPost = () =>{

@@ -4,7 +4,7 @@ import { getDataPost } from '../js/firebase_data.js';
 // import { getDataRegistry } from '../js/firebase_data.js';
 
 export const templateMuro = () => {
-
+  // getName();
   // getDataRegistry();
   document.getElementById('root-two').innerHTML = ` 
 
@@ -72,7 +72,21 @@ export const templateMuro = () => {
     <h3>Observa El Muro con lo Publicado...</h3>
     <div>
 
-   <div>
+
+
+
+
+
+   <div id>"publications-users">
+   <p id="paraghaphName"></p>
+   </div>
+    
+
+
+
+
+
+
    <table class="resp">
    <thead>
      <tr>
