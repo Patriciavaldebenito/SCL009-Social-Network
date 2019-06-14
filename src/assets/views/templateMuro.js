@@ -1,13 +1,15 @@
 import { signOutRedSocial } from './../js/firebase_auth.js';
 import { savePostData } from '../js/firebase_data.js';
 import { getDataPost } from '../js/firebase_data.js';
+import { templateLogin } from '../views/templateProjectLogin.js';
+
 // import { getDataRegistry } from '../js/firebase_data.js';
 
 export const templateMuro = () => {
   // getName();
   // getDataRegistry();
-  document.getElementById('root-two').innerHTML = ` 
-
+  document.getElementById('root').innerHTML = ` 
+  <div class="post-wall">
   <header class="header">
   <div class="wall-header">
       <h3>Publica tu Evento Aquí. </h3>
@@ -20,9 +22,9 @@ export const templateMuro = () => {
 <section class="aside aside-1">
   <div class="modal" id="modal-post" >
       
-      <form id="post-form">
+      <form id="event-list">
           <!-- input event -->
-           <div class="input-field2">
+           <div  class="input-field2">
                 <p>Tipo de Actividad o Evento:</p>
                 <input type="text" placeholder="Danza,Teatro,Música, etc." class ="inputevent" id="event" />
                 <label for="event"></label>
@@ -80,6 +82,8 @@ export const templateMuro = () => {
    <div id>"publications-users">
    <p id="paraghaphName"></p>
    </div>
+
+   <div id="event-list"></div>
     
 
 
@@ -125,7 +129,8 @@ export const templateMuro = () => {
            <button id="back" type="button"></button>
       </div>
     </div>
-  </footer>`;
+  </footer>
+  </div>`;
   getDataPost();
 //<aside class="aside aside-2"></aside>
   // Eventos en el muro de la aplicacion 
@@ -154,7 +159,7 @@ export const templateMuro = () => {
   })
 
   document.getElementById('back').addEventListener('click', () => {
-    templateProjectLogin();
+    templateLogin();
   });
 
   

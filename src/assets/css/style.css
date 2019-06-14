@@ -13,7 +13,7 @@ body {
 
 /* style container root */
 .root {
-  /* width: 90%; */
+  width: 90%;
   background: #fff;
   display: flex;
   align-items: center;
@@ -206,3 +206,14 @@ table tr:nth-of-type(even) {
 .paraghaphName{
   color:#000;
 }
+
+.post-wall{
+  background: #4AB3F9;
+  padding: 4%;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+
+  color:#000;
+}
+

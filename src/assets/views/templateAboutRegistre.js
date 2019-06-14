@@ -55,14 +55,16 @@ export const templateRegistre = () => {
 
     let resRegistre = validationFormRegistre(user, age, email, password);
 
-    console.log("la funcion validationFormRegistre lee los 4x y retorna = " + resRegistre);
+    console.log("la funcion validationFormRegistre  retorna = " + resRegistre);
 
     if (resRegistre) {
       console.log("al retornar true, se ejecutara createUser");
       createUser(user, age, email, password);
-     
+      
       console.log("createUser  ejecutando ");
     } else {
+
+     
       console.log("NO     createUser / parametros validos");
     }
   });
