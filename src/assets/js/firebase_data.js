@@ -68,25 +68,36 @@ export let savePostData = () => {
 
 // ----------------------------------------------------------------------------------------------------
 // Read Data documents
-export let getName = () =>{
-    // let usuario 
+// export let getName = () =>{
+//     // let usuario 
   
-     let db = firebase.firestore();
-     let app = document.getElementById('container');
-    //  let title = $('#title');
+//      let db = firebase.firestore();
+//      let app = document.getElementById('container');
+//     //  let title = $('#title');
    
-     db.collection('users').onSnapshot((querySnapshot) => {
-        // app.innerHTML = '';
-        querySnapshot.forEach((doc) => {
+//      db.collection('users').onSnapshot((querySnapshot) => {
+//         // app.innerHTML = '';
+//         querySnapshot.forEach((doc) => {
 
-            app.innerHTML =`${doc.data().user}`;
-            console.log(doc.data().user);
+//             app.innerHTML =`${doc.data().user}`;
+//             console.log(doc.data().user);
             
-     })
+//      })
 
-     });
- }
+//      });
+//  }
 
+  export let getName = (email) =>{
+    let db = firebase.firestore();
+    //basedata
+    let users = db.collection("users").where("email","==",email);
+    users.get().then((querySnapshot) => {
+        querySnapshot.forEach((doc)=>{
+            firebase.auth().currentUser.name = doc.data().name;
+        })
+        
+    });
+}
 
 
 // Read Data documents
@@ -94,7 +105,7 @@ export let getDataPost = () =>{
    // let usuario 
     let db = firebase.firestore();
     let tabla = document.getElementById('tabla');
-  
+    // getName(user.email);
     db.collection("post").onSnapshot((querySnapshot) => {
        tabla.innerHTML = '';
         // usar parametro user

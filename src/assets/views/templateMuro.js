@@ -5,9 +5,9 @@ import { getName } from '../js/firebase_data.js';
 
 export const templateMuro = () => {
   
-  getName();
+  
   document.getElementById('root').innerHTML = ` 
-
+  
   <header class="header">
   <div class="wall-header">
       <h3 class="welcome-muro"> Publica tu Evento Aquí. </h3>
@@ -118,6 +118,7 @@ export const templateMuro = () => {
     </div>
   </footer>
   </div>`;
+  getName();
   getDataPost();
   // <!--<form id="add-event">
   //<ul id="event-list></ul>
