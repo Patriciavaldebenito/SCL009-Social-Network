@@ -161,13 +161,13 @@ export const observer = () => {
     
 
   });
-  //email-password.html
+  
 };
 
 
 //Funcion Aparece
 function aparece(user) {
-  console.log(user.email);
+  
   var user = user;
   if (user.emailVerified) {
     

@@ -1,7 +1,10 @@
 import { signOutRedSocial } from './../js/firebase_auth.js';
 import { savePostData } from '../js/firebase_data.js';
-import { getDataPost } from '../js/firebase_data.js';
-import { getName } from '../js/firebase_data.js';
+// import { getDataPost } from '../js/firebase_data.js';
+// import { getName } from '../js/firebase_data.js';
+import { postCreate } from '../js/firebase_data.js';
+import { templateLogin } from './templateProjectLogin.js';
+import{ validationFormPublication } from '../controller/validation.js';
 
 export const templateMuro = () => {
   
@@ -34,7 +37,7 @@ export const templateMuro = () => {
           <!-- input coordenadas  -->
           <div class=" input-field2">
                 <p class="welcome-home"> Coodenadas </p>
-                <input type="text" placeholder="Dirección" class ="inputadrees" id="address"/>
+                <input type="text" placeholder="Dirección" class ="inputaddress" id="address"/>
                 <label for="address"></label>
           </div>
  
@@ -77,27 +80,9 @@ export const templateMuro = () => {
 
    <div>
    <div class="container">
-   <aside class="aside aside-2">
-  <!--Eventos en el muro de la aplicacion -->
-    <table class="resp">
-      <thead>
-        <tr>
-          <h3>
-          <!--<th scope="col">USUARIO</th>-->
-          <th scope="col">EVENTO</th>
-          <!--<th scope="col">COORDENADAS</th>-->
-          <th scope="col">METRO</th>
-          <th scope="col">FECHA</th>
-          <th scope="col">COMENTARIOS</th>
-          <!--<th scope="col">ME GUSTA</th>-->
-          </h3>
-        </tr>
-      </thead>
-      <tbody id="tabla">
-      </tbody>
-    </table>
-    </aside>
+    <div id="posts" class="row templatewall"></div>	
    </div>
+   
   <div class = "row" >
       <!--<button class="btn-create2" id="btn-edit" >Editar</button>-->
   </div>
@@ -118,8 +103,9 @@ export const templateMuro = () => {
     </div>
   </footer>
   </div>`;
-  getName();
-  getDataPost();
+  // getName();
+  // getDataPost();
+  // postCreate();
   // <!--<form id="add-event">
   //<ul id="event-list></ul>
   //</form>-->
@@ -127,25 +113,27 @@ export const templateMuro = () => {
 
   document.getElementById("btn-post").addEventListener("click", (e) => {
     e.preventDefault();
-    savePostData();
-    getDataPost();
+    
+    
     console.log("click en boton publicar");
     let event = document.getElementById("event").value;
-    let adrees = document.getElementById("adrees").value;
+    let address = document.getElementById("address").value;
     let subway = document.getElementById("subway").value;
     let date = document.getElementById("date").value;
     let message = document.getElementById("message").value;
 
-    let resPublication = validationFormPublication(event, date, adrees, subway, message);
+    let resPublication = validationFormPublication(event, date, address, subway, message);
     if (resPublication) {
       console.log(" se ejecutara postCreate");
-      postCreate(userPost);
+      // postCreate(userPost);
+      savePostData();
+      postCreate();
 
       console.log("postCreate ejecutando ");
     } else {
       console.log("NO corre postCreates / parametros no validos");
     }
-  })
+  });
 
   document.getElementById('back').addEventListener('click', () => {
     templateLogin();

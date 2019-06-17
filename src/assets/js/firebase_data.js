@@ -1,4 +1,4 @@
-
+import { validationFormPublication } from '../controller/validation.js';
 
 //Inicializar con Cloud firestore 
 
@@ -99,34 +99,98 @@ export let savePostData = () => {
     });
 }
 
+export const postCreate = () =>{
+	let db = firebase.firestore();
+	// let date = Date.now();
+	
+	 firebase.auth().onAuthStateChanged(user => {
+	 	
+	 	getName(user.email);
+	 	db.collection('users').doc(user.id).get().then(doc => {
+	 		if(validationFormPublication(event, address, subway, date, message)){
+		 		db.collection('post').add({
+                    id: user.id,
+		 			email: user.email,
+		 			user:user.name,
+                    event: event,
+                    address: address,
+                    subway: subway,
+                    date: date,
+                    message: message 
+		 		}).then(function(doc){
+                     console.log("Document written with ID: ", doc.id);
+                     document.getElementById('id').value=''; 
+                     document.getElementById('email').value=''; 
+                     document.getElementById('user').value=''; 
+		 			document.getElementById('event').value=''; 
+                    document.getElementById('address').value=''; 
+                    document.getElementById('subway').value=''; 
+                    document.getElementById('date').value=''; 
+                    document.getElementById('message').value=''; 
+                    
+                    
+                    document.getElementById('posts').innerHTML +=
+  		  		`<div class="container container__post">
+			  		<div class="row templatemuro">
+				  		<div class="img-person col-12">
+				  			<div class="row img">
+			  					<img src="assets/img/iconuser.jpg" alt="" />
+			  					<p class="msge" id="name">${doc.data().name}</p>
+			  					<p class="msge" id="messa">${message}</p>
+				  			</div>	
+				  		</div>		
+				  		<div id="msg${doc.id}" class="post col-12"> 
+				  			<p class="msge">${doc.data().message}</p> 
+				  		</div>
+				  		<div class="input col-12">
+				  			<input class="msge" id="inp${doc.id}" type="text">				  				
+                        </div>
+                    </div>	
+                </div>`;
+
+                    window.location.hash="#/muro";
+		 			
+
+		 		}).catch(function(error) {
+	            console.error("Error adding document: ", error);
+				});
+
+			}else{
+				console.log('error de validacion del post')
+				//return "error de validacion del post";
+
+			}
+	 	});
+	 });
+}
+
 
 // Read Data documents
-export let getDataPost = () =>{
-   // let usuario 
-    let db = firebase.firestore();
-    let tabla = document.getElementById('tabla');
-    // getName(user.email);
-    db.collection("post").onSnapshot((querySnapshot) => {
-       tabla.innerHTML = '';
-        // usar parametro user
-        querySnapshot.forEach((doc) => {
+// export let getDataPost = () =>{
+//     let db = firebase.firestore();
+//     let tabla = document.getElementById('tabla');
+//     // getName(user.email);
+//     db.collection("post").onSnapshot((querySnapshot) => {
+//        tabla.innerHTML = '';
+//         // usar parametro user
+//         querySnapshot.forEach((doc) => {
 
-            console.log(`${doc.id} => ${doc.data().user}`); // dato nombre usuario con id 
-            console.log( doc.data());// json con los valores ingresados para publicar el evento
+//             console.log(`${doc.id} => ${doc.data().user}`); // dato nombre usuario con id 
+//             console.log( doc.data());// json con los valores ingresados para publicar el evento
 
-            tabla.innerHTML += `
-            <div>
-            <tr>
-            <!--<th scope="row">${doc.data().user}</th>-->
-            <td>${doc.data().event}</td>
-            <!--<td>${doc.data().address}</td>-->
-            <td>${doc.data().subway}</td>
-            <td>${doc.data().date}</td>
-            <td>${doc.data().message}</td>
-            </tr>
-            </div>
-          `
+//             tabla.innerHTML += `
+//             <div>
+//             <tr>
+//             <!--<th scope="row">${doc.data().user}</th>-->
+//             <td>${doc.data().event}</td>
+//             <!--<td>${doc.data().address}</td>-->
+//             <td>${doc.data().subway}</td>
+//             <td>${doc.data().date}</td>
+//             <td>${doc.data().message}</td>
+//             </tr>
+//             </div>
+//           `
           
-        });
-    });
-}
+//         });
+//     });
+// }
