@@ -1,27 +1,21 @@
 import { signOutRedSocial } from './../js/firebase_auth.js';
 import { savePostData } from '../js/firebase_data.js';
-// import { getDataPost } from '../js/firebase_data.js';
-// import { getName } from '../js/firebase_data.js';
-import { postCreate } from '../js/firebase_data.js';
-import { templateLogin } from './templateProjectLogin.js';
-import{ validationFormPublication } from '../controller/validation.js';
+import { getDataPost } from '../js/firebase_data.js';
+// import { getNameData } from '../js/firebase_data.js';
 
 export const templateMuro = () => {
   
-  
+  // getNameData();
   document.getElementById('root').innerHTML = ` 
-  
   <header class="header">
   <div class="wall-header">
-      <h3 class="welcome-muro"> Publica tu Evento Aquí. </h3>
-      <div class= container></div>
+      <h3 class="welcome-muro">Hola!! Publica tu Evento Aquí. </h3>
       <h4 id="userName"></h4>
       <button class="btn-create2" id="button-sign-out"  type="button">Salir </button>
       <button class="back" id="back" type="button"></button>
                    
   </div>
 </header>
-
 <!-- SECTION USERS WRITING EVENT WHITH DATES  -->
 <section class="aside aside-1">
   <div class="modal" id="modal-post" >
@@ -37,7 +31,7 @@ export const templateMuro = () => {
           <!-- input coordenadas  -->
           <div class=" input-field2">
                 <p class="welcome-home"> Coodenadas </p>
-                <input type="text" placeholder="Dirección" class ="inputaddress" id="address"/>
+                <input type="text" placeholder="Dirección" class ="inputadrees" id="address"/>
                 <label for="address"></label>
           </div>
  
@@ -70,31 +64,43 @@ export const templateMuro = () => {
       </form>
     </div>
   </section>
-
 <!-- SECTION USERS PUBLICATIONS -->
 <section class="main">
   <article >
    <div>
     <h3  class="welcome-muro">El Muro con lo Publicado...</h3>
     </div>
-
    <div>
    <div class="container">
-    <div id="posts" class="row templatewall"></div>	
+   <aside class="aside aside-2">
+  <!--Eventos en el muro de la aplicacion -->
+    <table class="resp">
+      <thead>
+        <tr>
+          <h3>
+          <!--<th scope="col">USUARIO</th>-->
+          <th scope="col">EVENTO</th>
+          <!--<th scope="col">COORDENADAS</th>-->
+          <th scope="col">METRO</th>
+          <th scope="col">FECHA</th>
+          <th scope="col">COMENTARIOS</th>
+          <!--<th scope="col">ME GUSTA</th>-->
+          </h3>
+        </tr>
+      </thead>
+      <tbody id="tabla">
+      </tbody>
+    </table>
+    </aside>
    </div>
-   
   <div class = "row" >
       <!--<button class="btn-create2" id="btn-edit" >Editar</button>-->
   </div>
-
     <!-- button create delete in wall -->
     <div class = "row" >
         <!--<button class="btn-create2" id="btn-delete" >Borrar</button>-->
      </div>
  </section>
-
-
-
  <footer class="footer">
     <div class = "row" >
       <div class = "col" >
@@ -103,9 +109,7 @@ export const templateMuro = () => {
     </div>
   </footer>
   </div>`;
-  // getName();
-  // getDataPost();
-  // postCreate();
+  getDataPost();
   // <!--<form id="add-event">
   //<ul id="event-list></ul>
   //</form>-->
@@ -113,27 +117,25 @@ export const templateMuro = () => {
 
   document.getElementById("btn-post").addEventListener("click", (e) => {
     e.preventDefault();
-    
-    
+    savePostData();
+    getDataPost();
     console.log("click en boton publicar");
     let event = document.getElementById("event").value;
-    let address = document.getElementById("address").value;
+    let adrees = document.getElementById("adrees").value;
     let subway = document.getElementById("subway").value;
     let date = document.getElementById("date").value;
     let message = document.getElementById("message").value;
 
-    let resPublication = validationFormPublication(event, date, address, subway, message);
+    let resPublication = validationFormPublication(event, date, adrees, subway, message);
     if (resPublication) {
       console.log(" se ejecutara postCreate");
-      // postCreate(userPost);
-      savePostData();
-      postCreate();
+      postCreate(userPost);
 
       console.log("postCreate ejecutando ");
     } else {
       console.log("NO corre postCreates / parametros no validos");
     }
-  });
+  })
 
   document.getElementById('back').addEventListener('click', () => {
     templateLogin();
