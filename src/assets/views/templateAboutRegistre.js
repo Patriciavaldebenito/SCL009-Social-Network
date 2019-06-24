@@ -1,10 +1,11 @@
-import { validationFormRegistreDates } from "../controller/validation_dates.js";
-import { createUser } from "./../js/firebase_auth.js";
-// import { templateMuro } from "./templateMuro.js";
-import { loginGoogle } from "./../js/firebase_auth.js";
-import { templateHome } from "./templateHome.js";
+  import { validationFormRegistreDates } from "../controller/validation_dates.js";
+  import { createUser } from "./../js/firebase_auth.js";
+  import { loginGoogle } from "./../js/firebase_auth.js";
+  import { templateHome } from "./templateHome.js";
 
 
+
+  
 export const templateRegistre = () => {
   let containerRegistre = document.getElementById("root");
 
@@ -42,6 +43,7 @@ export const templateRegistre = () => {
   
 `;
   containerRegistre.innerHTML = contenidoRegistre;
+
 
   // 1. En registre click en btn registre
   document.getElementById("btn-registre").addEventListener("click", (e) => {
@@ -84,6 +86,7 @@ export const templateRegistre = () => {
 
 
   });
+
 
 
 };

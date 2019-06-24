@@ -1,26 +1,43 @@
-import { signOutRedSocial } from './../js/firebase_auth.js';
-import { savePostData } from '../js/firebase_data.js';
-import { getDataPost } from '../js/firebase_data.js';
-// import { getNameData } from '../js/firebase_data.js';
+
+  import { signOutRedSocial } from './../js/firebase_auth.js';
+  import { savePostData } from '../js/firebase_data.js';
+  import { getDataPost } from '../js/firebase_data.js';
 
 export const templateMuro = () => {
   
   // getNameData();
   document.getElementById('root').innerHTML = ` 
   <header class="header">
-  <div class="wall-header">
-      <h3 class="welcome-muro">Hola!! Publica tu Evento Aquí. </h3>
+      <div class="demo-header">
+         <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid">
+       </div>
+      <div class="columna" >
+       <h3 class="welcome-muro">Hola!! Publica tu Evento Aquí. </h3>
+      </div>
+
+      <div class="items">
+
+        <div class="item">
+         <button class="btn-create2" id="button-sign-out"  type="button">Salir </button>
+        </div>
+
+        <div class="item">
+        <button class="back" id="back" type="button"></button>
+        </div>
+
+      </div>
+
       <h4 id="userName"></h4>
-      <button class="btn-create2" id="button-sign-out"  type="button">Salir </button>
-      <button class="back" id="back" type="button"></button>
-                   
-  </div>
-</header>
-<!-- SECTION USERS WRITING EVENT WHITH DATES  -->
-<section class="aside aside-1">
-  <div class="modal" id="modal-post" >
-      
-      <form id="event-list">
+
+  
+  </header>
+
+  <!-- SECTION USERS WRITING EVENT WHITH DATES  -->
+  <section class="aside aside-1">
+   <div class="modal" id="modal-post" >
+       
+      <form class="event-list" id="event-list">
+
           <!-- input event -->
            <div class="input-field2">
                 <p class="welcome-home">Tipo de Actividad o Evento:</p>
@@ -64,8 +81,11 @@ export const templateMuro = () => {
       </form>
     </div>
   </section>
-<!-- SECTION USERS PUBLICATIONS -->
-<section class="main">
+
+
+ <!-- SECTION USERS PUBLICATIONS -->
+ <section class="main">
+
   <article >
    <div>
     <h3  class="welcome-muro">El Muro con lo Publicado...</h3>
@@ -115,36 +135,38 @@ export const templateMuro = () => {
   //</form>-->
 
 
-  document.getElementById("btn-post").addEventListener("click", (e) => {
-    e.preventDefault();
-    savePostData();
-    getDataPost();
-    console.log("click en boton publicar");
-    let event = document.getElementById("event").value;
-    let adrees = document.getElementById("adrees").value;
-    let subway = document.getElementById("subway").value;
-    let date = document.getElementById("date").value;
-    let message = document.getElementById("message").value;
 
-    let resPublication = validationFormPublication(event, date, adrees, subway, message);
-    if (resPublication) {
-      console.log(" se ejecutara postCreate");
-      postCreate(userPost);
 
-      console.log("postCreate ejecutando ");
-    } else {
-      console.log("NO corre postCreates / parametros no validos");
-    }
-  })
-
-  document.getElementById('back').addEventListener('click', () => {
-    templateLogin();
-  });
-
-  
-  document.getElementById('button-sign-out').addEventListener('click', () => {
-
-    signOutRedSocial();
-  });
-
+    document.getElementById("btn-post").addEventListener("click", (e) => {
+        e.preventDefault();
+        savePostData();
+        getDataPost();
+        console.log("click en boton publicar");
+        let event = document.getElementById("event").value;
+        let adrees = document.getElementById("adrees").value;
+        let subway = document.getElementById("subway").value;
+        let date = document.getElementById("date").value;
+        let message = document.getElementById("message").value;
+    
+        let resPublication = validationFormPublication(event, date, adrees, subway, message);
+        if (resPublication) {
+          console.log(" se ejecutara postCreate");
+          postCreate(userPost);
+    
+          console.log("postCreate ejecutando ");
+        } else {
+          console.log("NO corre postCreates / parametros no validos");
+        }
+      })
+    
+      document.getElementById('back').addEventListener('click', () => {
+        templateLogin();
+      });
+    
+      
+      document.getElementById('button-sign-out').addEventListener('click', () => {
+    
+        signOutRedSocial();
+      });
+    
 }

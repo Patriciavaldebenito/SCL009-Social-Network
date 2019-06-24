@@ -1,8 +1,4 @@
-import { loginGoogle } from "./../js/firebase_auth.js";
-// import { templateMuro } from "./templateMuro.js";
-
-
-// import { initRealTime } from './../js/firebase_auth.js';
+import { loginGoogle } from "../../../assets/js/firebase_auth.js";
 
 export const templateHome = () => {
 
@@ -37,28 +33,31 @@ export const templateHome = () => {
    </form>
   </div>
 
-</div>`;
+ </div>`;
 
   // initRealTime ();
   //<div id="app" class="title"></div>
 
-  // 1. En home click en btn  registrar
-  document.getElementById("btn-registre-home").addEventListener("click", () => {
+  // function DOM in template Home
+ 
 
-    window.location.hash = "#/registre";
-  });
-
-  // 2. En home click en btn google
-  document.getElementById("button-google-home").addEventListener("click", () => {
-    console.log("presionaste boton google en Home!");
-    loginGoogle();
-
-  });
-
-  //3. En home click en btn login
-
-  document.getElementById("btn-login-home").addEventListener("click", () => {
-    window.location.hash = "#/login";
-  });
-
+    // 1. En home click en btn  registrar
+    document.getElementById("btn-registre-home").addEventListener("click", () => {
+  
+      window.location.hash = "#/registre";
+    });
+  
+    // 2. En home click en btn google
+    document.getElementById("button-google-home").addEventListener("click", () => {
+      console.log("presionaste boton google en Home!");
+      loginGoogle();
+  
+    });
+  
+    //3. En home click en btn login
+  
+    document.getElementById("btn-login-home").addEventListener("click", () => {
+      window.location.hash = "#/login";
+    });
+  
 };
