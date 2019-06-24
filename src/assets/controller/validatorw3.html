@@ -10,133 +10,93 @@
 
 <body>
     <!--Template Home-->
-    <div class="modal" id="modal-home" >
-      <div class="modal-content">
-        <form id="home-form">
-          <br>
-          <div class="row">
-            <div class="col input-field">
-              <h3>Bienvenidos</h3>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col input-field">
-              <button class="btn-create" id="btn-registre-home" >Registrar</button>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col input-field">
-              <button class="btn-create" id="btn-login-home" >Entrar</button>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col input-field">
-              <button class="btn-google" type="button" id="button-google-home">Google</button>
-            </div>
-          </div>     
-        </form>
+    <div class="flexbox-item">
+
+      <div class="demo-header">
+        <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid" alt= "logo aplication">
       </div>
+      <div class="paragraph-home">
+        <p class="welcome-home">Bienvenido</p>
+      </div>  
+    
+      
+    
+    
+       <form >
+    
+     
+         <div class="container-button-red">
+            <button class="btn-red" id="btn-registre-home">Registrar</button>
+         </div>
+    
+        <div class="container-button-red"> 
+          <button class="btn-red" id="btn-login-home">Entrar</button>
+        </div>
+    
+        <div class="container-button-blue">
+          <button class="btn-blue" type="button" id="button-google-home">Google</button>
+        </div>
+    
+       </form>
+      
+    
     </div>
     <!--Template AboutRegistre-->
-    <br>
-  <div class="modal" id="modal-signup" >
-    <div class="modal-content">
-      <h3>Crea tu cuenta</h3>
-      <form id="signup-form">
+    <div class="demo-header">
+      <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid" alt="logo aplication">
+     </div>
 
-        <div class="row input-field">
-          <div class = "col" >
-            <input type="text" placeholder="Nombre" class ="inputUser" id="signup-user" />
-            <label for="signup-user"></label>
-          </div>
-        </div>
+<h3 class="paragraph-registre">Crea tu cuenta</h3>
 
-        <div class="row input-field">
-          <div class = "col" >
-            <input type="number" placeholder="Edad" class ="inputAge" id="signup-age"/>
-            <label for="signup-age"></label>
-          </div>
-        </div>
+<form class= "form-registre" id="signup-form">
 
-        <div class="row input-field">
-          <div class = "col" >
-            <input type="email" placeholder="Correo" class ="inputEmail" id="signup-email"/>
-            <label for="signup-email"></label>
-          </div>
-        </div>
+<input type="text" placeholder=" Nombre" class ="input-field inputUser" id="signup-user" />
+<label for="signup-user"></label>
 
-        <div class="row input-field">
-          <div class = "col" >
-             <input type="password" placeholder="Contraseña" class ="inputPassword" id="signup-password"/>
-             <label for="signup-password"></label>
-          </div>
-        </div>
+<input type="number" placeholder=" Edad" class ="input-field inputAge" id="signup-age"/>
+<label for="signup-age"></label>
 
-        <br>
-        <div class = "row" >
-          <div class = "col" >
-           <button class="btn-create" id="btn-registre" >Crear</button>
-          </div>
-        </div>
 
-      </form>
+<input type="email" placeholder=" Correo" class ="input-field inputEmail" id="signup-email"/>
+<label for="signup-email"></label>
 
-    </div>
+<input type="password" placeholder=" Contraseña" class ="input-field inputPassword" id="signup-password"/>
+<label for="signup-password"></label>
 
-    <div class = "row" >
-      <div class = "col" >
-        <button class="btn-google" type="button" id="button-google">Acceso con Google</button>
-      </div>
-    </div>
 
-    <br>
 
-    <div class = "row" >
-      <div class = "col" >
-        <button id="backinRegistre" type="button"></button>
-      </div>
-    </div>
 
-  </div>
+<button class="btn-red" id="btn-registre" >Crear</button>
+<button class="btn-blue" type="button" id="button-google">Google</button>
+
+
+<button class="back" id="backregistre" type="button"></button>
+</form>
     <!--Template ProjectLogin-->
-    <div class="modal" id="modal-login">
-      <div class="modal-content">
-        <h3>Inicia Sesión</h3>
-        <br>
-        <form id="login-form">
-          <div class="row input-field">
-            <div class = "col" >
-              <input type="email" placeholder="Correo" id="login-email"/>
-              <label for="login-email"></label>
-            </div>
-          </div>
-          <div class="row input-field">
-            <div class = "col" >
-              <input type="password" placeholder="Contraseña" id="login-password"/>
-              <label for="login-password"></label>
-            </div>
-          </div>
-          <br>
-          
-          <div class="row">
-            <div class="col input-field">
-              <button  class="btn-create" id="btn-login">Ingresa</button>
-            </div>
-          </div>
-          
-          <div class="row">
-            <div class="col input-field">
-              <button class="btn-google" type="button" id="button-google-login">Acceso con Google</button>
-            </div>
-          </div>  
-          <div class="row">
-            <div class="col input-field">
-              <button id="back" type="button"></button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
+    <div class="demo-header">
+      <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid" alt="logo aplication"> 
+   </div> 
+   
+   <h3 class ="paragraph-login">Inicia Sesión</h3>
+        
+   <form class ="form-login" id="login-form">       
+      <input type="email" placeholder=" Correo" class ="input-field" id="login-email" >
+      <label for="login-email"></label>
+      
+      <input type="password" placeholder=" Contraseña" class ="input-field" id="login-password"/>
+      <label for="login-password"></label>
+     
+   
+   
+      <button class="btn-red" id="btn-login">Ingresa</button>
+              
+      <button class="btn-blue" type="button" id="button-google-login">Google</button>
+   
+               
+      <button class ="back" id="backlogin" type="button"></button>  
+   </form>
+     
+   
 </body>
 
 </html>
