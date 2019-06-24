@@ -1,10 +1,11 @@
-import { validationFormRegistreDates } from "../controller/validation_dates.js";
-import { createUser } from "./../js/firebase_auth.js";
-// import { templateMuro } from "./templateMuro.js";
-import { loginGoogle } from "./../js/firebase_auth.js";
-import { templateHome } from "./templateHome.js";
+  import { validationFormRegistreDates } from "../controller/validation_dates.js";
+  import { createUser } from "./../js/firebase_auth.js";
+  import { loginGoogle } from "./../js/firebase_auth.js";
+  import { templateHome } from "./templateHome.js";
 
 
+
+  
 export const templateRegistre = () => {
   let containerRegistre = document.getElementById("root");
 
@@ -42,47 +43,51 @@ export const templateRegistre = () => {
   
 `;
   containerRegistre.innerHTML = contenidoRegistre;
-
-  // 1. En registre click en btn probando ****cambiar name gaba??¡¡
-  document.getElementById("btn-registre").addEventListener("click", (e) => {
-    e.preventDefault();
-    
-    console.log("click en boton registrar");
-    let user = document.getElementById("signup-user").value;
-    let age = document.getElementById("signup-age").value;
-    let email = document.getElementById("signup-email").value;
-    let password = document.getElementById("signup-password").value;
-
-    let resRegistre = validationFormRegistreDates(user, age, email, password);
-
-    console.log("la funcion validationFormRegistredates  retorna = " + resRegistre);
-
-    if (resRegistre) {
-      console.log("al retornar true, se ejecutara createUser");
-      createUser(user, age, email, password);
+  
+ 
+  
+  
+    // 1. En registre click en btn probando ****cambiar name gaba??¡¡
+    document.getElementById("btn-registre").addEventListener("click", (e) => {
+      e.preventDefault();
       
-      console.log("createUser  ejecutando ");
-      //swal.fire('Buen Trabajo!', 'Estás registrado en Panoramix!, Te enviamos correo.','success');
-
-    } else {
-
-     
-      console.log("NO     createUser / parametros validos");
-    }
-  });
-
-  document.getElementById('back').addEventListener('click', () => {
-    templateHome();
-  });
-
-  // 2. En registre click en btn google
-  document.getElementById("button-google").addEventListener("click", () => {
-    console.log("presionaste boton google en Home!");
-
-    loginGoogle();
-
-
-  });
-
-
+      console.log("click en boton registrar");
+      let user = document.getElementById("signup-user").value;
+      let age = document.getElementById("signup-age").value;
+      let email = document.getElementById("signup-email").value;
+      let password = document.getElementById("signup-password").value;
+  
+      let resRegistre = validationFormRegistreDates(user, age, email, password);
+  
+      console.log("la funcion validationFormRegistredates  retorna = " + resRegistre);
+  
+      if (resRegistre) {
+        console.log("al retornar true, se ejecutara createUser");
+        createUser(user, age, email, password);
+        
+        console.log("createUser  ejecutando ");
+        //swal.fire('Buen Trabajo!', 'Estás registrado en Panoramix!, Te enviamos correo.','success');
+  
+      } else {
+  
+       
+        console.log("NO     createUser / parametros validos");
+      }
+    });
+  
+    document.getElementById('back').addEventListener('click', () => {
+      templateHome();
+    });
+  
+    // 2. En registre click en btn google
+    document.getElementById("button-google").addEventListener("click", () => {
+      console.log("presionaste boton google en Home!");
+  
+      loginGoogle();
+  
+  
+    });
+  
+  
+  
 };

@@ -219,7 +219,7 @@ table tr:nth-of-type(even) {
 
 .welcome-muro {
   margin-top: 5%;
-  font-size: 22px;
+  font-size: 18px;
   color: rgb(62, 102, 143);
   text-align: center;
 
@@ -245,4 +245,39 @@ table tr:nth-of-type(even) {
   width: 50%;
   margin-left: 20%;
   margin-right: 30%;
+}
+
+.event-list{
+  text-align: center;
+  padding: 2%;
+  background: #d4e6f1;
+}
+
+.columna {
+  width:80%;
+  float:left;
+  height: 100px;
+}
+
+@media (max-width: 250px) {
+  
+  .columna {
+    width:auto;
+    float:none;
+  }
+  
+}
+
+.items {
+  width:10%;
+  float:left;
+}
+
+@media (max-width: 50px) {
+  
+  .columna {
+    width:auto;
+    float:none;
+  }
+  
 }
