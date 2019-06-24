@@ -68,6 +68,7 @@ export const createUser = (user, age, email, password) => {
       var errorCode = error.code;
       var errorMessage = error.message;
       // ...
+      
     });
 
 };
@@ -160,13 +161,13 @@ export const observer = () => {
     
 
   });
-  //email-password.html
+  
 };
 
 
 //Funcion Aparece
 function aparece(user) {
-  console.log(user.email);
+  
   var user = user;
   if (user.emailVerified) {
     
@@ -177,7 +178,7 @@ function aparece(user) {
   if (!user.emailVerified) {
    
       console.log("el correo no ha sido verificado");
-      swal.fire("Verificar tu correo. Cuando este ok, debes Iniciar Sesion!");
+      
       window.location.hash = "#/login";
     }
 

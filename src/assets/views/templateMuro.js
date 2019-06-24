@@ -7,7 +7,6 @@ export const templateMuro = () => {
   
   // getNameData();
   document.getElementById('root').innerHTML = ` 
-
   <header class="header">
       <div class="demo-header">
          <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid">
@@ -29,6 +28,7 @@ export const templateMuro = () => {
       </div>
 
       <h4 id="userName"></h4>
+
   
   </header>
 
@@ -37,6 +37,7 @@ export const templateMuro = () => {
    <div class="modal" id="modal-post" >
        
       <form class="event-list" id="event-list">
+
           <!-- input event -->
            <div class="input-field2">
                 <p class="welcome-home">Tipo de Actividad o Evento:</p>
@@ -81,13 +82,14 @@ export const templateMuro = () => {
     </div>
   </section>
 
+
  <!-- SECTION USERS PUBLICATIONS -->
  <section class="main">
+
   <article >
    <div>
     <h3  class="welcome-muro">El Muro con lo Publicado...</h3>
     </div>
-
    <div>
    <div class="container">
    <aside class="aside aside-2">
@@ -114,15 +116,11 @@ export const templateMuro = () => {
   <div class = "row" >
       <!--<button class="btn-create2" id="btn-edit" >Editar</button>-->
   </div>
-
     <!-- button create delete in wall -->
     <div class = "row" >
         <!--<button class="btn-create2" id="btn-delete" >Borrar</button>-->
      </div>
  </section>
-
-
-
  <footer class="footer">
     <div class = "row" >
       <div class = "col" >

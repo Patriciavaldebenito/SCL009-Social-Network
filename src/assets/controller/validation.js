@@ -86,7 +86,7 @@ export const validationFormRegistre = (user, age, email, password) => {
     return false;
   }
   else {
-  
+
     return true;
 
   }
@@ -117,7 +117,7 @@ export const validationFormSignLogin = (email, password) => {
     return false;
   }
   else {
-   
+
     return true;
 
   }
@@ -185,14 +185,14 @@ export const validationMessage = message => {
     return true;
 };
 
-export const validationFormPublication = (event, date, address, subway, message) => {
-  if (validationEvent(event) === false || validationDate(date) === false || validationAddress(address) === false || validationSubway(subway) ===false || validationMessage(message) ===false ) {
+export const validationFormPublication = (event, address, subway, date, message) => {
+  if (validationEvent(event) === false || validationAddress(address) === false || validationSubway(subway) ===false || validationDate(date) === false || validationMessage(message) ===false ) {
 
   
     return false;
   }
   else {
-   
+
     return true;
 
   }
