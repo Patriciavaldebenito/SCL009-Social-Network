@@ -6,16 +6,16 @@ export const templateHome = () => {
   <div class="flexbox-item">
 
   <div class="demo-header">
-    <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid">
+    <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid" alt="logo aplication">
   </div>
   <div class="paragraph-home">
     <p class="welcome-home">Bienvenido</p>
   </div>  
 
-  <div class:"home-form">
+  
 
 
-   <form class:"home-form">
+   <form >
 
  
      <div class="container-button-red">
@@ -31,7 +31,7 @@ export const templateHome = () => {
     </div>
 
    </form>
-  </div>
+
 
  </div>`;
 

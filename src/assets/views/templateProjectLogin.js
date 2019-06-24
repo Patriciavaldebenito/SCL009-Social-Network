@@ -7,7 +7,7 @@ export const templateLogin = () => {
 
   document.getElementById("root").innerHTML = `
   <div class="demo-header">
-   <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid" > 
+   <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid" alt="logo aplication" > 
  </div> 
 
  <h3 class ="paragraph-login">Inicia Sesión</h3>
@@ -29,7 +29,7 @@ export const templateLogin = () => {
    <button class ="back" id="back" type="button"></button>  
   </form>
   
- </div>`;
+ `;
 
  
  
@@ -69,7 +69,6 @@ export const templateLogin = () => {
    document.getElementById("button-google-login").addEventListener("click", () => {
      console.log("presionaste boton google en Home!");
      loginGoogle();
- 
  
  
    });

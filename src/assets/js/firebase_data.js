@@ -1,5 +1,3 @@
-
-
 //Inicializar con Cloud firestore 
 
 //HU4 Comenzando a Guardar Data

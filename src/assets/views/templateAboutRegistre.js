@@ -10,7 +10,7 @@ export const templateRegistre = () => {
   let containerRegistre = document.getElementById("root");
 
   let contenidoRegistre = ` <div class="demo-header">
-                             <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid" >
+                             <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid" alt="logo aplications">
                             </div>
 
   <h3 class="paragraph-registre">Crea tu cuenta</h3>
