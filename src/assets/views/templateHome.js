@@ -4,13 +4,12 @@ export const templateHome = () => {
 
   document.getElementById("root").innerHTML = `
   <div class="flexbox-item">
-
   <div class="demo-header">
-    <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid" alt="logo aplication">
+    <img src="https://i.ibb.co/M7ssZ9x/logoPano.png" class="img-fluid" alt="logo aplication">
   </div>
   <div class="paragraph-home">
     <p class="welcome-home">Bienvenido</p>
-  </div>  
+  </div> 
 
   
 
