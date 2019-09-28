@@ -9,7 +9,7 @@ export const templateMuro = () => {
   document.getElementById('root').innerHTML = ` 
   <header class="header">
       <div class="demo-header">
-         <img src="https://i.ibb.co/9hHdDmd/logoPano.png" class="img-fluid">
+         <img src="https://i.ibb.co/M7ssZ9x/logoPano.png" class="img-fluid">
        </div>
       <div class="columna" >
        <h3 class="welcome-muro">Hola!! Publica tu Evento Aquí. </h3>
